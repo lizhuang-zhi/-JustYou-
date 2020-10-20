@@ -1,0 +1,125 @@
+/*设置卡片 */
+.card{
+	width: 100%;
+	margin-bottom:20px;
+}
+/* 卡片顶部容器 */
+.card .card-head{
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+/* 设置用户列表 */
+.card .card-head .user-list{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+/* 设置用户图片样式 */
+.card-head .user-list .user-img{
+	width: 50px;
+	height: 50px;
+}
+.user-list .user-img image{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	margin: 10px;
+}
+/* 设置用户id */
+.user-list .user-id{
+	position: absolute;
+	font-size: 16px;
+	top: 15px;
+	left:65px;
+}
+/* 设置发布时间 */
+.user-list .user-time{
+	position: absolute;
+	font-size: 12px;
+	color: #bbbbbb;
+	bottom:10px;
+	left: 65px;
+}
+/* 设置发布状态 */
+.user-list .state{
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	color: #bbbbbb;
+}
+.user-list .state image{
+	width: 18px;
+	height: 18px;
+}
+/* 设置发布内容 */
+.card .content{
+	padding:0 12px;
+	font-size: 14px;
+	line-height: 20px;
+}
+/* 设置图片 */
+.card .img-list{
+	margin: 10px;
+}
+.img-list image{
+	width: 100%;
+	border-radius: 10px;
+}
+/* 设置底部logo */
+.buttom-logo{
+	width: 100%;
+	height: 35px;
+	position: relative;
+}
+/* 浏览 */
+.buttom-logo .eye image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 10px;
+}
+/* 分享数字 */
+.buttom-logo .eye .eye-num{
+	position: absolute;
+	top: 0;
+	left: 10%;
+	color:#676767 ;
+}
+/* 爱心 */
+.buttom-logo .click image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 55%;
+}
+.buttom-logo .click{
+	position: relative;
+}
+/* 爱心数字 */
+.buttom-logo .click .click-love{
+	position: absolute;
+	top: 0;
+	left: 62%;
+	color:#676767 ;
+}
+/* 评论信息 */
+.buttom-logo .Message image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right:15%;
+}
+.buttom-logo .Message{
+	position: relative;
+}
+.buttom-logo .Message .MS{
+	top: 0;
+	margin:0 3px;
+	right: 3%;
+	position: absolute;
+	color:#676767 ;
+}

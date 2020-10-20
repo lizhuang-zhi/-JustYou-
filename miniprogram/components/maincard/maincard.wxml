@@ -1,0 +1,60 @@
+<view class="card">
+	<!-- 卡片顶部容器 -->
+	<view class="card-head">
+		<view class="user-list">
+			<!-- 用户头像 -->
+			<view class="user-img" bindtap="ToAboutUser">
+				<image src="{{userimg}}"></image>
+			</view>
+			<!-- 用户id -->
+			<view class="user-id">
+				<text>{{username}}</text>
+			</view>
+			<!-- 发表时间 -->
+			<view class="user-time">
+				<text>{{time}}</text>
+			</view>
+			<!-- 发表状态 -->
+			<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+			<view class="state" bindtap="onClick">
+				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/elipsis.png">
+				</image>
+			</view>
+		</view>
+	</view>
+	<!-- 点击详情 -->
+	<view bindtap="init">
+		<!--发表内容 -->
+		<view class="content">
+			<text>
+			{{txt}}
+			</text>
+		</view>
+		<view class="img-list">
+			<view>
+				<image src="{{image}}"></image>
+			</view>
+		</view>
+	</view>
+
+	<!-- 底部logo -->
+	<view class="buttom-logo">
+		<!-- 浏览 -->
+		<view class="eye">
+			<image src="https://s1.ax1x.com/2020/10/13/04lkfH.png"></image>
+			<text class="eye-num">100</text>
+		</view>
+		<!-- 爱心 -->
+		<view class="click" bindtap="tapMe">
+			<image wx:if="{{judge}}" src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心灰.png"></image>
+			<image wx:else src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心红.png"></image>
+			<text class="click-love">{{lovenum}}</text>
+		</view>
+		<!-- 消息 -->
+		<view class="Message" bindtap="init">
+			<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/Message.png">
+			</image>
+			<text class="MS">评论</text>
+		</view>
+	</view>
+</view>

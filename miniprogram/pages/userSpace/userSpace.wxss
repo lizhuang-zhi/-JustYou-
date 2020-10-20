@@ -1,0 +1,204 @@
+ /* 设置外部容器 */
+ .head{
+	width: 100%;
+	height: 395.83px;
+	position: relative;
+	border-bottom: 1px solid #999999;
+}
+/* 背景图片 */
+.head image{
+	width: 100%;
+	height: 100%;
+}
+/* 设置关注 */
+.head .Add_attention{
+	width:18%;
+	height: 18px;
+	background-color: #606876;
+	color: white;
+	border: 1px solid white;
+	text-align: center;
+	opacity: .8;
+	border-radius: 20px;
+	font-size: 14px;
+	position: absolute;
+	top: 5px;
+	right: 12%;
+}
+.head .Add_attention image{
+	width:17px;
+	height:17px;
+	vertical-align:middle; 
+}
+/* 设置 设置 */
+.head .Set_up{
+	font-size:15px;
+	color: white;
+	position: absolute;
+	top: 5px;
+	right: 2%;
+}
+/* 用户列表 */
+.user-list{
+	width: 100%;
+	height: 44.73%;
+	position: absolute;
+	top:28.85%;
+}
+/* 用户头像 */
+.user-list .user-img{
+	width:22.12%;
+	height:46.86%;
+	position: absolute;
+	left:38.88%;
+	border-radius: 50%;
+}
+.user-list .user-img image{
+	width:100%;
+	height: 100%;
+}
+/* 用户id */
+.user-list .user-id{
+	width:22.12%;
+	height: 9.48%;
+	position: absolute;
+	top: 57.45%;
+	left:38.88%;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	text-shadow:1px 1px 1px black;
+}
+
+/* 重命名id */
+.user-list image{
+	width: 14px;
+	height: 14px;
+	vertical-align:middle; 
+}
+.user-list text{
+	padding:0 4px;
+}
+/* 用户使用天数 */
+.user-list .user-time{
+	position: absolute;
+	top:74.09%;
+	left:43%;
+	margin: 0 auto;
+	color: white;
+	text-shadow:1px 1px 1px black;
+}
+/* 设置导航栏 */
+.main .top-wrapper{
+	width: 100%;
+	height: 72.28px;
+	text-align: center;
+	padding-top:22.88px;
+	overflow: hidden;
+}
+.top-wrapper view{
+	position: relative;
+}
+/* 设置导航栏竖线 */
+.top-wrapper .fans::after,.top-wrapper .activity::after{
+	content: '';
+	position: absolute;
+	width:1px;
+	height:35px;
+	left: 0;
+    bottom: 30px;
+    top: 0;
+	margin: auto 0;
+    background-color:#bcbcbc;
+}
+/* 关注 */
+.top-wrapper .attention{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+.attention .attention-num{
+	font-size: 20px;
+}
+.attention .attention-name{
+	font-size: 14px;
+	color: #bcbcbc;
+}
+/* 粉丝 */
+.top-wrapper .fans{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+.fans .fans-num{
+	font-size: 20px;
+}
+.fans .fans-name{
+	font-size: 14px;
+	color: #bcbcbc;
+}
+/* 动态 */
+.top-wrapper .activity{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+.activity .activity-num{
+	font-size: 20px;
+}
+.activity .activity-name{ 
+	font-size: 14px;
+	color: #bcbcbc;
+}
+/* 设置卡片 */
+.card{
+	width: 100%;
+	margin-bottom:20px;
+}
+/* 卡片顶部容器 */
+.card .card-head{
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+/* 设置发布时间 */
+.card .handtime{
+	margin-left:5%;
+	height: 12px;
+	font-size: 12px;
+	color: #bbbbbb;
+}
+/* 设置发布状态 */
+.card .state text{
+	height: 12px;
+	font-size: 12px;
+	color: #bbbbbb;
+}
+.card .state image{
+	width: 16px;
+	height: 16px;
+	vertical-align:middle; 
+}
+/* 设置发布内容 */
+.card .content{
+	padding:12px;
+	font-size: 14px;
+	line-height: 20px;
+}
+/* 设置图片 */
+.card .img-list{
+	margin: 10px;
+	/* position: relative; */
+}
+.img-list image{
+	width: 100%;
+	/* height: 100%;
+	border-radius: 10px;
+	position: absolute;
+	top: 0; */
+}
+
+

@@ -1,0 +1,2 @@
+.box{padding: 40rpx 30rpx 0;}
+.box .btn{padding-top: 50rpx;}

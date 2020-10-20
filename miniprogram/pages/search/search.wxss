@@ -1,0 +1,60 @@
+.Searchcontainer .searchbox .historySearch .history .topplace{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Searchcontainer .searchbox .historySearch .history .topplace .imgGar{
+  width: 60rpx;
+  height: 60rpx;
+}
+.Searchcontainer .searchbox .historySearch .history .topplace .imgGar image{
+  width: 100%;
+  height: 100%;
+}
+.Searchcontainer .searchbox .historySearch .history .topplace .tit{
+  font-size: 34rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+.Searchcontainer .searchbox .historySearch{
+  padding: 20rpx 30rpx 0;
+}
+.Searchcontainer .searchbox .historySearch .history .content{
+  padding: 18rpx 20rpx;
+}
+.Searchcontainer .searchbox .historySearch .history .content .searchwords{
+  height: 60rpx;
+  background: #91AA9D;
+  border-radius: 50rpx;
+  display: inline-block; 
+  box-sizing: border-box;
+  margin: 0 20rpx 20rpx 0;
+}
+.Searchcontainer .searchbox .historySearch .history .content .searchwords .words{
+  font-size: 28rpx;
+  padding:12rpx 25rpx;
+  color: #FCFFF5;
+}
+
+/* 热门搜索 */
+.Searchcontainer .searchbox .hot{
+  padding: 0 30rpx;
+}
+.Searchcontainer .searchbox .hot .topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Searchcontainer .searchbox .hot .topbar .tit{
+  font-size: 34rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+.Searchcontainer .searchbox .hot .topbar .pic{
+  width: 60rpx;
+  height: 60rpx;
+}
+.Searchcontainer .searchbox .hot .topbar .pic image{
+  width: 100%;
+  height: 100%;
+}

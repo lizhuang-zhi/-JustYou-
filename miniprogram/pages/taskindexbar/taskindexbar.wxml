@@ -1,0 +1,88 @@
+<view class="topbar">
+  <view class="tit">晚上好！</view>
+  <view class="today">今天是9月23日</view>
+</view>
+
+
+<!-- 轮播图 -->
+<view class="picbanner">
+  <view class="banner">
+    <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay
+      interval="7000">
+      <!-- <swiper-item>
+        <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=195753523,1408817252&fm=15&gp=0.jpg">
+        </image>
+      </swiper-item> -->
+      <swiper-item>
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=301839729,184320281&fm=26&gp=0.jpg">
+        </image>
+      </swiper-item>
+      <!-- <swiper-item>
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1175545418,4135298332&fm=26&gp=0.jpg">
+        </image>
+      </swiper-item> -->
+    </swiper>
+  </view>
+</view>
+
+<!-- 菜单 -->
+<view class="menu">
+  <!-- 横托滚动 -->
+  <scroll-view class="major" scroll-x>
+    <!-- 方式一需要class="majorCon" -->
+    <!-- <view class="majorCon"> -->
+    <navigator class="box" url="/pages/ps/ps">
+      <image class="pic" src="/images/kecheng1.png"></image>
+      <view class="txt">平面设计</view>
+    </navigator>
+
+    <navigator class="box" url="">
+      <image class="pic" src="/images/kecheng2.png"></image>
+      <view class="txt">室内设计</view>
+    </navigator>
+    <navigator class="box" url="">
+      <image class="pic" src="/images/kecheng3.png"></image>
+      <view class="txt">UI设计</view>
+    </navigator>
+    <navigator class="box" url="">
+      <image class="pic" src="/images/kecheng4.png"></image>
+      <view class="txt">影视后期</view>
+    </navigator>
+    <navigator class="box" url="">
+      <image class="pic" src="/images/kecheng5.png"></image>
+      <view class="txt">Web前端</view>
+    </navigator>
+    <navigator class="box" url="">
+      <image class="pic" src="/images/kecheng2.png"></image>
+      <view class="txt">Web后端</view>
+    </navigator>
+    <!-- </view> -->
+  </scroll-view>
+</view>
+
+<!-- 通知栏 -->
+<view class="notify">
+  <van-notice-bar color="#FF2D2D" background="#F6F6F6" left-icon="volume-o" text="最近疫情当前，我们需要时刻警觉自生安全!最近疫情当前，我们需要时刻警觉自生安全!最近疫情当前，我们需要时刻警觉自生安全!" />
+</view>
+
+<!-- 下边栏 -->
+<view class="bottombar">
+  <view class="around">
+
+    <view class="box" wx:for="{{4}}" wx:key="index">
+      <view class="up">
+        <view class="picAndtit">
+          <view class="pic">
+            <image src="/images/kecheng4.png"></image>
+          </view>
+          <view class="title">行程安排</view>
+        </view>
+        <view class="more">></view>
+      </view>
+      <view class="bottom">
+        <view class="content">今天没有行程安排，好好休息一下</view>
+      </view>
+    </view>
+
+  </view>
+</view>

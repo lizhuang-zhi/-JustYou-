@@ -1,0 +1,15 @@
+.box{display: flex;justify-content: space-between;
+align-items: center;}
+.box .tit{font-size: 32rpx;}
+.box .rightPar{display: flex;
+justify-content: space-between;
+align-items: center;}
+.box .rightPar .info{font-size: 28rpx;
+color: rgb(108,108,108);
+padding-right: 10rpx;}
+.box .rightPar .pic{width: 32rpx;height: 32rpx;}
+.box .rightPar .pic image{width: 100%;height: 100%;}
+
+/* .line{width: 100%;height: 3rpx;
+background-color: rgb(240,240,240);
+margin: 30rpx 0;} */

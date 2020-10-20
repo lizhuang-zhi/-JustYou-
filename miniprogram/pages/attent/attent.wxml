@@ -1,0 +1,25 @@
+<!-- <view class="topbox">
+	<view class="attention">
+		<view class="box">
+			<text class="num">1</text>
+			<view class="nam">关注</view>
+		</view>
+	</view>
+	<view class="fans">
+		<view class="box">
+			<text class="num">2</text>
+			<view class="nam">粉丝</view>
+		</view>
+	</view>
+</view>-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+	<van-tab title="关注">
+		<view wx:for="{{4}}" wx:key="index">
+			<attentioncard attenimg="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/user-img1.jpg" />
+		</view>
+	</van-tab>
+
+	<van-tab title="粉丝">
+			<attentioncard attenimg="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/user-img1.jpg" />
+	</van-tab>
+</van-tabs>

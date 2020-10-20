@@ -1,0 +1,181 @@
+/*设置卡片 */
+.card{
+	width: 100%;
+	margin-bottom:20px;
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+/* 卡片顶部容器 */
+.card .card-head{
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+/* 设置用户列表 */
+.card .card-head .user-list{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+/* 设置用户图片样式 */
+.card-head .user-list .user-img{
+	width: 50px;
+	height: 50px;
+}
+.user-list .user-img image{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	margin: 10px;
+}
+/* 设置用户id */
+.user-list .user-id{
+	position: absolute;
+	font-size: 16px;
+	top: 15px;
+	left:65px;
+}
+/* 设置发布时间 */
+.user-list .user-time{
+	position: absolute;
+	font-size: 12px;
+	color: #bbbbbb;
+	bottom:10px;
+	left: 65px;
+}
+/* 设置关注 */
+.user-list .state{
+	width: 55px;
+	height: 25px;
+	background: rgb(7,193,96);
+	border-radius: 12px;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	color: #fff;
+}
+.user-list .state text{
+	height:25px;
+	line-height: 25px ;
+	font-size:14px;
+}
+/* 设置发布内容 */
+.card .content{
+	padding:0 12px;
+	font-size: 14px;
+	line-height: 20px;
+}
+/* 设置图片 */
+.card .img-list{
+	margin: 10px;
+}
+.img-list image{
+	width: 100%;
+	border-radius: 10px;
+}
+/* 设置底部logo */
+.buttom-logo{
+	width: 100%;
+	height: 45px;
+	position: relative;
+	align-items: center;
+}
+/* 收藏 */
+.buttom-logo .Collection image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 5%;
+}
+/* 浏览*/
+.buttom-logo .eye image{
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left:83%;
+}
+/* 分享数字 */
+.buttom-logo .eye .eye-num{
+	font-size: 13px;
+	position: absolute;
+	top: 0; 
+	left:89%;
+	color:#676767 ;
+}
+/* 爱心 */
+.buttom-logo .click image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 53%;
+}
+.buttom-logo .click{
+	position: relative;
+}
+/* 爱心数字 */
+.buttom-logo .click .click-love{
+	font-size: 13px;
+	position: absolute;
+	top: 0;
+	left:59%;
+	color:#676767 ;
+}
+/* 评论信息 */
+.buttom-logo .Message image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left:68%;
+}
+.buttom-logo .Message{
+	position: relative;
+}
+.buttom-logo .Message .MS{
+	font-size: 13px;
+	top: 0;
+	margin:0 3px;
+	left:73%;
+	position: absolute;
+	color:#676767 ;
+}
+/* 输入框 */
+page{
+  width: 100%;
+}
+.commentInputView{
+  width: 100%;
+  height: 100rpx;
+  background-color: rgba(204, 204, 204, 0.61);
+  padding: 4%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+.commentInput{
+  width:70%;
+  background-color:#fff;
+  font-size:28rpx;
+  border-radius:15rpx;
+  display: flex;
+  align-items: center;
+}
+ 
+.input{
+  width:100%;
+  padding: 15rpx;
+  font-size: 30rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height-step:20rpx;
+  border: 0;
+}
+.send{
+  width: 20%;
+  height: 80rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background-color: green;
+  border: 0;
+}

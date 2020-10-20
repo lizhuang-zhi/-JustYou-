@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Square":"/components/Square/Square"
+  },
+  "navigationBarBackgroundColor":"#D1DBBD"
+}

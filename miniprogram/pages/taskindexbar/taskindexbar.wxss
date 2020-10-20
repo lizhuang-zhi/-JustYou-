@@ -1,0 +1,129 @@
+page {
+  background-image: linear-gradient(to right, rgb(243, 244, 247), rgb(231, 232, 234));
+}
+
+/* 顶部栏 */
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  padding: 30rpx 44rpx 0;
+  letter-spacing: 2rpx;
+}
+
+.topbar .tit {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.topbar .today {
+  font-size: 22rpx;
+  letter-spacing: 1rpx;
+}
+
+/* 轮播图 */
+.picbanner {
+  padding: 26rpx 44rpx;
+}
+
+.picbanner .banner {
+  width: 100%;
+  height: 128px;
+  box-shadow: 2px 2px 5px rgb(196, 197, 198);
+}
+
+.picbanner .banner swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.picbanner .banner image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 菜单 */
+.menu {
+  padding: 0 44rpx;
+}
+
+.menu .major {
+  white-space: nowrap;
+  /* padding: 10rpx 0; */
+}
+
+.menu .major .box {
+  text-align: center;
+  width: 135rpx;
+  display: inline-block;
+}
+
+.menu .major .pic {
+  width: 83rpx;
+  height: 80rpx;
+}
+
+.menu .major .txt {
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+
+/* 通知栏 */
+.notify{
+  margin: 30rpx 60rpx 0;
+  box-shadow: 2px 2px 6px rgb(180, 180, 180);
+  border-radius: 20rpx;
+}
+.notify van-notice-bar{border-radius: 20rpx;}
+
+/* 长条栏 */
+.bottombar {
+  padding: 40rpx 60rpx;
+}
+
+.bottombar .around .box {
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px rgb(180, 180, 180);
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.bottombar .around .box .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 32rpx 0 22rpx;
+}
+
+.bottombar .around .box .up .more{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgb(224,126,249);
+}
+
+.bottombar .around .box .up .picAndtit {
+  display: flex;
+  align-items: center;
+}
+
+.bottombar .around .box .up .picAndtit .title {
+  font-size: 26rpx;
+  font-weight: bold;
+  letter-spacing: 3rpx;
+}
+
+.bottombar .around .box .up .picAndtit .pic {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 18rpx;
+}
+
+.bottombar .around .box .up .picAndtit .pic image {
+  width: 100%;
+  height: 100%;
+}
+.bottombar .around .box .bottom{padding: 20rpx 0 30rpx;}
+.bottombar .around .box .bottom .content {
+  text-align: center;
+  font-size: 34rpx;
+  color: #B9B9B9;
+}

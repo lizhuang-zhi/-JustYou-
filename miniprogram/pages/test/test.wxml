@@ -1,0 +1,160 @@
+<view class="topMap">
+  <map 
+    id="map"
+    subkey="RTMBZ-UXSK6-UAJSI-M6UR7-4U53F-FXFNA"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}" 
+    scale="14"
+    layer-style="1"
+    show-location
+  ></map>
+</view>
+
+
+<!-- 快递栏 -->
+<view class="midbar">
+  <view class="box">
+    <!-- 上部分 -->
+    <view class="up">
+
+      <view class="top">
+        <view class="front">
+          <view class="tit">代取快递</view>
+          <view class="share">
+            <image src="https://s1.ax1x.com/2020/10/10/0yt6yT.png"></image>
+            <view class="words">分享</view>
+          </view>
+        </view>
+        <view class="after">规则</view>
+      </view>
+
+      <view class="bot">您下订单，我们为你取快递！</view>
+    </view>
+
+    <view class="line"></view>
+
+    <!-- 中部分 -->
+    <view class="mid">
+      <view class="midbox">
+        <!-- 到哪里取件 -->
+        <view class="whereAndaddress" bindtap='xuanZe'>
+          <view class="where">到哪里取件</view>
+          <view class="address">点击填写取件地址</view>
+        </view>
+
+        <view class="station">驿站</view>
+      </view>
+    </view>
+
+    <view class="line"></view>
+
+    <!-- 下部分 -->
+    <view class="down">
+      <view class="downbox">
+        <!-- 要送到哪里 -->
+        <view class="whereAndaddress" bindtap='xuanZe'>
+          <view class="where">要送到哪里</view>
+          <view class="address">点击填写收件地址</view>
+        </view>
+
+        <view class="station">常用</view>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 查看详情 -->
+<view class="look">
+  <view class="box">
+    <view class="sentence">
+      欢迎在本平台发送跑腿任务，下单后我们会尽快发布任务...
+    </view>
+
+    <view class="square" bindtap="CheckContent">查看详情</view>
+
+    <!-- 弹出详情 -->
+    <van-dialog id="van-dialog" />
+
+  </view>
+</view>
+
+
+
+<!-- 快递短信 -->
+<view class="message">
+  <view class="mesBox">
+    <!-- 上方标题 -->
+    <view class="info">
+      <view class="tit">快递短信</view>
+      <view class="sent">可能会要求代取小哥出示信息凭证</view>
+      <view class="toast">请将快递收货短信截图上传至此。请放心下单，信息仅取件人员可见</view>
+    </view>
+
+    <view class="uploadpic">
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+    </view>
+
+  </view>
+</view>
+
+
+
+<!-- 具体快递信息 -->
+<view class="form">
+  <view class="formBox">
+
+    <ExpressInfo titContent="物品重量" infoContent="请选择"
+    bindtap="showPopup"/>
+    <view class="liner"></view>
+    <ExpressInfo titContent="取件数量" infoContent="请选择"
+    bindtap="showPopup"/>
+    <view class="liner"></view>
+    <ExpressInfo titContent="天气服务" infoContent="请选择"
+    bindtap="SelectTianQi"/>
+
+    <!-- 上拉菜单部分 -->
+    <van-action-sheet
+      show="{{ show }}"
+      actions="{{ actions }}"
+      bind:close="onClose"
+      bind:select="onSelect"
+    />
+
+    <!-- 弹出层 -->
+    <van-popup show="{{ Popshow }}" 
+    bind:close="PoponClose"
+    position="bottom"
+    custom-style="height: 40%;">
+      <van-picker columns="{{ columns }}" bind:change="PickeronChange" />
+    </van-popup>
+
+    <!-- toast -->
+    <van-toast id="van-toast" />
+
+
+  </view>
+</view>
+
+
+
+<!-- 其他 -->
+<view class="other">
+  <view class="otherBox" bindtap="ToExpressNotes">
+    <ExpressInfo titContent="备注留言" infoContent="点击填写备注"/>
+  </view>
+</view>
+
+
+<!-- <button class='button-function' type='primary' bindtap='chaKan'>查看</button>
+<button class='button-function' type='mini' bindtap='xuanZe'>选择</button>
+ -->
+
+
+
+<!-- <map id="myMap" show-location />
+<button type="primary" bindtap="getCenterLocation">获取位置</button>
+<button type="primary" bindtap="moveToLocation">移动位置</button>
+<button type="primary" bindtap="translateMarker">移动标注</button>
+<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button> -->

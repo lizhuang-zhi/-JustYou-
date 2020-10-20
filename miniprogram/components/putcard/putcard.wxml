@@ -1,0 +1,67 @@
+<!-- 设置外部容器 -->
+<view class="outbox" wx:for="{{1}}" wx:key="index">
+	<!-- 设置内部容器 -->
+	<view class="box">
+		<!-- 设置顶部logo -->
+		<view class="top-logo">
+			<view class="top-logo"></view>
+		</view>
+		<!-- 设置用户列表 -->
+		<view class="user-list">
+			<!-- 用户头像 -->
+			<view class="user-img">
+				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/user-img1.jpg"></image>	
+			</view>
+			<!-- 用户id -->
+			<view class="user-id">
+				<text>K</text>
+			</view>
+			<!-- 用户专业 -->
+			<view class="user-maj">
+				<text>信息工程</text>
+			</view>
+			<!-- 发表时间 -->
+			<view class="user-time">
+				<text>1天前14：15</text>
+			</view>
+			<!-- 关注 -->
+			<view class="attention">
+				<text>+关注</text>
+			</view>
+		</view>
+		<!-- 内容 -->
+		<view class="content">
+			<text>嘿嘿哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+		</view>
+		<!-- 标签 -->
+		<view class="tap">
+			<text>#什么时候开学 </text>
+		</view>
+		<!-- 图片 -->
+		<view class="img-list">
+			<!-- <image class="top-left" src="../img/left.jpg"></image>
+			<image class="top-right" src="../img/right-top.png"></image>
+			<image class="bottom-left" src="../img/right-top.png"></image>
+			<image class="bottom-right" src="../img/left.jpg"></image> -->
+		</view>
+		<!-- 底部logo -->
+		<view class="buttom-logo">
+			<!-- 小眼睛 -->
+			<view class="eye">
+				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/view.png"></image>
+				<text class="eye-num">100</text>
+			</view>
+			<!-- 爱心 -->
+			<view class="click" bindtap="tapMe">
+				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心灰.png"></image>
+				<text class="click-love">1</text>
+			</view>
+			<!-- 消息 -->
+			<view class="Message">
+				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/Message.png">
+				</image>
+				<text class="MS">评论</text>
+			</view>
+		</view>
+	</view>
+</view>

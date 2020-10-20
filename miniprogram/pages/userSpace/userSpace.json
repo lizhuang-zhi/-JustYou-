@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "maincard":"/components/maincard/maincard"
+
+  },
+  "navigationBarTitleText":"我的"
+}

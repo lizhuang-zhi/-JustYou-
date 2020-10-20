@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "attentioncard":"/components/attentioncard/attentioncard",
+    "putcard":"/components/putcard/putcard"
+  },
+  "navigationBarTitleText":"关注"
+
+}

@@ -1,0 +1,36 @@
+<!-- 任务发布编辑页面 （暂时未使用）-->
+
+
+
+<van-cell-group>
+	<van-field value="{{ name }}" required clearable label="用户名" placeholder="请输入用户名" />
+	<van-field value="{{ position }}" label="地点" placeholder="请输入地点" required border="{{ true }}" />
+	<van-field value="{{ message }}" label="内容" type="textarea" placeholder="请输入内容" autosize border="{{ ture }}" />
+</van-cell-group>
+<!-- 选择时间 -->
+<van-cell title="选择时间" is-link bind:click="showPopup" />
+
+<van-popup show="{{ show }}" position="bottom" round custom-style="height: 50%;" bind:close="onClose">
+
+	<van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  bind:input="onInput"
+  min-date="{{ minDate }}"
+  formatter="{{ formatter }}"
+/>
+
+</van-popup>
+
+
+
+<!-- 单元格 -->
+<van-cell-group>
+	<van-cell title="上传图片" value="0/4" />
+</van-cell-group>
+
+<!-- 上传图片 -->
+<van-uploader file-list="{{ fileList }}" max-count="4" bind:after-read="afterRead" />
+
+<!-- 提交按钮 -->
+<van-button type="primary" size="large">提交</van-button>

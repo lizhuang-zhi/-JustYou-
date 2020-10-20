@@ -1,0 +1,101 @@
+<view class="header">
+  <image  class="pic" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1344763389,911548809&fm=26&gp=0.jpg"></image>
+  <image class="bg_ware" src="https://s1.ax1x.com/2020/08/27/dhPKpR.gif"></image>
+</view>
+
+<!-- 菜单栏 -->
+<view class="Menupbar">
+  <view class="box" wx:for="{{menuList}}" wx:key="index" bindtap="ToPage"
+  data-pageurl="{{item.pageurl}}" bindtap="ToPageWay">
+    <image src="{{item.picUrl}}"></image>
+    <view class="txt">{{item.title}}</view>
+  </view>
+</view>
+
+<view class="MenuLine"></view>
+
+<!-- 好物甄选 -->
+<view class="like">
+  <view class="box">
+
+    <view class="upbar">
+      <view class="tit">甄选好物</view>
+      <view class="look">滑动查看</view>
+    </view>
+
+    <view class="info">品质服务与你不期而遇！</view>
+
+    <view class="rollbar">
+      <scroll-view class="scroll" scroll-x>
+
+        <view class="inbox">
+          <navigator class="smallbox" wx:for="{{myLikeGoodsList}}" wx:key="index"
+          data-id="{{item.id}}" bindtap="ToDetailByLike">
+            <view class="pic">
+              <image src="{{item.goodsPicList[0].picUrl}}"></image>
+            </view>
+
+            <view class="tit">{{item.goodName}}</view>
+            <view class="price">￥{{item.goodPrice}}</view>
+          </navigator>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+</view>
+
+<view class="MenuLine2"></view>
+
+
+<!-- 搜索与分类 -->
+<view class="SearchAndSorts">
+  <van-search
+    value="{{ value }}"
+    shape="round"
+    background="#FFFFFF"
+    placeholder="请输入搜索关键词"
+    bind:search="jumpfor"
+  />
+
+  <view class="sorts">
+    <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/sorts.png"></image>
+    
+    <button bindtap="ToSortsPage"></button>
+    
+  </view>
+</view>
+
+
+
+<!-- 展示商品 -->
+<view class="outbox" wx:for="{{4}}" wx:key="index">
+  <view class="box">
+
+    <view class="picAndword">
+
+      <view class="pic">
+        <image src="https://s1.ax1x.com/2020/08/22/dU0xAS.jpg"></image>
+      </view>
+
+      <view class="word">
+        <view class="tit">坦克大战（C语言版）</view>
+        <view class="info">
+          <view class="price">￥15.00</view>
+          <view class="scale">已售：24</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class="line"></view>
+</view>
+
+
+
+<!-- 顶部标语 -->
+<view class="backtit">JustYou的小店来了！</view>
+<view class="backtxt">限时折扣，快来抢购</view>
+
+

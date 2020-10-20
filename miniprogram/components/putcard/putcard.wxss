@@ -1,0 +1,185 @@
+page{background-color: rgb(246,247,247);}
+/* 设置外部容器 */
+.outbox{
+	margin: 8% 5%;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+	border-radius: 12px;
+	background-color: rgb(255,255,255);
+}
+/* 顶部logo */
+.box .top-logo{
+	position:relative ;
+}
+/* 设置顶部logo */
+.top-logo view{
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left:0;
+	padding:10px;
+	background-color: rgb(240, 236, 236);
+	background-clip: content-box;
+	border-radius: 50%;
+	position: absolute;
+}
+/* 设置用户一栏 */
+.user-list{
+	height: 45px;
+	padding:0 10px;
+	position: relative;
+	font-size: 12px;
+	margin-bottom:10px;
+}
+/* 用户头像 */
+.box .user-list .user-img{
+	width: 45px;
+	height: 100%;
+	position: absolute;
+}
+/* 用户头像样式 */
+.user-list .user-img image{
+	width: 100%;
+	height: 100%;
+}
+/* 用户的id*/
+.user-list .user-id{
+	height:20px;
+	position: relative;
+}
+/* 用户的id样式*/
+.user-list .user-id text{
+	top: 0;
+	left: 52px;
+	position: absolute;
+}
+/* 用户的专业 */
+.user-list .user-maj{
+	height: 20px;
+	position: relative;
+}
+/* 用户的专业样式 */
+.user-list .user-maj {
+	top: 22px;
+	left:18%;
+	position: absolute;
+	color: #353535;
+}
+/* 用户发表时间 */
+.user-list .user-time{
+	top: 22px;
+	left: 35%;
+	position: absolute;
+	color: #353535;
+}
+/* 关注 */
+.user-list .attention{
+	top: 5%;
+	right:5%;
+	padding:4px 8px;
+	position: absolute;
+	background-color: #515254;
+	border-radius: 10px;
+	color: #fff;
+}
+/* 内容 */
+.content{
+	padding:0 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	/* white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; */
+}
+/* 标签 */
+.tap{
+	margin-left: 10px;
+	margin-top: 20px;
+	color: #3c6b9d;
+}
+/* 图片列表 */
+.img-list{
+	margin:10px;
+	/* height: 300px; */
+	position: relative;
+	margin-bottom: 25px;
+}
+.img-list .top-left{
+	width: 49%;
+	height: 49%;
+	border-radius: 5px;
+	position: absolute;
+	right: 0;
+}
+.img-list .top-right{
+	width: 49%;
+	height: 49%;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.img-list .bottom-left{
+	width: 49%;
+	height: 49%;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.img-list .bottom-right{
+	width: 49%;
+	height: 49%;
+	border-radius: 5px;
+	position: absolute;
+}
+/* 设置底部logo */
+.buttom-logo{
+	width: 100%;
+	height: 35px;
+	position: relative;
+}
+/* 小眼睛 */
+.buttom-logo .eye image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 10px;
+}
+.buttom-logo .eye .eye-num{
+	position: absolute;
+	top: 0;
+	left: 10%;
+	color:#676767 ;
+}
+.buttom-logo .click image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 55%;
+}
+.buttom-logo .click{
+	position: relative;
+}
+.buttom-logo .click .click-love{
+	position: absolute;
+	top: 0;
+	left: 62%;
+	color:#676767 ;
+}
+.buttom-logo .Message image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right:18%;
+}
+.buttom-logo .Message{
+	position: relative;
+}
+.buttom-logo .Message .MS{
+	top: 0;
+	margin:0 3px;
+	right: 5%;
+	position: absolute;
+	color:#676767 ;
+}

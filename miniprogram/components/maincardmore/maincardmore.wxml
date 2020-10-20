@@ -1,0 +1,69 @@
+<view class="card">
+	<!-- 卡片顶部容器 -->
+	<view class="card-head">
+		<view class="user-list">
+			<!-- 用户头像 -->
+			<view class="user-img">
+				<image src="{{userimg}}"></image>
+			</view>
+			<!-- 用户id -->
+			<view class="user-id">
+				<text>{{userid}}</text>
+			</view>
+			<!-- 发表时间 -->
+			<view class="user-time">
+				<text>{{time}}</text>
+			</view>
+			<!-- 关注 -->
+			<view class="state" bindtap="onClick">
+				<text>{{atten}}</text>
+			</view>
+		</view>
+	</view>
+	<!--发表内容 -->
+	<view class="content">
+		<text>
+		{{txt}}
+		</text>
+	</view>
+	<view class="img-list">
+		<view>
+			<image src="{{imagel}}"></image>
+		</view>
+	</view>
+
+	<!-- 底部logo -->
+	<view class="buttom-logo">
+		<!-- 收藏 -->
+		<view class="Collection" bindtap="Tapstart">
+			<image wx:if="{{light}}" src="https://s1.ax1x.com/2020/10/04/0GB3TS.png"></image>
+			<image wx:else src="https://s1.ax1x.com/2020/10/04/0GB1w8.png"></image>
+		</view>
+		<!-- 浏览 -->
+		<view class="eye">
+			<image src="https://s1.ax1x.com/2020/10/13/04lkfH.png"></image>
+			<text class="eye-num">1001</text>
+		</view>
+		<!-- 爱心 -->
+		<view class="click" bindtap="tapMe">
+			<image wx:if="{{judge}}" src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心灰.png"></image>
+			<image wx:else src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心红.png"></image>
+			<text class="click-love">{{lovenum}}</text>
+		</view>
+		<!-- 消息 -->
+		<view class="Message">
+			<image bindtap='focusButn' src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/Message.png">
+			</image>
+			<text class="MS" bindtap='focusButn'>评论</text>
+			
+			<!-- 弹出输入框 -->
+			<view class='commentInputView' style='bottom:{{height == ""?0:height}}px;' hidden='{{!isInput}}'>
+
+				<view class='commentInput'>
+					<input class='input' maxlength='-1' value="{{value}}" bindfocus="inputFocus" focus='{{focusInput}}' bindblur="inputBlur" cursor-spacing ></input>
+				</view>
+				<button class='send' bindtap="fabiao">发送</button>
+			</view>
+		</view>
+	</view>
+</view>

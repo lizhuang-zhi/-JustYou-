@@ -1,0 +1,66 @@
+page {
+  background: rgb(255, 255, 255);
+}
+
+.up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160rpx;
+}
+
+.up .word {
+  font-size: 96rpx;
+  font-weight: bold;
+}
+
+.up .sentence .line {
+  height: 3rpx;
+  background: linear-gradient(244deg, rgba(255, 255, 255, 0) 0%, rgba(220, 220, 220, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.up .sentence .tit {
+  font-size: 28rpx;
+  padding: 15rpx 0;
+}
+
+
+/* 图片 */
+.picpart {
+  display: flex;
+  justify-content: center;
+  margin: 140rpx 0;
+}
+
+.picpart .pic {
+  width: 450rpx;
+  height: 450rpx;
+}
+
+.picpart .pic image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 按钮文字 */
+button{
+  color: rgb(255, 255, 255);
+}
+
+
+/* 按钮样式 */
+button {
+  /* background: initial; */
+  /* 添加 */
+  width: 350rpx;
+  background: rgb(46,219,196);
+  border-radius: 70rpx;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}

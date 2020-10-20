@@ -1,0 +1,14 @@
+<view class="box">
+  <!-- 左边标题 -->
+  <view class="tit">{{titContent}}</view>
+  <!-- 右边部分 -->
+  <view class="rightPar">
+    <view class="info">{{infoContent}}</view>
+    <view class="pic">
+      <image src="https://s1.ax1x.com/2020/10/12/02VFH0.png"></image>
+    </view>
+  </view>
+
+</view>
+
+<!-- <view class="line"></view> -->

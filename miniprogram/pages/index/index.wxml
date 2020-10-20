@@ -1,0 +1,169 @@
+<!-- 顶部栏 -->
+<van-sticky>
+  <view class="headbar">
+    <view class="pic" bindtap="showPopup">
+      <van-image round width="3.2rem" height="3.2rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </view>
+    <view class="words">晚上好，K</view>
+  </view>
+</van-sticky>
+
+<!-- 搜索栏 -->
+<!-- <view class="search">
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  background="#F6F6F6"
+  placeholder="请输入搜索关键词"
+  />
+</view> -->
+
+<!-- 左侧弹出层，点击头像 -->
+<view class="leftPanel">
+  <van-popup
+  show="{{ show }}"
+  position="left"
+  custom-style="width: 60%;height:100%"
+  bind:close="onClose"
+  >
+  <popleft></popleft>
+  </van-popup>
+
+</view>
+
+
+<!-- 主体栏 -->
+<view class="mainbar">
+  <view class="box">
+    <!-- 左侧轮播 -->
+    <view class="lunbo">
+      <view class="banner">
+        <swiper indicator-dots 
+          indicator-color="rgba(255,255,255,0.5)" 
+          indicator-active-color="#fff" 
+          circular autoplay
+          interval="7000">
+          <swiper-item>
+            <image
+              src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1519263927,1554024039&fm=26&gp=0.jpg">
+            </image>
+          </swiper-item>
+          <swiper-item>
+            <image
+              src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=301839729,184320281&fm=26&gp=0.jpg">
+            </image>
+          </swiper-item>
+          <swiper-item>
+            <image
+              src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3258537004,1856926204&fm=26&gp=0.jpg">
+            </image>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+
+    
+    <!-- 右侧栏 -->
+    <view class="right">
+      <view class="upbar" bindtap="TaskContent">
+        <view class="words">任务大厅</view>
+        <view class="go" animation="{{animationData}}">>></view>
+        <!-- <view class="pic">
+          <image src=""></image>
+        </view> -->
+      </view>
+
+      <view class="bottombar">
+        <view class="leftpar">
+
+          <!-- 第一个小方块 -->
+          <view class="square">
+            <view class="pic" bindtap="ToSearchPage">
+              <image src="/images/转发查阅.png"></image>
+            </view>
+          </view>
+
+          <!-- 第二个小方块 -->
+          <view class="square1">
+            <view class="pic1" bindtap="GiveToast">
+              <image src="/images/地球.png"></image>
+            </view>
+          </view>
+
+          <!-- 自定义组件 -->
+          <!-- <Square/>
+          <Square/> -->
+        </view>
+
+        <view class="rightpar">
+          <!-- 长条项目商城 -->
+          <view class="longbox">
+            <view class="box" bindtap="ShoppingContent">
+              <view class="tit">项目商城</view>
+              <view class="go">>></view>
+            </view>
+          </view>
+
+          <!-- 自定义组件 -->
+          <!-- <LongSquare/> -->
+        </view>
+      </view>
+
+      <!-- <view class="bottombar" bindtap="ShoppingContent">
+        <view class="words">项目商城</view>
+        <view class="go">>></view>
+      </view> -->
+    </view>
+
+    
+  </view>
+</view>
+
+<!-- 通知栏 -->
+<view class="notify">
+  <van-notice-bar color="#1989fa" background="#F6F6F6" left-icon="volume-o" text="最近疫情当前，我们需要时刻警觉自生安全!最近疫情当前，我们需要时刻警觉自生安全!最近疫情当前，我们需要时刻警觉自生安全!" />
+</view>
+
+<!-- 分类栏 -->
+<view class="categorybar">
+  <van-tabs>
+
+    <view class="box">
+
+      <van-tab title="学习">
+      <block wx:for="{{5}}" wx:key="index">
+        <Taskbar></Taskbar>
+        <!-- <maincard image="https://s1.ax1x.com/2020/10/01/0KfnfJ.jpg" txt="一路向前，莫问前程，每一张牌，都是对你的一份思念，我赌赢了所有，却赢zhi不回你的爱。刀光剑影，铁石心肠，只有你知道在隐雾下的我，还是那么脆弱，容易感伤。漫天的冰雪冻结了我的心，但它冻结不了我心中的正义，我愿用我严寒的身躯冰冻这世间的邪恶。我生于黑暗，我也将死于黑暗，我要我的银弩终结这世间的邪恶。物是人非，可我依旧穿着嫁衣，在黑夜中寻找你的身影。在漆黑的夜里你需要一道光照亮夜行的路，我燃烧了自己，但也造就了你我永远不能相拥。我的身世奠定了我的位置，一身的荣华，无限的权力，我更喜欢的是和你在一起！" time="2020-10-1" userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" username="k"/>   -->
+      </block>
+
+      </van-tab>
+      <van-tab title="运动篮球">内容 2</van-tab>
+      <van-tab title="招募">内容 3</van-tab>
+      <van-tab title="通知栏">内容 4</van-tab>
+      
+    </view>
+    
+  </van-tabs>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!-- 底部tabbar -->
+<!-- <van-tabbar active="{{ active }}" active-color="#8ccfb9" bind:change="onChange">
+  <van-tabbar-item icon="setting-o">商城</van-tabbar-item>
+  <van-tabbar-item>
+    <van-icon animation="{{ani}}" slot="icon" color="#8ccfb9" name="add" size="51px" />
+    <van-icon animation="{{ani}}" slot="icon-active" name="add" size="51px" />
+  </van-tabbar-item>
+  <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+</van-tabbar> -->
+
+
+

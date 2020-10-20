@@ -1,0 +1,148 @@
+page{background: rgb(249,248,249);}
+/* 地图栏 */
+.topMap{width: 100%;height: 460rpx;}
+.topMap map{width: 100%;height: 100%;}
+
+
+/* 快递栏 */
+/* 上 */
+.midbar{padding: 25rpx 22rpx 0;}
+.midbar .box{background: rgb(255,255,255);
+  padding: 40rpx 32rpx 0;
+border-radius: 10rpx;}
+.midbar .box .line{width: 100%;height: 2rpx;
+  background-color: rgb(240,240,240);}
+.midbar .box .up{padding-bottom: 34rpx;}
+.midbar .box .up .top{display: flex;
+  justify-content: space-between;align-items: center;
+  padding-bottom: 20rpx;
+}
+.midbar .box .up .top .front{display: flex;
+justify-content: space-between;align-items: center;}
+.midbar .box .up .top .front .tit{font-size: 45rpx;
+font-weight: bold;}
+.midbar .box .up .top .front .share{display: flex;
+justify-content: space-between;align-items: center;
+padding-left: 18rpx;}
+.midbar .box .up .top .front .share image{width: 30rpx;height: 30rpx;}
+.midbar .box .up .top .front .share .words{font-size: 28rpx;
+color: rgb(71,71,255);}
+
+.midbar .box .up .top .after{font-size: 28rpx;color: rgb(107,107,107);}
+.midbar .box .up .bot{font-size: 26rpx;color: rgb(103,103,103);}
+
+
+/* 中 */
+.midbar .box .mid{padding: 54rpx 0;}
+.midbar .box .mid .midbox{
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+.midbar .box .mid .midbox::before{
+  content: "";width: 10rpx;
+  height: 10rpx;
+  background-color: rgb(22,194,74);
+  border-radius: 50%;
+}
+.midbar .box .mid .midbox .station{
+position: relative;
+color:rgb(232,232,232); background-color: rgb(51,51,51);
+width: 90rpx;height: 40rpx;text-align: center;
+font-size: 26rpx;border-radius: 8rpx;}
+.midbar .box .mid .midbox .station::before{
+  content: "";width: 1rpx;height: 60rpx;
+  background-color: rgb(240,240,240);
+  position: absolute;
+  left: -30rpx;
+  top: -8rpx;
+}
+.midbar .box .mid .midbox .whereAndaddress{
+  position: absolute;
+  left: 40rpx;
+}
+.midbar .box .mid .midbox .whereAndaddress .where{
+  padding-bottom: 20rpx;font-size: 29rpx;
+  font-weight: bold;letter-spacing: 2rpx;}
+.midbar .box .mid .midbox .whereAndaddress .address{
+  color: rgb(185,184,184); font-size: 26rpx;
+  letter-spacing: 1rpx;}
+
+
+/* 下 */
+.midbar .box .down{padding: 54rpx 0;}
+.midbar .box .down .downbox{display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;}
+.midbar .box .down .downbox::before{
+  content: "";width: 10rpx;
+  height: 10rpx;
+  background-color: rgb(255,158,58);
+  border-radius: 50%;}  
+.midbar .box .down .downbox .station{
+  position: relative;
+  color:rgb(232,232,232); background-color: rgb(51,51,51);
+  width: 90rpx;height: 40rpx;text-align: center;
+  font-size: 26rpx;border-radius: 8rpx;}
+.midbar .box .down .downbox .station::before{
+  content: "";width: 1rpx;height: 60rpx;
+  background-color: rgb(240,240,240);
+  position: absolute;
+  left: -30rpx;
+  top: -8rpx;}
+.midbar .box .down .downbox .whereAndaddress{
+    position: absolute;
+    left: 40rpx;}  
+.midbar .box .down .downbox .whereAndaddress .where{
+    padding-bottom: 20rpx;font-size: 29rpx;
+    font-weight: bold;letter-spacing: 2rpx;}    
+.midbar .box .down .downbox .whereAndaddress .address{
+    color: rgb(185,184,184); font-size: 26rpx;
+    letter-spacing: 1rpx;}
+
+
+
+/* 查看详情 */
+.look{padding: 0 22rpx;margin-top: 22rpx;}
+.look .box{display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(255,255,255);
+padding: 38rpx 30rpx 38rpx 68rpx;}
+.look .box .sentence{width: 60%;
+font-size: 26rpx;}
+.look .box .square{border: 3rpx solid rgb(233,233,233);
+padding: 14rpx 36rpx;font-size: 28rpx;
+color: rgb(104,104,104);}
+
+
+
+/* 快递短信 */
+.message{padding: 25rpx 22rpx 0;}
+.message .mesBox{background-color: rgb(255,255,255);
+padding: 50rpx 32rpx;}
+.message .mesBox .info{padding-bottom: 60rpx;}
+.message .mesBox .info .tit{font-size: 30rpx;
+font-weight: bold;padding-bottom: 17rpx;}
+.message .mesBox .info .sent{font-size: 26rpx;
+color: rgb(118,118,118);padding-bottom: 36rpx;}
+.message .mesBox .info .toast{font-size: 26rpx;
+color: rgb(184,184,184);}
+
+
+/* 具体快递信息 */
+.form{padding: 25rpx 22rpx 0;}
+.form .formBox{background-color: rgb(255,255,255);
+padding: 36rpx 32rpx;}
+.form .formBox .liner{width: 100%;height: 2rpx;
+background-color: rgb(240,240,240);
+margin: 27rpx 0;}
+
+
+
+/* 其他 */
+.other{padding: 25rpx 22rpx 0;}
+.other .otherBox{background-color: rgb(255,255,255);
+padding: 26rpx 32rpx;}

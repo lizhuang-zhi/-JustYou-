@@ -1,0 +1,25 @@
+<view class="outbox">
+		<view class="box">
+			<!-- 设置用户列表 -->
+			<view class="user-list">
+				<!-- 用户头像 -->
+				<view class="user-img" bindtap="tapMe">
+					<image src="https://s1.ax1x.com/2020/10/07/0afByq.jpg"></image>
+				</view>
+				<!-- 用户id -->
+				<view class="user-id">
+					<text>K</text>
+				</view>
+				<!-- 发表时间 -->
+				<view class="user-time">
+					<text>1天前14：15</text>
+				</view>
+			</view>
+      <view class="content">
+          <text class="Floor">1楼</text>
+          <view class="txt">
+            <text>当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君</text>
+          </view>
+      </view>
+		</view>
+	</view>

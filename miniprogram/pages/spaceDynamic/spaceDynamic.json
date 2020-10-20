@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "maincard":"/components/maincard/maincard"
+  }
+}

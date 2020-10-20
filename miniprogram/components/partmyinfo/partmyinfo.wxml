@@ -1,0 +1,8 @@
+<view class="boxcard">
+	<view class="box">
+		<view class="imgbox">
+			<image src="{{myimg}}"></image>
+			<text>{{rowinfo}}</text>
+		</view>
+	</view>
+</view>

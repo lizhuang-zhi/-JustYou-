@@ -1,0 +1,71 @@
+.mainp{
+  height: 160px;
+  padding: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+/* 背景图片 */
+.mainp image{
+  width: 100%;
+  height: 100%;
+  border-radius:10px;
+}
+/* .part-list{
+  box-sizing: border-box;
+} */
+
+/* 图片列表 */
+.part-list .time-list{
+  height: 30px;
+  line-height: 30px;
+  font-size:14px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 3%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* 热度列表 */
+.part-list .fire-list{
+  height: 30px;
+  line-height: 30px;
+  font-size:14px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 47%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* 标签列表 */
+.part-list .tag-list{
+  height: 30px;
+  line-height: 30px;
+  font-size:14px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right:20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* 内容 */
+.content-list .content-title{
+  height: 30px;
+  line-height: 30px;
+  font-size:20px;
+  color: white;
+  position: absolute;
+  left:25px;
+  bottom: 10px;
+}
+/* 地球、热度、标签图片 */
+.part-list .time-list image,.part-list .fire-list image,.part-list .tag-list image{
+  width: 30px;
+  height: 30px;
+}
+

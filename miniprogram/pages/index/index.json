@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Taskbar":"/components/Taskbar/Taskbar",
+    "popleft":"/components/popleft/popleft",
+    "LongSquare":"/components/LongSquare/LongSquare",
+    "Square":"/components/Square/Square"
+  },
+  "navigationStyle":"custom"
+}

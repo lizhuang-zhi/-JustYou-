@@ -1,0 +1,109 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goodindexbar/goodindexbar",
+    "pages/taskindexbar/taskindexbar",
+    "pages/startway/startway",
+    "pages/missionhall/missionhall",
+    "pages/search/search",
+    "pages/pageFill/pageFill",
+    "pages/user/user",
+    "pages/maincardmore/maincardmore",
+    "pages/listline/listline",
+    "pages/Mylist/Mylist",
+    "pages/attent/attent",
+    "pages/userSpace/userSpace",
+    "pages/test/test",
+    "pages/myinfo/myinfo",
+    "pages/Expressnotes/Expressnotes",
+    "pages/userAddress/userAddress",
+    "pages/spaceDynamic/spaceDynamic"
+
+  ],
+  
+
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "JustYou",
+    "navigationBarTextStyle": "black"
+  },
+
+
+  "tabBar": {
+    "color":"#a4a5a9",
+    "selectedColor":"#5d5e60",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/first2.png",
+        "selectedIconPath":"images/first1.png"
+      },
+      {
+        "pagePath": "pages/spaceDynamic/spaceDynamic",
+        "text": "动态",
+        "iconPath":"images/dingding2.png",
+        "selectedIconPath":"images/dingding1.png"
+      },{
+        "pagePath": "pages/goodindexbar/goodindexbar",
+        "text": "商城",
+        "iconPath":"images/store1.png",
+        "selectedIconPath":"images/store2.png"
+      },{
+        "pagePath": "pages/test/test",
+        "text": "消息",
+        "iconPath":"images/dingding2.png",
+        "selectedIconPath":"images/dingding1.png"
+      },{
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath":"images/home2.png",
+        "selectedIconPath":"images/home1.png"
+      }
+    ]
+  },
+
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-toast": "@vant/weapp/toast/index"
+    
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}

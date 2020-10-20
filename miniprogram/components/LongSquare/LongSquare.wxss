@@ -1,0 +1,15 @@
+.longbox .box{display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 70px;height: 140px;
+background-color: rgb(134,166,188);
+border-radius: 20rpx;}
+.longbox .box .tit{
+  text-align: center;
+letter-spacing: 4rpx;
+padding-top: 20rpx;}
+.longbox .box .go{text-align: right;
+font-size: 30rpx;padding: 0 16rpx 12rpx 0;}
+.longbox .box .tit,.go{
+  color: rgb(211,226,234);
+  font-size: 45rpx;}

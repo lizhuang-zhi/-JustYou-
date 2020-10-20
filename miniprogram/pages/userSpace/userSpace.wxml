@@ -1,0 +1,53 @@
+<!-- 设置外部容器 -->
+<view class="head">
+	<!-- 背景图片 -->
+	<image src="https://s1.ax1x.com/2020/10/01/0KfmY4.jpg"></image>
+	<!-- 设置关注 -->
+	<view bindtap="tapMe" class="Add_attention">
+		<text>{{atten}}</text>
+		<!-- <image wx:if="{{judge}}" src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/add1.png"></image>
+		<image wx:else src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/add.png"></image> -->
+
+	</view>
+
+	<!-- 用户列表 -->
+	<view class="user-list">
+		<!-- 用户头像 -->
+		<view class="user-img">
+			<image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/JustYou/goddes.png"></image>
+		</view>
+		<!-- 用户id -->
+		<view class="user-id">
+			<text>木木</text>
+			<!-- <image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/edit (1).png"></image> -->
+		</view>
+		<!-- 用户存在天数 -->
+		<view class="user-time">
+			<text>541天</text>
+		</view>
+	</view>
+</view>
+<!-- 设置动态框 -->
+<view class="main">
+	<!-- 顶部导航栏 -->
+	<view class="top-wrapper">
+		<!-- 关注 -->
+		<view bindtap="attent" class="attention">
+			<view class="attention-num">25</view>
+			<view class="attention-name">关注</view>
+		</view>
+		<!-- 粉丝 -->
+		<view bindtap="attent" class="fans">
+			<view class="fans-num">{{fans}}</view>
+			<view class="fans-name">粉丝</view>
+		</view>
+		<!-- 动态 -->
+		<view class="activity" bindtap="Mylist">
+			<view class="activity-num">8</view>
+			<view class="activity-name">我的订单</view>
+		</view>
+	</view>
+</view>
+<block wx:for="{{3}}" wx:key="index">
+	<maincard image="https://s1.ax1x.com/2020/10/01/0KfnfJ.jpg" txt="一路向前，莫问前程，每一张牌，都是对你的一份思念，我赌赢了所有，却赢zhi不回你的爱。刀光剑影，铁石心肠，只有你知道在隐雾下的我，还是那么脆弱，容易感伤。漫天的冰雪冻结了我的心，但它冻结不了我心中的正义，我愿用我严寒的身躯冰冻这世间的邪恶。我生于黑暗，我也将死于黑暗，我要我的银弩终结这世间的邪恶。物是人非，可我依旧穿着嫁衣，在黑夜中寻找你的身影。在漆黑的夜里你需要一道光照亮夜行的路，我燃烧了自己，但也造就了你我永远不能相拥。我的身世奠定了我的位置，一身的荣华，无限的权力，我更喜欢的是和你在一起！" time="2020-10-1" userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" username="k"/>
+</block>

@@ -1,0 +1,24 @@
+<!-- 任务大厅发布-长条 -->
+<view class="long" style="background: {{backColr}};">
+  <view class="longbox">
+
+    <view class="up">
+      <view class="pic">
+        <image src="https://s1.ax1x.com/2020/09/26/0PltmT.png"></image>
+      </view>
+      <view class="tit">学习</view>
+    </view>
+
+    <view class="mid">
+      <view class="word">{{description}}</view>
+    </view>
+
+    <view class="bottom">
+      <view class="join">4 参与</view>
+      <view class="img">
+        <image src="https://s1.ax1x.com/2020/09/02/dz0dNq.png"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

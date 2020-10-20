@@ -1,0 +1,19 @@
+.square{
+  width: 69px;
+  height: 65px;
+  background: #D1DBBD;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.square .pic{
+  width: 60%;
+  height: 60%;
+  /* 使块元素水平居中 */
+  margin: auto;
+  
+}
+.square .pic image{
+  width: 100%;
+  height: 100%;
+}

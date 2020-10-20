@@ -1,0 +1,50 @@
+<view class="Searchcontainer">
+  <view class="searchbox">
+    <!-- 顶部栏 -->
+    <view class="topbar">
+      <van-search
+        value="{{ value }}"
+        shape="round"
+        background="#D1DBBD"
+        placeholder="请输入搜索关键词"
+      />
+    </view>
+
+    <!-- 历史搜索 -->
+    <view class="historySearch">
+      <view class="history">
+
+        <view class="topplace">
+          <view class="tit">历史搜索</view>
+          <view class="imgGar">
+            <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/sorts.png"></image>
+          </view>
+        </view>
+        
+        <view class="content">
+          <block wx:for="{{7}}" wx:key="index">
+            <view class="searchwords">
+              <view class="words">考研</view>
+            </view>
+          </block>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 热门搜索 -->
+    <view class="hot">
+      <view class="topbar">
+        <view class="tit">热门搜索</view>
+        <view class="pic">
+          <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/sorts.png"></image>          
+        </view>
+      </view>
+
+      <view class="contentOfhot">
+        内容
+      </view>
+    </view>
+
+  </view>
+</view>
