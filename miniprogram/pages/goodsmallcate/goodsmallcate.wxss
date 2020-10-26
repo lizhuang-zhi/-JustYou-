@@ -1,0 +1,29 @@
+.uppic{width: 100%;height: 420rpx;}
+.uppic image{width: 100%;height: 100%;}
+
+.content{padding: 20rpx 40rpx 0;
+display: flex;flex-wrap: wrap;justify-content: space-between;}
+.content .box{width: 320rpx;height: 393.6rpx;
+  box-shadow:5px 4px 0px 0px rgb(250,250,250);
+  border-radius: 15rpx;margin-bottom: 30rpx;}
+.content .box .pic{width: 100%;height: 270rpx;}
+.content .box .pic image{width: 100%;height: 100%;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.content .box .down .tit{padding: 20rpx 0 10rpx 20rpx;
+font-size: 32rpx;}
+.content .box .down .info{display: flex;
+  justify-content: space-between;padding: 10rpx 20rpx;
+font-size: 25rpx;}
+
+
+
+.radius{width: 100%;height: 40rpx;position: absolute;
+top: 400rpx;left: 0;background-color: rgb(255,255,255);
+border-radius: 20rpx;}
+
+.turnback{width: 35rpx;height: 35rpx;position: absolute;top: 4.6%;left: 5%;}
+.turnback image{width: 100%;height: 100%;}
+.category{position: absolute;top: 4.6%;left: 45.4%;color: rgb(255,255,255);}
+.sentence{position: absolute;top: 24%;left: 40%;color: rgb(232,233,233);}

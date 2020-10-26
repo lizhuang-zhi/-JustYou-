@@ -1,0 +1,94 @@
+<van-tabs sticky animated>
+  <!-- 待付款 -->
+  <van-tab title="待付款">
+    <block wx:for="{{PayMentList}}" wx:key="index">
+      
+      <view class="top">
+        <view class="num">
+          <view class="goodsid">商品编号：</view>
+          <view class="id">202384982938292</view>
+        </view>
+        <view class="topline"></view>
+      </view>
+
+      <van-card
+        num="{{item.goodNum}}"
+        price="{{item.goodPrice}}"
+        desc="{{item.goodTitInfo}}"
+        title="{{item.goodName}}"
+        thumb="{{ item.picUrl }}"
+        wx:for="{{item.goodsCustomList}}" wx:key="index"
+      >
+        <van-tag class="toptag" mark type="warning" slot="tags">代付款</van-tag>
+        <view class="tags" slot="tags">
+          <van-tag class="tag_1" plain type="danger">秒杀</van-tag>
+          <van-tag plain type="danger">书籍</van-tag>
+        </view>
+
+        <!-- <view  class="footer" slot="footer">
+          <van-button class="btn_1" round plain type="default" size="small">取消订单</van-button>
+          <van-button round plain type="danger" size="small">立即付款</van-button>
+        </view> -->
+        <view class="listline" slot="footer"></view>
+
+      </van-card>
+
+      <view class="bottom">
+        <view class="allgoodsNum">共<text>{{item.goodsAllNum}}</text>件商品</view>
+        <view class="allPrice">总价：<text>￥{{item.totalPrice}}</text></view>
+        <view class="bottombtn">
+          <van-button class="btn_1" round plain type="default" size="small">取消订单</van-button>
+          <van-button round plain type="danger" size="small">立即付款</van-button>
+        </view>
+      </view>
+
+      <view class="bottomline"></view>
+    </block>
+
+  </van-tab>
+
+  <!-- 进行中 -->
+  <van-tab title="进行中">
+    <block wx:for="{{InProgressList}}" wx:key="index">
+      <van-card
+        num="{{item.goodNum}}"
+        price="{{item.goodPrice}}"
+        desc="{{item.goodTitInfo}}"
+        title="{{item.goodName}}"
+        thumb="{{ item.picUrl }}"
+        wx:for="{{item.goodsCustomList}}" wx:key="index"
+      >
+        <van-tag class="toptag" mark type="primary" slot="tags">运送中</van-tag>
+        <view class="tags" slot="tags">
+          <van-tag class="tag_1" plain type="danger">秒杀</van-tag>
+          <van-tag plain type="danger">书籍</van-tag>
+        </view>
+
+        <!-- <view  class="footer" slot="footer">
+          <van-button class="btn_1" round plain type="default" size="small">取消订单</van-button>
+          <van-button round plain type="danger" size="small">立即付款</van-button>
+        </view> -->
+      </van-card>
+
+      <view class="bottomline"></view>
+    </block>
+    
+
+  </van-tab>
+
+  <!-- 已完成 -->
+  <van-tab title="已完成">
+    <block wx:for="{{FinallyList}}" wx:key="index">
+     <van-card
+      num="{{item.goodNum}}"
+      price="{{item.goodPrice}}"
+      desc="{{item.goodTitInfo}}"
+      title="{{item.goodName}}"
+      thumb="{{ item.picUrl }}"
+      wx:for="{{item.goodsCustomList}}" wx:key="index"
+      />
+    </block>
+  </van-tab>
+</van-tabs>
+
+

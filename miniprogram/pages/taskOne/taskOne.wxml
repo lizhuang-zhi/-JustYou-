@@ -1,0 +1,121 @@
+<view class="OutBox">
+
+  <view class="innerBox">
+  
+    <!-- 搜索栏 -->
+    <view class="topbar">
+      <!-- 目标栏 -->
+      <view class="address">
+        <view class="tit">目标</view>
+        <view class="content">
+          <input placeholder="搜索输入..." type="text" />
+        </view>
+      </view>
+
+      <!-- 搜索按钮 -->
+      <view class="search">
+        <view class="searchContent">搜索</view>
+      </view>
+
+    </view>
+
+    <!-- 地图栏 -->
+    <view class="mapPar">
+      <view class="topMap">
+        <map 
+          id="map"
+          subkey="RTMBZ-UXSK6-UAJSI-M6UR7-4U53F-FXFNA"
+          longitude="{{longitude}}"
+          latitude="{{latitude}}" 
+          scale="14"
+          layer-style="1"
+          show-location
+        ></map>
+      </view>
+    </view>
+
+    <!-- 图片栏 -->
+    <view class="picPar">
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+    </view>
+
+    <!-- 主信息栏 (人物个数（上拉菜单）)-->
+    <view class="mainPar">
+      <view class="main">
+
+        <van-cell-group>
+          <!-- 标签 -->
+          <van-field input-align="right" value="{{ name }}" clearable label="标签" placeholder="请输入标签" />
+          
+          <!-- 分类 -->
+          <van-cell title="分类" is-link value="{{getSorts}}" 
+          arrow-direction="down" bindtap="sortsTap"/>
+          <van-action-sheet
+            show="{{ sortsShow }}"
+            actions="{{ actions }}"
+            bind:close="sortsClose"
+            bind:select="sortsSelect"
+          />
+
+          <!-- 时间 -->
+          <van-cell title="时间" is-link value="{{getTime}}" 
+          arrow-direction="down" bindtap="TimePopup"/>
+          <van-popup show="{{ Timeshow }}" bind:close="TimeClose"
+          position="bottom">
+            <van-datetime-picker
+              type="datetime"
+              value="{{ currentDate }}"
+              min-date="{{ minDate }}"
+              max-date="{{ maxDate }}"
+              bind:input="onInput"
+            />
+          </van-popup>
+          
+
+          <!-- 性别选择 -->
+          <view class='sex'>
+            <text>性别</text>
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label class="radio" wx:for="{{sex}}" wx:key="index">
+                <radio color="#353535" value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+              </label>
+            </radio-group>
+          </view>
+
+          <!-- 人物个数 -->
+          <van-cell title="人数" is-link value="{{getPeopleCount}}" 
+          arrow-direction="down" bindtap="PeopelCountOpen"/>
+          <van-popup show="{{ peoCount }}" bind:close="PeopelCountClose"
+          position="bottom">
+            <Pickerup></Pickerup>
+            <van-picker 
+            columns="{{ Peocolumns }}" 
+            default-index="{{ 2 }}"
+            bind:change="PeoCountChange" 
+            />
+          </van-popup>
+          <!-- toast -->
+          <van-toast id="van-toast" />
+
+
+          <van-field input-align="right" value="{{ message }}" label="QQ号" type="number" placeholder="请输入您的QQ" autosize border="{{ ture }}" />
+        </van-cell-group>
+
+
+      </view>
+    </view>
+
+
+    <!-- 其他备注 -->
+    <view class="ohterWard">
+      <view class="box">
+        <textarea hidden="{{hidJudge}}" auto-height placeholder="特别备注（选填）..." name="textarea"></textarea>
+      </view>
+    </view>
+
+    <!-- 提交按钮 -->
+    <button plain>发布</button>
+    
+  </view>
+
+</view>

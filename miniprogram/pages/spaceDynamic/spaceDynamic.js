@@ -1,4 +1,7 @@
 // pages/spaceDynamic/spaceDynamic.js
+var api = require('../../utils/api');
+// 动态数据集合
+var spaceIndex = api.getspaceIndex();
 Page({
 
   /**
@@ -8,11 +11,24 @@ Page({
 
   },
 
+  // 初始化数据
+  Start(page = 1){
+    wx.request({
+      url: spaceIndex,
+      data: {
+        pageNum: page 
+      },
+      success:res=>{
+        console.log(res);
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.Start();
   },
 
   /**

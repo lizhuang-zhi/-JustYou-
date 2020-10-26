@@ -16,7 +16,7 @@ Page({
     userSex:'',
     modalHidden:true
   },
-    //单选按钮发生变化
+  //单选按钮发生变化
   radioChange(e){
     console.log(e.detail.value);
     var sexName=this.data.isSex
@@ -58,6 +58,8 @@ Page({
       modalHidden: true
     })
   },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

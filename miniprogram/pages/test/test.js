@@ -108,15 +108,22 @@ Page({
     Toast(`当前值：${value}, 当前索引：${index}`);
   },
 
+  // 常用地址填写页面
+  ToGetUsualAddress(){
+    wx.navigateTo({
+      url: '/pages/userAddress/userAddress',
+    })
+  },
+
   
 
 
-  chaKan: function (e) {
-      wx.openLocation({
-        latitude: 31.38475,
-        longitude: 120.98181,
-      })
-  },
+  // chaKan: function (e) {
+  //     wx.openLocation({
+  //       latitude: 31.38475,
+  //       longitude: 120.98181,
+  //     })
+  // },
 
   // 选择位置事件
   xuanZe: function (e) {
@@ -126,12 +133,9 @@ Page({
       }
     })
   },
- 
- 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+
+  // 初始化获取地址位置
+  Start(){
     var that = this;
     //获取当前位置
     wx.getLocation({
@@ -144,6 +148,15 @@ Page({
         
       }
     })
+  },
+ 
+ 
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    // 初始化位置信息
+    this.Start();
 
     
   },

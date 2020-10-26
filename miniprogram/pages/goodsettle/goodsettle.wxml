@@ -1,0 +1,92 @@
+<!-- 确认支付遮罩层 -->
+<van-overlay show="{{ show }}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block" catch:tap="noop">
+      <image src="/images/weixinPay.jpg"></image>
+    </view>
+  </view>
+</van-overlay>
+
+<!-- 用户信息 -->
+<view class="userInfo">
+  <view class="box">
+    <view class="up">
+      <view class="username">李壮志</view>
+      <view class="userphone">18200181462</view>
+    </view>
+
+    <view class="useraddress">四川省 成都市 武侯区 顺和街1号5栋1单元20楼34号德玛西亚总部</view>
+  </view>
+</view>
+
+
+<!-- 遍历商品集合（购物车）-->
+<view class="goods" wx:if="{{id == ''}}">
+  <van-card 
+    num="{{item.goodNum}}"
+    price="{{item.goodPrice}}"
+    desc="{{item.goodTitInfo}}"
+    title="{{item.goodName}}"
+    thumb="{{ item.picUrl }}"
+    wx:for="{{goodsList}}" wx:key="index"
+  >
+
+  <view class="line" slot="footer"></view>
+
+  </van-card>
+</view>
+
+
+<!-- 商品对象（立即支付跳转至此） -->
+<view class="goods" wx:else>
+  <van-card 
+    num="{{goodobject.goodNum == null ? 1 : goodobject.goodNum}}"
+    price="{{goodobject.goodPrice}}"
+    desc="{{goodobject.goodTitInfo}}"
+    title="{{goodobject.goodName}}"
+    thumb="{{ goodobject.picUrl }}"
+  >
+
+  <view class="line" slot="footer"></view>
+
+  </van-card>
+</view>
+
+
+<!-- 其他 -->
+<view class="down">
+  <view class="box">
+
+    <view class="up">
+      <view class="total">合计：</view>
+      <view class="price">￥{{totalPrice}}</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="mid">
+      <view class="otherwords">备注：</view>
+      <view class="words">备注信息（选填）...</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="bottom">
+      <view class="paymethod">付款方式：</view>
+      <view class="method">微信</view>
+    </view>
+
+  </view>
+</view>
+
+
+<van-submit-bar
+  price="{{ totalPrice*100 }}"
+  button-text="确认支付"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+  label="实付金额："
+>
+
+  <view slot="tip">请确认您的收件信息, <text>修改地址</text></view>
+</van-submit-bar>

@@ -1,0 +1,114 @@
+page {
+  background: #FFFFFF;
+}
+
+.OutBox {
+  padding: 26rpx 34rpx;
+}
+
+/* 搜索栏 */
+.OutBox .innerBox .topbar {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.OutBox .innerBox .topbar .address {
+  display: flex;
+  align-items: center;
+  background: #F5F4F4;
+  border-radius: 40rpx;
+  padding: 0 28rpx;
+
+}
+
+.OutBox .innerBox .topbar .address .tit {
+  font-size: 28rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  padding-right: 18rpx;
+
+}
+
+.OutBox .innerBox .topbar .address .content {
+  width: 400rpx;
+  font-size: 26rpx;
+
+}
+
+
+.OutBox .innerBox .topbar .search .searchContent {
+  width: 110rpx;
+  height: 60rpx;
+  background: #353635;
+  color: #FFFFFF;
+  border-radius: 40rpx;
+  padding: 15rpx 0 0;
+  text-align: center;
+  letter-spacing: 2rpx;
+}
+
+
+/* 地图栏 */
+.OutBox .innerBox .mapPar .topMap {
+  width: 100%;
+  height: 300rpx;
+  padding: 26rpx 0 0;
+}
+
+.OutBox .innerBox .mapPar .topMap map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 图片栏 */
+.OutBox .innerBox .picPar {
+  padding: 40rpx 0 30rpx;
+}
+
+/* 主体栏 */
+.OutBox .innerBox .mainPar .main .sex{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1rpx solid #eee;
+}
+.OutBox .innerBox .mainPar .main .sex text{
+  font-size: 28rpx;
+  color: #323233;
+}
+
+
+/* 其他备注 */
+.OutBox .innerBox .ohterWard {
+  margin: 30rpx 0 0;
+  width: 100%;
+  height: 300rpx;
+  box-shadow: 0 0 10px rgb(209, 204, 204);
+  box-sizing: border-box;
+  padding: 32rpx 34rpx 0;
+  border-radius: 20rpx;
+
+}
+
+.OutBox .innerBox .ohterWard .box {
+  width: 100%;
+}
+
+.OutBox .innerBox .ohterWard .box textarea {
+  width: 100%;
+  font-size: 28rpx;
+}
+
+
+
+
+/* 提交按钮 */
+.OutBox .innerBox button {
+  width: 96%;
+  margin: 40rpx auto;
+
+}

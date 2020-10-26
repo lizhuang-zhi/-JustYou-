@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 排行榜
+    RankList:[
+      {jud:true,color:"red",rank:"1",desc:"东软美景",numVal:"9090923"},
+      {jud:true,color:"orange",rank:"2",desc:"青城山",numVal:"2565556"},
+      {jud:true,color:"yellowgreen",rank:"3",desc:"软件工程实践中心",numVal:"34444"},
+      {jud:false,color:"gray",rank:"4",desc:"德玛西亚",numVal:"4356"},
+      {jud:false,color:"gray",rank:"5",desc:"无极剑圣",numVal:"5000"},
+    ]
   },
 
   /**

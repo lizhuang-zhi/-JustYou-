@@ -4,6 +4,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    time:String,
+    looks:String,
+    category:String,
+    title:String,
+    picture:String
+
 
   },
 

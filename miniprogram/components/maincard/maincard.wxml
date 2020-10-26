@@ -17,7 +17,7 @@
 			<!-- 发表状态 -->
 			<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
 			<view class="state" bindtap="onClick">
-				<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/elipsis.png">
+				<image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/JustYou/goddes.png">
 				</image>
 			</view>
 		</view>
@@ -46,13 +46,13 @@
 		</view>
 		<!-- 爱心 -->
 		<view class="click" bindtap="tapMe">
-			<image wx:if="{{judge}}" src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心灰.png"></image>
-			<image wx:else src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/爱心红.png"></image>
+			<image wx:if="{{judge}}" src="https://s1.ax1x.com/2020/10/07/0ah39J.png"></image>
+			<image wx:else src="https://s1.ax1x.com/2020/10/07/0ahlh4.png"></image>
 			<text class="click-love">{{lovenum}}</text>
 		</view>
 		<!-- 消息 -->
 		<view class="Message" bindtap="init">
-			<image src="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/Message.png">
+			<image src="https://s1.ax1x.com/2020/10/07/0ahcut.png">
 			</image>
 			<text class="MS">评论</text>
 		</view>

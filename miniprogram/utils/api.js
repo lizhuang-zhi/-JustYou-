@@ -1,14 +1,35 @@
-var prefix = 'http://localhost:8099'  //域名前缀
+var prefix = 'https://mrkleo.top/justyou'  //域名前缀
 
 /* 接口地址 */
-// 甄选好物
-const myLikeUrl = prefix + '/weixin/goods/mylike';
+// 首页（index）
+// 首页分类
+const indexCategory = prefix + '/taskHall/listClassName';
+// 通过分类获取对应的集合
+const TaskListByCate = prefix + '/taskHall/TaskByClass';
 
 
-function getmyLikeUrl(){
-  return myLikeUrl;
+// 动态（spaceDynamic）
+const spaceIndex = prefix + '/gotoHomePage';
+
+
+
+
+function getindexCategory(){
+  return indexCategory;
+}
+
+function getTaskListByCate(){
+  return TaskListByCate;
+}
+
+function getspaceIndex(){
+  return spaceIndex;
 }
 
 
-module.exports.getmyLikeUrl = getmyLikeUrl;
 
+
+
+module.exports.getindexCategory = getindexCategory;
+module.exports.getTaskListByCate = getTaskListByCate;
+module.exports.getspaceIndex = getspaceIndex;

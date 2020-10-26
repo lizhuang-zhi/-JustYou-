@@ -1,0 +1,26 @@
+<view class="myAlbum">
+	<!--相册头部 -->
+	<view class="Ablum-head">
+		<view class="Album-name">我的相册</view>
+		<!-- 相册图标 -->
+		<view class="Album-icon">
+			<!-- 点赞 -->
+			<!-- <view class="hit">
+				<van-icon name="thumb-circle" size="22px" />
+			</view> -->
+			<!-- 评论 -->
+			<!-- <view class="Comment">
+				<van-icon name="chat" size="22px" />
+			</view> -->
+			<!-- 浏览 -->
+			<!-- <view class="eye">
+				<van-icon name="browsing-history" size="22px" />
+			</view> -->
+		</view>
+		<view class="Album-con">人与景皆可如画</view>
+	</view>
+	<!-- 相册列表 -->
+	<block wx:for="{{3}}" wx:key="index">
+		<Album />
+	</block>
+</view>

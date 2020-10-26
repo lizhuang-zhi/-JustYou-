@@ -6,18 +6,30 @@
     "pages/startway/startway",
     "pages/missionhall/missionhall",
     "pages/search/search",
-    "pages/pageFill/pageFill",
     "pages/user/user",
     "pages/maincardmore/maincardmore",
-    "pages/listline/listline",
-    "pages/Mylist/Mylist",
     "pages/attent/attent",
     "pages/userSpace/userSpace",
     "pages/test/test",
     "pages/myinfo/myinfo",
     "pages/Expressnotes/Expressnotes",
     "pages/userAddress/userAddress",
-    "pages/spaceDynamic/spaceDynamic"
+    "pages/spaceDynamic/spaceDynamic",
+    "pages/moreTask/moreTask",
+    "pages/taskOne/taskOne",
+    "pages/webSocket/webSocket",
+    "pages/Albumwx/Albumwx",
+    "pages/userCharac/userCharac",
+    "pages/webSocketIndex/webSocketIndex",
+    "pages/goodcategorys/goodcategorys",
+    "pages/goodsmallcate/goodsmallcate",
+    "pages/goodcarts/goodcarts",
+    "pages/goodorder/goodorder",
+    "pages/goodsearch/goodsearch",
+    "pages/goodcontent/goodcontent",
+    "pages/goodsettle/goodsettle"
+
+
 
   ],
   
@@ -42,18 +54,20 @@
         "selectedIconPath":"images/first1.png"
       },
       {
-        "pagePath": "pages/spaceDynamic/spaceDynamic",
-        "text": "动态",
+        "pagePath": "pages/webSocketIndex/webSocketIndex",
+        "text": "消息",
         "iconPath":"images/dingding2.png",
         "selectedIconPath":"images/dingding1.png"
-      },{
+      },
+      {
         "pagePath": "pages/goodindexbar/goodindexbar",
         "text": "商城",
         "iconPath":"images/store1.png",
         "selectedIconPath":"images/store2.png"
-      },{
-        "pagePath": "pages/test/test",
-        "text": "消息",
+      },
+      {
+        "pagePath": "pages/spaceDynamic/spaceDynamic",
+        "text": "动态",
         "iconPath":"images/dingding2.png",
         "selectedIconPath":"images/dingding1.png"
       },{
@@ -101,7 +115,9 @@
     "van-share-sheet": "@vant/weapp/share-sheet/index",
     "van-uploader": "@vant/weapp/uploader/index",
     "van-picker": "@vant/weapp/picker/index",
-    "van-toast": "@vant/weapp/toast/index"
+    "van-toast": "@vant/weapp/toast/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
     
   },
   "sitemapLocation": "sitemap.json"

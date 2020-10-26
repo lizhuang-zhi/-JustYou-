@@ -1,5 +1,4 @@
-<maincardmore time="2020-10-1" txt="一路向前，莫问前程" userid="k" imagel="https://s1.ax1x.com/2020/10/01/0KfEwT.jpg" userimg="cloud://kchheniry-4lstb.6b63-kchheniry-4lstb-1302952647/JustYou/User/user-img1.jpg"/>
+<maincardmore userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" time="2020-10-1" txt="一路向前，莫问前程" userid="k" imagel="https://s1.ax1x.com/2020/10/01/0KfEwT.jpg" />
 
 <CommentCard txt="{{txt}}"/>
-<!-- <CommentCard txt="{{txt}}"/>
-<CommentCard txt="{{txt}}"/> -->
+

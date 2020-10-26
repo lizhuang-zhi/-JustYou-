@@ -1,0 +1,17 @@
+<view class='outcard'>
+  <view class='card'>
+    <view class='card-img'>
+      <view class='hot-num' style="background-color:{{color}};">{{rankingnum}}</view>
+      <image class='img' src="https://s1.ax1x.com/2020/06/01/tJwQw8.jpg"></image>
+    </view>
+     <view class="card-content">
+      <view class="title">
+         <text>{{Desc}}</text>
+         <text class='hotcontent' wx:if="{{judge}}">热</text>
+      </view>
+      <view class="hotnum">
+        <text>人气值 {{numberValue}}</text>
+      </view>
+    </view>
+  </view>
+</view>

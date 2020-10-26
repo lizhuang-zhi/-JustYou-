@@ -48,7 +48,6 @@ var common = {
    });
  },
 
-
   // 更改日期格式
   changeTimeFormat(time){
     return this.format(time,'yyyy-MM-dd');     

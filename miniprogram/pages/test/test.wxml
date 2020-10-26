@@ -57,7 +57,7 @@
           <view class="address">点击填写收件地址</view>
         </view>
 
-        <view class="station">常用</view>
+        <view class="station" bindtap="ToGetUsualAddress">常用</view>
 
       </view>
     </view>
@@ -127,6 +127,7 @@
     bind:close="PoponClose"
     position="bottom"
     custom-style="height: 40%;">
+      <Pickerup></Pickerup>
       <van-picker columns="{{ columns }}" bind:change="PickeronChange" />
     </van-popup>
 

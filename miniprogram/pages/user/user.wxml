@@ -53,21 +53,22 @@
 <view class="article">
 
   <view class="box">
-    <view class="theme">博客文章</view>
+    <view class="theme">关于我的</view>
     <view class="line"></view>
-    <view class="function">
+
+    <view class="function" wx:for="{{aboutMeList}}" wx:key="index">
       <!-- 第一个功能 -->
       <view class="collection" bindtap="myProServe">
         <view class="leftPart">
           <image src="https://s1.ax1x.com/2020/09/02/dz019f.png"></image>
-          <view class="tit">我的收藏</view>
+          <view class="tit">{{item.tit}}</view>
         </view>
         <view class="rightPart">查看 ></view>
       </view>
 
-      <!-- 第二个功能... -->
 
     </view>
+
   </view>
 </view>
 

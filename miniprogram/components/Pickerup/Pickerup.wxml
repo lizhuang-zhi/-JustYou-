@@ -1,0 +1,5 @@
+<view class="picker">
+	<view bindtap="TCancel" class="Cancel">取消</view>
+	<view class="title">限制人数</view>
+	<view bindtap="TDeter" class="Determine">确定</view>
+</view>

@@ -1,0 +1,45 @@
+<view class="uppic">
+  <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2439783137,4116775368&fm=26&gp=0.jpg"></image>
+</view>
+
+
+
+<van-tree-select
+  items="{{ items }}"
+  height="850rpx"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+>
+  <view class="content" slot="content">
+    <view class="box" wx:for="{{smallSortsList}}" wx:key="index"
+    bindtap="ToSmallCate" data-id="{{item.id}}"
+    data-smallsortName="{{item.smallsortName}}"
+    data-smallsortDescription="{{item.smallsortDescription}}">
+
+      <view class="inner">
+        <image src="https://img.alicdn.com/bao/uploaded/O1CN01h4yDIM22kPbs6jinM_!!0-item_pic.jpg_240x240.jpg"></image>
+        <view class="innerbox">
+          <view class="tit">{{item.smallsortName}}</view>
+          <view class="desc">{{item.smallsortDescription}}</view>
+        </view>
+      </view>
+
+      <view class="line"></view>
+    </view>
+
+  </view>
+  
+</van-tree-select>
+
+
+
+<navigator url="/pages/goodindex/goodindex" open-type="navigateBack">
+  <view class="turnback">
+    <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/turnback.png"></image>
+  </view>
+</navigator>
+
+<view class="category">分类</view>
+<view class="sentence">- 发现好物，探索新生活 -</view>

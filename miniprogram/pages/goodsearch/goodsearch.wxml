@@ -1,0 +1,38 @@
+<van-sticky>
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    shape="round"
+    background="#D81E06"
+    bind:change="onChange"
+    bind:search="onSearch"
+  >
+    <view class="pic" slot="action" bind:tap="onClick">
+      <image src="/images/good_scan.png"></image>
+    </view>
+  </van-search>
+</van-sticky>
+
+
+
+<!-- 内容 -->
+<view class="content">
+  <view class="box" wx:for="{{goodsList}}" wx:key="index"
+  bindtap="ToContent" data-id="{{item.id}}">
+
+    <view class="pic">
+      <image src="{{item.picUrl}}"></image>
+    </view>
+
+    <view class="down">
+      <view class="tit">{{item.goodName}}</view>
+      <view class="info">
+        <view class="price">￥{{item.goodPrice}}</view>
+        <view class="sales">已售 {{item.goodSales}}</view>
+      </view>
+    </view>
+
+  </view>   
+</view>
+

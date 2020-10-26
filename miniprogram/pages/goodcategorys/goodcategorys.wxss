@@ -1,0 +1,21 @@
+.uppic{width: 100%;height: 470rpx;}
+.uppic image{width: 100%;height: 100%;}
+
+van-tree-select .content{padding: 38rpx 40rpx 50rpx;}
+van-tree-select .content .box .inner{display: flex;}
+van-tree-select .content .box .inner image{width: 130rpx;height: 130rpx;
+border-radius: 10rpx;}
+van-tree-select .content .box .inner .innerbox{display: flex;
+flex-direction: column;justify-content: space-around;padding-left: 20rpx;}
+van-tree-select .content .box .inner .innerbox .tit{font-size: 32rpx;
+font-weight: bold;}
+van-tree-select .content .box .inner .innerbox .desc{font-size: 29rpx;
+color: rgb(109,110,110);}
+van-tree-select .content .box .line{width: 450rpx;height: 4rpx;
+  background-color: rgb(230,231,231);margin: 30rpx 0;text-align: center;}
+
+
+.turnback{width: 35rpx;height: 35rpx;position: absolute;top: 4.6%;left: 5%;}
+.turnback image{width: 100%;height: 100%;}
+.category{position: absolute;top: 4.6%;left: 45%;color: rgb(255,255,255);}
+.sentence{position: absolute;top: 24%;left: 5%;color: rgb(232,233,233);}

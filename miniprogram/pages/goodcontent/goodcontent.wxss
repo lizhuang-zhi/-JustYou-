@@ -1,0 +1,75 @@
+.banner{width: 100%;height: 460rpx;}
+.banner image{width: 100%;height: 100%;}
+
+.pricebar{width: 100%;height: 145rpx;background-color: rgb(255,61,49);
+display: flex;justify-content: space-between;
+align-items: center;padding: 0 30rpx;box-sizing: border-box;}
+.pricebar .kefupic{width: 60rpx;height: 60rpx;}
+.pricebar .kefupic .pic{width: 100%;height: 100%;}
+/* .pricebar .kefupic .pic::before{width: 1rpx;height: 60rpx;content: "";
+  background-color: rgb(240,240,240);position: absolute;top: 0;left: 0;} */
+
+.pricebar .info{display: flex;align-items: center;
+width: 510rpx;justify-content: space-between;
+color: rgb(255,255,255);}
+.pricebar .info .price{font-size: 40rpx;padding-right: 20rpx;}
+.pricebar .info .store{font-size: 24rpx;}
+.pricebar .info .sales{font-size: 24rpx;}
+
+
+.titpart{padding: 30rpx 25rpx;}
+.titpart .tit{font-size: 34rpx;font-weight: bold;
+padding-bottom: 10rpx;}
+.titpart .down{display: flex;align-items: center;}
+.titpart .down van-tag{padding-right: 10rpx;}
+.titpart .down .des{font-size: 26rpx;padding-top: 7rpx;}
+
+.line_1{width: 100%;height: 10rpx;background: rgb(246,245,245);}
+
+
+.service{padding: 35rpx 25rpx;}
+.service .box{display: flex;justify-content: space-between;}
+.service .box .innerbox{display: flex;align-items: center;}
+.service .box .innerbox .pic{width: 39rpx;height: 39rpx;
+padding-right: 10rpx;}
+.service .box .innerbox .pic image{width: 100%;height: 100%;}
+.service .box .innerbox .txt{font-size: 26rpx;}
+
+
+.like{padding: 25rpx 0 30rpx 30rpx;}
+.like .box .upbar{display: flex;
+  justify-content: space-between;align-items: center;
+padding: 0 30rpx 25rpx 0;}
+.like .box .upbar .tit{font-size: 34rpx;}
+.like .box .upbar .look{font-size: 25rpx;
+  color: rgb(190,190,190);}
+.like .box .rollbar .scroll .inbox{display: flex;}
+.like .box .rollbar .scroll .inbox .smallbox{width: 300rpx;
+flex: 0 0 300rpx;padding-right: 15rpx;}
+
+.like .box .rollbar .scroll .inbox .smallbox .pic{width: 100%;
+height: 182rpx;}
+.like .box .rollbar .scroll .inbox .smallbox .pic image{width: 100%;
+  height: 100%;border-radius: 18rpx;}
+.like .box .rollbar .scroll .inbox .smallbox .tit{font-size: 26rpx;
+color: rgb(54,54,54);padding: 20rpx 0 2rpx;
+font-weight: 520;}
+.like .box .rollbar .scroll .inbox .smallbox .price{font-size: 26rpx;
+font-weight: bold;color: rgb(255,85,19);}
+
+
+.desciption{padding: 40rpx 40rpx 30rpx;}
+.desciption .txt{font-size: 30rpx;line-height: 1.9;
+letter-spacing: 3rpx;padding-bottom: 30rpx;}
+.desciption .line_2{width: 100%;height: 2rpx;background: rgb(240,240,240);}
+
+
+.details{padding: 0 40rpx 70rpx;}
+.details .tit{font-size: 34rpx;color: rgb(249,220,83);
+padding-bottom: 25rpx;}
+.details .pic{width: 100%;text-align: center;}
+.details .pic image{width: 100%;text-align: center;}
+
+
+.turnback{width: 35rpx;height: 35rpx;position: absolute;top: 4.6%;left: 5%;}
+.turnback image{width: 100%;height: 100%;}

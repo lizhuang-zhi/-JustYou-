@@ -227,9 +227,13 @@
   justify-content: space-between;
   background-color: rgb(134,166,188);
   border-radius: 20rpx;
-box-shadow: 0 0 10px rgb(83, 103, 116);}
+  box-shadow: 0 0 10px rgb(83, 103, 116);
+  background-image: url('https://s1.ax1x.com/2020/10/24/BVE2VA.jpg');
+  background-size: 130%;
+}
+
 .mainbar .box .right .bottombar .rightpar .longbox .box .tit{
-    text-align: center;
+  text-align: center;
   letter-spacing: 4rpx;
   padding-top: 20rpx;}
 .mainbar .box .right .bottombar .rightpar .longbox .box .go{text-align: right;

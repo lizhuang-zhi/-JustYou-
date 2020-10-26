@@ -38,7 +38,7 @@ Component({
     at:true,
     light:true,
     judge:true,
-    lovenum:0,
+    lovenum:100,
   },
 
   /**

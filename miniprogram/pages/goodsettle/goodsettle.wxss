@@ -1,0 +1,48 @@
+.userInfo{padding: 20rpx 30rpx;}
+.userInfo .box .up{display: flex;align-items: center;
+  padding-bottom: 10rpx;}
+.userInfo .box .up .username{padding-right: 15rpx;
+font-size: 28rpx;letter-spacing: 1rpx;}
+.userInfo .box .up .userphone{font-size: 26rpx;
+color: #717171;}
+.userInfo .box .useraddress{font-size: 29rpx;
+line-height: 1.8;letter-spacing: 1rpx;}
+
+
+
+.goods{padding: 30rpx 0 40rpx;
+background-color: rgb(250,250,250);}
+.goods .line{width: 100%;height: 2rpx;
+background-color: rgb(238,240,240);
+margin-top: 30rpx;}
+
+
+.down{padding: 40rpx 30rpx 320rpx;}
+.down .box{font-size: 29rpx;letter-spacing: 2rpx;}
+.down .box .up{display: flex;}
+.down .box .up .price{color: rgb(255,53,23);
+font-weight: 700;}
+.down .box .mid .words{width: 100%;height: 150rpx;
+background-color: rgb(244,243,243);
+border-radius: 20rpx;padding: 20rpx 0 0 20rpx;
+box-sizing: border-box;color: rgb(130,130,130);}
+.down .box .mid .otherwords{padding-bottom: 20rpx;}
+.down .box .line{width: 100%;height: 2rpx;
+  background-color: rgb(238,240,240);
+margin: 30rpx 0 30rpx;}
+.down .box .bottom{display: flex;}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.wrapper .block {
+  width: 280px;
+  height: 320px;
+  background-color: #fff;
+}
+
+.wrapper .block image{width: 100%;height: 100%;}

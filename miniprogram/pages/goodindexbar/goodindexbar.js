@@ -1,5 +1,5 @@
 var api = require('../../utils/api');
-var myLikeUrl = api.getmyLikeUrl();
+// var myLikeUrl = api.getmyLikeUrl();
 
 Page({
 

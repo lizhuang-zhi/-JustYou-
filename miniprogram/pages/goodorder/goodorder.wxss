@@ -1,0 +1,34 @@
+.top{padding: 25rpx 30rpx 20rpx;}
+.top .num{display: flex;font-size: 30rpx;
+font-weight: 320;}
+.top .num .goodsid{letter-spacing: 1rpx;}
+.top .topline{width: 100%;height: 2rpx;
+background-color: rgb(240,240,240);
+margin-top: 12rpx;}
+
+
+van-card{position: relative;}
+van-card .toptag{position: absolute;top: 0;left: -39%;}
+van-card .tags .tag_1{margin-right: 10rpx;}
+van-card .listline{width: 100%;height: 2rpx;
+  background-color: rgb(240,240,240);
+margin-top: 30rpx;}
+
+
+.bottom{display: flex;justify-content: space-between;
+  font-size: 25rpx;padding: 28rpx 30rpx 8rpx; 
+align-items: center;box-sizing: border-box;}
+.bottom .allgoodsNum{letter-spacing: 2rpx;}
+.bottom .allgoodsNum text{color: red;font-size: 28rpx;}
+.bottom .allPrice{padding-right: 70rpx;}
+.bottom .allPrice text{color: red;font-size: 28rpx;}
+.bottom .bottombtn .btn_1{padding-right: 20rpx;}
+
+
+.footer{padding-top: 20rpx;display: flex;
+justify-content: flex-end;}
+.footer .btn_1{margin-right: 13rpx;}
+
+.bottomline{margin-top: 20rpx; 
+  width: 100%; height: 12rpx;
+background-color: rgb(240,240,240);}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Album":"/components/Album/Album"
+  } ,
+  "enablePullDownRefresh":true
+}

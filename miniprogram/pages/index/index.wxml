@@ -21,10 +21,10 @@
 <!-- 左侧弹出层，点击头像 -->
 <view class="leftPanel">
   <van-popup
-  show="{{ show }}"
-  position="left"
-  custom-style="width: 60%;height:100%"
-  bind:close="onClose"
+    show="{{ show }}"
+    position="left"
+    custom-style="width: 60%;height:100%"
+    bind:close="onClose"
   >
   <popleft></popleft>
   </van-popup>
@@ -68,9 +68,6 @@
       <view class="upbar" bindtap="TaskContent">
         <view class="words">任务大厅</view>
         <view class="go" animation="{{animationData}}">>></view>
-        <!-- <view class="pic">
-          <image src=""></image>
-        </view> -->
       </view>
 
       <view class="bottombar">
@@ -126,20 +123,31 @@
 
 <!-- 分类栏 -->
 <view class="categorybar">
-  <van-tabs>
+  <van-tabs swipeable bind:change="ChangeTabs">
 
     <view class="box">
 
-      <van-tab title="学习">
-      <block wx:for="{{5}}" wx:key="index">
-        <Taskbar></Taskbar>
-        <!-- <maincard image="https://s1.ax1x.com/2020/10/01/0KfnfJ.jpg" txt="一路向前，莫问前程，每一张牌，都是对你的一份思念，我赌赢了所有，却赢zhi不回你的爱。刀光剑影，铁石心肠，只有你知道在隐雾下的我，还是那么脆弱，容易感伤。漫天的冰雪冻结了我的心，但它冻结不了我心中的正义，我愿用我严寒的身躯冰冻这世间的邪恶。我生于黑暗，我也将死于黑暗，我要我的银弩终结这世间的邪恶。物是人非，可我依旧穿着嫁衣，在黑夜中寻找你的身影。在漆黑的夜里你需要一道光照亮夜行的路，我燃烧了自己，但也造就了你我永远不能相拥。我的身世奠定了我的位置，一身的荣华，无限的权力，我更喜欢的是和你在一起！" time="2020-10-1" userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" username="k"/>   -->
-      </block>
+      <block wx:for="{{CateList}}" wx:key="index">
 
-      </van-tab>
-      <van-tab title="运动篮球">内容 2</van-tab>
-      <van-tab title="招募">内容 3</van-tab>
-      <van-tab title="通知栏">内容 4</van-tab>
+        <van-tab title="{{item.name}}">
+
+          <block wx:for="{{TaskByCate}}" wx:key="index">
+            <Taskbar time="{{item.release_time}}"
+            looks="{{item.recruiting_number}}"
+            category="{{item.taskClassification.name}}"
+            title="{{item.task_title}}"
+            picture="{{item.taskClassification.picture}}"></Taskbar>
+          </block>
+
+        </van-tab>
+
+        <!-- <van-tab title="运动">内容 2</van-tab>
+        <van-tab title="ALL">内容 4</van-tab>
+        <van-tab title="招募">内容 3</van-tab>
+        <van-tab title="通知栏">内容 4</van-tab> -->
+
+      </block>
+      
       
     </view>
     

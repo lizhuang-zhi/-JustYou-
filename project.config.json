@@ -2,7 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -30,35 +30,25 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": []
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "appid": "wx45847f8c326518ee",
   "projectname": "WX_justyou",
-  "libVersion": "2.8.1",
+  "libVersion": "2.13.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
     "plugin": {
-      "current": -1,
       "list": []
     },
     "game": {
       "list": []
     },
     "gamePlugin": {
-      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "current": -1,
       "list": [
         {
           "id": -1,
@@ -97,13 +87,6 @@
         },
         {
           "id": -1,
-          "name": "任务填写",
-          "pathName": "pages/pageFill/pageFill",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
           "name": "用户页面",
           "pathName": "pages/user/user",
           "query": "",
@@ -117,8 +100,8 @@
           "scene": null
         },
         {
-          "id": -1,
-          "name": "测试页面",
+          "id": 8,
+          "name": "物品代取任务页面",
           "pathName": "pages/test/test",
           "query": "",
           "scene": null
@@ -153,29 +136,8 @@
         },
         {
           "id": -1,
-          "name": "pages/listline/listline",
-          "pathName": "pages/listline/listline",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
           "name": "pages/myinfo/myinfo",
           "pathName": "pages/myinfo/myinfo",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/Mylist/Mylist",
-          "pathName": "pages/Mylist/Mylist",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/pageFill/pageFill",
-          "pathName": "pages/pageFill/pageFill",
           "query": "",
           "scene": null
         },
@@ -188,8 +150,69 @@
         },
         {
           "id": -1,
-          "name": "pages/taskindexbar/taskindexbar",
-          "pathName": "pages/taskindexbar/taskindexbar",
+          "name": "更多任务页面",
+          "pathName": "pages/moreTask/moreTask",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "第一版式发布编辑页面",
+          "pathName": "pages/taskOne/taskOne",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "webSocket聊天",
+          "pathName": "pages/webSocket/webSocket",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的相册",
+          "pathName": "pages/Albumwx/Albumwx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户性格扇形图",
+          "pathName": "pages/userCharac/userCharac",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "动态",
+          "pathName": "pages/spaceDynamic/spaceDynamic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "进入聊天之前",
+          "pathName": "pages/webSocketIndex/webSocketIndex",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品分类页面",
+          "pathName": "pages/goodcategorys/goodcategorys",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "提交订单（立即购买）页面",
+          "pathName": "pages/goodsettle/goodsettle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情页",
+          "pathName": "pages/goodcontent/goodcontent",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品搜索页面",
+          "pathName": "pages/goodsearch/goodsearch",
           "query": "",
           "scene": null
         }

@@ -1,0 +1,25 @@
+/* 相册列表 */
+.Album-list{
+  top: 0;
+  padding:0 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.Album-list .puttime{
+  height:40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+/* 排列*/
+.Album-list .list{
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/* 图片大小 */
+.Album-list .list image{
+  width: 31%;
+  height: 112px;
+  margin-bottom: 12px;
+}

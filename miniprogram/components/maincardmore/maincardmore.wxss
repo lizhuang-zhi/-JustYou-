@@ -80,46 +80,31 @@
 	width: 100%;
 	height: 45px;
 	position: relative;
-	align-items: center;
+	/* align-items: center; */
 }
 /* 收藏 */
 .buttom-logo .Collection image{
 	width: 20px;
 	height: 20px;
 	position: absolute;
+	top: 0;
 	left: 5%;
-}
-/* 浏览*/
-.buttom-logo .eye image{
-	width: 22px;
-	height: 22px;
-	position: absolute;
-	left:83%;
-}
-/* 分享数字 */
-.buttom-logo .eye .eye-num{
-	font-size: 13px;
-	position: absolute;
-	top: 0; 
-	left:89%;
-	color:#676767 ;
 }
 /* 爱心 */
 .buttom-logo .click image{
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	left: 53%;
+	left: 46%;
 }
 .buttom-logo .click{
 	position: relative;
 }
 /* 爱心数字 */
 .buttom-logo .click .click-love{
-	font-size: 13px;
 	position: absolute;
 	top: 0;
-	left:59%;
+	left: 52%;
 	color:#676767 ;
 }
 /* 评论信息 */
@@ -127,17 +112,30 @@
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	left:68%;
+	left:62%;
 }
 .buttom-logo .Message{
 	position: relative;
 }
 .buttom-logo .Message .MS{
-	font-size: 13px;
 	top: 0;
 	margin:0 3px;
-	left:73%;
+	left: 68%;
 	position: absolute;
+	color:#676767 ;
+}
+/* 浏览 */
+.buttom-logo .eye image{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left:80%;
+}
+/* 浏览数字 */
+.buttom-logo .eye .eye-num{
+	position: absolute;
+	top: 0;
+	left: 87%;
 	color:#676767 ;
 }
 /* 输入框 */

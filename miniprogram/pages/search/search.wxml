@@ -42,7 +42,13 @@
       </view>
 
       <view class="contentOfhot">
-        内容
+        <block wx:for="{{RankList}}" wx:key="index">
+          <hotcard color="{{item.color}}" 
+          rankingnum="{{item.rank}}" 
+          Desc="{{item.desc}}" 
+          numberValue="{{item.numVal}}"
+          judge="{{item.jud}}"/>
+        </block>
       </view>
     </view>
 

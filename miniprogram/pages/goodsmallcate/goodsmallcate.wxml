@@ -1,0 +1,37 @@
+<view class="uppic">
+  <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1024227013,875865424&fm=26&gp=0.jpg"></image>
+</view>
+
+<!-- 内容 -->
+<view class="content">
+  <view class="box" wx:for="{{goodsList}}" wx:key="index"
+  bindtap="ToContent" data-id="{{item.id}}">
+
+    <view class="pic">
+      <image src="{{item.picUrl}}"></image>
+    </view>
+
+    <view class="down">
+      <view class="tit">{{item.goodName}}</view>
+      <view class="info">
+        <view class="price">￥{{item.goodPrice}}</view>
+        <view class="sales">已售 {{item.goodSales}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+
+<!-- 弧度栏 -->
+<view class="radius"></view>
+
+<navigator url="/pages/goodcategorys/goodcategorys" open-type="navigateBack">
+  <view class="turnback">
+    <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/turnback.png"></image>
+  </view>
+</navigator>
+
+<view class="category">{{title}}</view>
+<view class="sentence">- {{description}} -</view>

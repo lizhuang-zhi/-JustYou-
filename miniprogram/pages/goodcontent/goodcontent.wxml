@@ -1,0 +1,135 @@
+<swiper class="banner" 
+indicator-dots indicator-color="rgb(255,255,255,0.5)"
+indicator-active-color="#fff" autoplay
+interval="3000" circular >
+  <swiper-item wx:for="{{dataList.goodsPicList}}" wx:key="index">
+    <image src="{{item.picUrl}}"></image>
+  </swiper-item>
+
+</swiper>
+
+<!-- 价格阐述栏 -->
+<view class="pricebar">
+  <view class="info">
+    <view class="price">￥{{dataList.goodPrice}}</view>
+    <view class="store">库存：{{dataList.goodStore}}</view>
+    <view class="sales">已售：{{dataList.goodSales}}</view>
+  </view>
+  
+  <view class="kefupic">
+    <image class="pic" src="/images/xiaoxi.png"></image>
+  </view>
+</view>
+
+
+
+<view class="titpart">
+  <view class="tit">{{dataList.goodName}}</view>
+  <view class="down">
+    <van-tag type="danger">自营</van-tag>
+    <view class="des">{{dataList.goodTitInfo}}</view>
+  </view>
+</view>
+
+<view class="line_1"></view>
+
+
+<view class="service">
+  <view class="box">
+
+    <view class="innerbox">
+      <view class="pic">
+        <image src="/images/good_brand.png"></image>
+      </view>
+      <view class="txt">自营品牌</view>
+    </view>
+
+    <view class="innerbox">
+      <view class="pic">
+        <image src="/images/good_correctgoods.png"></image>
+      </view>
+      <view class="txt">正品保障</view>
+    </view>
+
+    <view class="innerbox">
+      <view class="pic">
+        <image src="/images/good_backgoods.png"></image>
+      </view>
+      <view class="txt">7日无理由</view>
+    </view>
+
+  </view>
+</view>
+
+<view class="line_1"></view>
+
+
+<!-- 猜你喜欢板块 -->
+<view class="like">
+  <view class="box">
+
+    <view class="upbar">
+      <view class="tit">猜你喜欢</view>
+      <view class="look">滑动查看</view>
+    </view>
+
+    <view class="rollbar">
+      <scroll-view class="scroll" scroll-x>
+
+        <view class="inbox">
+          <navigator class="smallbox" wx:for="{{myLikeGoodsList}}" wx:key="index"
+          data-id="{{item.id}}" bindtap="ToDetailByLike">
+            <view class="pic">
+              <image src="{{item.goodsPicList[0].picUrl}}"></image>
+            </view>
+
+            <view class="tit">{{item.goodName}}</view>
+            <view class="price">￥{{item.goodPrice}}</view>
+          </navigator>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+</view>
+
+<view class="line_1"></view>
+
+<!-- 商品详情 -->
+<view class="desciption">
+  <view class="txt">
+    {{dataList.goodConcreteInfo}}
+  </view>
+  <view class="line_2"></view>
+</view>
+
+
+<view class="details">
+  <view class="tit">商品详情</view>
+  <view class="pic">
+    <image src="{{dataList.goodBottomPicurl}}" mode="widthFix"></image>
+  </view>
+</view>
+
+
+<!-- 底部菜单栏 -->
+<van-goods-action>
+  <!-- <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" /> -->
+  <van-goods-action-icon icon="{{star}}" text="收藏" bind:click="onClickStar" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCart" />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    open-type="getUserInfo"
+    bind:click="AddCart"
+  />
+  <van-goods-action-button text="立即购买" bind:click="onClickButtonToBuy" />
+</van-goods-action>
+
+
+<!-- 返回键 -->
+<navigator url="/pages/goodindex/goodindex" open-type="navigateBack">
+  <view class="turnback">
+    <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/turnback.png"></image>
+  </view>
+</navigator>

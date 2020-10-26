@@ -6,22 +6,32 @@ Page({
    */
   data: {
     openid:'',
+    judge:[1,2,3,6],
     name:'boy',
     picUrl:'https://s1.ax1x.com/2020/08/02/aYQfFx.jpg',
+    // 关于我的
+    aboutMeList:[
+      {pic:"",tit:"我的发布",url:""},
+      {pic:"",tit:"我的动态",url:""},
+      {pic:"",tit:"我的性格",url:""}
+    ],
+    // 周边服务
     aroundSaleList:[
       {pic:"orders-o",text:"订单管理",url:"/pages/goodorder/goodorder"},
       {pic:"cart-o",text:"购物车",url:"/pages/goodcarts/goodcarts"},
       {pic:"star-o",text:"我的收藏",url:""},
       {pic:"location-o",text:"地址管理",url:""},
-      {pic:"friends-o",text:"邀请好友",url:""},
+      {pic:"friends-o",text:"我的相册",url:"/pages/Albumwx/Albumwx"},
       {pic:"comment-o",text:"我的消息",url:""}
     ],
+    // 其他服务
     otherList:[
       {pic:"https://s1.ax1x.com/2020/09/02/dz0Gjg.png",text:"在线客服"},
       {pic:"https://s1.ax1x.com/2020/09/02/dz0YuQ.png",text:"授权管理"},
       {pic:"https://s1.ax1x.com/2020/09/02/dz0aEn.png",text:"意见反馈"},
       {pic:"https://s1.ax1x.com/2020/09/02/dz0dNq.png",text:"关于我们",url:"/pages/aboutus/aboutus"}
-    ]
+    ],
+
 
   },
 

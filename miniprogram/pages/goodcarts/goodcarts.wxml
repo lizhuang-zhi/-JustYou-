@@ -1,0 +1,68 @@
+<!-- <view style="position:fixed;top:0;">
+我是固定在顶部的
+哈哈哈
+</view> -->
+
+<!-- <view style="position:fixed;bottom:0;">
+老子是底部王子
+</view> -->
+
+<van-empty wx:if="{{empty}}" description="购物车空空如也~" 
+image="https://img.yzcdn.cn/vant/custom-empty-image.png">
+  <navigator url="/pages/goodindex/goodindex" open-type="reLaunch">
+    <van-button round type="danger" class="bottom-button">
+      去逛逛
+    </van-button>
+  </navigator>
+</van-empty>
+
+<view class="line"></view>
+
+<van-card
+  price="{{item.goodPrice}}"
+  desc="{{item.goodTitInfo}}"
+  title="{{item.goodName}}"
+  thumb="{{ item.picUrl }}"
+  wx:for="{{goodsList}}" wx:key="index" 
+>
+  <van-tag class="toptag" mark type="warning" slot="tags">代付款</van-tag>
+  <view class="tags" slot="tags">
+    <van-tag class="tag_1" plain type="danger">秒杀</van-tag>
+    <van-tag plain type="danger">书籍</van-tag>
+  </view>
+
+  <van-stepper slot="num" 
+    disable-input value="{{ item.goodNum }}" 
+    data-id="{{item.id}}"
+    bind:change="onChangeNum" 
+    input-width="30px" 
+    button-size="22px"
+  />
+
+  <view  class="footer" slot="footer">
+    <van-button class="btn_1" round plain 
+    type="default" size="small" 
+    bindtap="delGoodsCart"
+    data-id="{{item.id}}">删除订单</van-button>
+    <van-button round 
+    plain type="danger" size="small"
+    data-id="{{item.id}}" 
+    bindtap="goToBuy">立即付款</van-button>
+  </view>
+
+  <view class="bottomline" slot="footer"></view>
+</van-card>
+
+<view class="linebottom"></view>
+
+<!-- 删除订单弹出框 -->
+<van-dialog id="van-dialog" />
+
+
+<van-submit-bar
+  price="{{ totalPrice*100 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+
+

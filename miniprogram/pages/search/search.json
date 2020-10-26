@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "Square":"/components/Square/Square"
+    "Square":"/components/Square/Square",
+    "hotcard":"/components/hotcard/hotcard"
   },
   "navigationBarBackgroundColor":"#D1DBBD"
 }
