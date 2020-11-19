@@ -73,6 +73,7 @@ Page({
     
     // this.test();
     console.log(options.otherOpenid);
+    // 其他人的openid为老骚
     if(options.otherOpenid == "ohNiv4nVNsdHsSHQK6A1kFtWVjX8"){
       this.setData({
         otherPer: true

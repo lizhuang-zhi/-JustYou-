@@ -18,6 +18,7 @@
             <text class='chat-time'>{{item.date}}</text>
           </view>
           <view class='other-record'>
+            <!-- 左边 -->
 
             <!-- 老骚的图 -->
             <image class='other-head-img'
@@ -43,12 +44,12 @@
           <view class='own-record'>
             <view class='own-record-content'>{{item.message}}</view>
             <view class='own-record-content-triangle'></view>
-            
-
-            <image wx:if="{{otherPer}}" class='own-head-img' src='https://s1.ax1x.com/2020/10/24/BVq66f.jpg'>
+            <!-- 右边 -->
+            <!-- 其他人是老骚时，这里放我的图 -->
+            <image wx:if="{{otherPer}}" class='own-head-img' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
             </image>
 
-            <image wx:else class='own-head-img' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
+            <image wx:else class='own-head-img' src='https://s1.ax1x.com/2020/10/24/BVq66f.jpg'>
             </image>
 
           </view>
