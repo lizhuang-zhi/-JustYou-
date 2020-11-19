@@ -21,7 +21,7 @@
 
             <!-- 老骚的图 -->
             <image class='other-head-img'
-              wx:if="{{otherPer}}" src='https://exp-picture.cdn.bcebos.com/49bf00425d6b04d11916df3bb213e8e5edee0196.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1'>
+              wx:if="{{otherPer}}" src='https://s1.ax1x.com/2020/10/24/BVq66f.jpg'>
             </image>
 
             <!-- 我的图 -->
@@ -44,11 +44,11 @@
             <view class='own-record-content'>{{item.message}}</view>
             <view class='own-record-content-triangle'></view>
             
-            
-            <image wx:if="{{otherPer}}" class='own-head-img' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
+
+            <image wx:if="{{otherPer}}" class='own-head-img' src='https://s1.ax1x.com/2020/10/24/BVq66f.jpg'>
             </image>
 
-            <image wx:else class='own-head-img' src='https://exp-picture.cdn.bcebos.com/49bf00425d6b04d11916df3bb213e8e5edee0196.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1'>
+            <image wx:else class='own-head-img' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
             </image>
 
           </view>
