@@ -18,9 +18,17 @@
             <text class='chat-time'>{{item.date}}</text>
           </view>
           <view class='other-record'>
+
+            <!-- 老骚的图 -->
             <image class='other-head-img'
-              src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
+              wx:if="{{otherPer}}" src='https://exp-picture.cdn.bcebos.com/49bf00425d6b04d11916df3bb213e8e5edee0196.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1'>
             </image>
+
+            <!-- 我的图 -->
+            <image class='other-head-img'
+              wx:else src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
+            </image>
+
             <view class='other-record-content-triangle'></view>
             <view class='other-record-content'>
               {{item.message}}</view>
@@ -35,9 +43,14 @@
           <view class='own-record'>
             <view class='own-record-content'>{{item.message}}</view>
             <view class='own-record-content-triangle'></view>
-            <image class='own-head-img'
-              src='https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3892521478,1695688217&fm=26&gp=0.jpg'>
+            
+            
+            <image wx:if="{{otherPer}}" class='own-head-img' src='https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg'>
             </image>
+
+            <image wx:else class='own-head-img' src='https://exp-picture.cdn.bcebos.com/49bf00425d6b04d11916df3bb213e8e5edee0196.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1'>
+            </image>
+
           </view>
         </view>
         <!-- own结尾 -->

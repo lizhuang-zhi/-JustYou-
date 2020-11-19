@@ -294,7 +294,6 @@ Page({
       }
 
       
-
     }).then(res=>{
       wx.hideLoading({})
     })

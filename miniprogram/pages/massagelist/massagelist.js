@@ -94,7 +94,6 @@ Page({
     
 
     var that = this;
-    // var _this = this;
 
     var promise = new Promise(function(resolve,reject){
       // 获取用户的openid
@@ -112,61 +111,7 @@ Page({
       })
 
     }).then(res=>{
-      // wx.getStorage({
-      //   key: 'OPENID',
-      //   success: function(res) {
-      //     _this.setData({
-      //       openid:res.data
-      //     })
-      //     console.log("我是wx.getStore中成功的回调："+res.data);
-          
-      //   },
-      // })
-      var _this = this;
-      //建立连接
-      // wss://mrkleo.top/justyou/websocket/1233/2345
-      wxWebsocket = wx.connectSocket({
-        // url: "wss://mrkleo.top/justyou/websocket/"+_this.data.openid+"/"+"ohNiv4nVNsdHsSHQK6A1kFtWVjX8",
-        url: "wss://mrkleo.top/justyou/websocket/"+this.data.openid+"/"+options.id,
-        success:res=>{
-          console.log(res);
-        }
-      })
       
-      //连接成功
-      // wx.onSocketOpen(function () {
-      //   console.log('连接成功');
-
-        
-      //   // wx.closeSocket({
-      //   //   success:res=>{
-      //   //     console.log("我是在连接成功中调用的关闭");
-            
-      //   //   }
-      //   // })
-        
-      // })
-
-      //接受消息
-      wxWebsocket.onMessage((e) =>{
-        console.log('连接成功')
-        _this.setData({
-          testWebsocket:JSON.parse(e.data).data
-        })
-      })
-
-
-
-      // 监听关闭事件
-      // wx.onSocketClose(function(res){
-      //   console.log("断开连接");
-        
-      // })
-
-      //监听 WebSocket 连接关闭事件
-      wxWebsocket.onClose((e) =>{
-
-      })
       
       if(that.data.openid == 'ohNiv4sDFfJFos4AGEQdZisBetp0'){
           that.setData({
@@ -209,36 +154,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var _this = this;
-
-    // 监听 WebSocket 接受到服务器的消息事件
-    wx.onSocketMessage(function(res){   
-          
-      var list = [];
-      list = _this.data.newsList;
-      // var _data = JSON.parse(res.data);
-      console.log("服务器返回的消息："+res.data);
-
-      // var list = [];
-      // list = _this.data.newsList;
-      // var temp = { 
-      //   'message': res.data,
-      //   'date': "2012",
-      //   type: 0
-      // };
-      // list.push(temp);
-      // _this.setData({
-      //   newsList:list,
-      //   input:null
-      // })
-      
-      // // list.push(_data);
-      // // console.log("用户的输入为: "+list[0].message);
-      // // _this.setData({
-      // //   newsList:list
-      // // })
-
-    })
+    
   },
 
   /**
@@ -292,38 +208,7 @@ Page({
   },
 
 
-  send :function(){
-    var _this = this;
-    var myDate = new Date();
-    var finDate = myDate.getMonth()+"-"+myDate.getDate()+" "+myDate.getHours()+":"+myDate.getMinutes();
-    if(_this.data.input){
-      wx.sendSocketMessage({
-        data: _this.data.input,
-      })
-      var list = [];
-      list = this.data.newsList;
-      var temp = { 
-        'message': _this.data.input,
-        'date': finDate,
-        type: 1
-      };
-      list.push(temp);
-      this.setData({
-        newsList:list,
-        input:null
-      })
-    }
-    
-  },
-  bindChange:function(res){
-    this.setData({
-      input: res.detail.value
-    })
-  },
-  back:function(){
-    wx.closeSocket();
-    console.log('连接断开');
-  }
+  
 
 })
 

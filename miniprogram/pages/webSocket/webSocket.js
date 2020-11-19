@@ -10,7 +10,8 @@ Page({
   data: {
     newsList:[],
     input:null,
-    openid:null
+    openid:null,
+    otherPer: null
 
   },
 
@@ -72,6 +73,15 @@ Page({
     
     // this.test();
     console.log(options.otherOpenid);
+    if(options.otherOpenid == "ohNiv4nVNsdHsSHQK6A1kFtWVjX8"){
+      this.setData({
+        otherPer: true
+      })
+    }else{
+      this.setData({
+        otherPer: false
+      })
+    }
     
     
 
@@ -79,19 +89,19 @@ Page({
     var _this = this;
 
     var promise = new Promise(function(resolve,reject){
-      // // 获取用户的openid
-      // wx.cloud.callFunction({
-      //   name:'getUserOpenid',
-      // })
-      // .then(back=>{
-      //   // console.log(back.result.openid);
-      //   that.setData({
-      //     openid:back.result.openid
-      //   })
-      //   // Bestopenid = that.data.openid;
-      //   console.log('that.data中的openid：'+that.data.openid);
-      //   resolve('success');
-      // })
+      // 获取用户的openid
+      wx.cloud.callFunction({
+        name:'getUserOpenid',
+      })
+      .then(back=>{
+        // console.log(back.result.openid);
+        that.setData({
+          openid:back.result.openid
+        })
+        // Bestopenid = that.data.openid;
+        console.log('that.data中的openid：'+that.data.openid);
+        resolve('success');
+      })
 
     }).then(res=>{
       // wx.getStorage({
@@ -104,12 +114,13 @@ Page({
           
       //   },
       // })
-      var _this = this;
+      console.log();
+      
       //建立连接
       // wss://mrkleo.top/justyou/websocket/1233/2345
       wxWebsocket = wx.connectSocket({
         // url: "wss://mrkleo.top/justyou/websocket/"+_this.data.openid+"/"+"ohNiv4nVNsdHsSHQK6A1kFtWVjX8",
-        url: "wss://mrkleo.top/justyou/websocket/"+this.data.openid+"/"+options.otherOpenid,
+        url: "wss://mrkleo.top/justyou/websocket/"+_this.data.openid+"/"+options.otherOpenid,
         success:res=>{
           console.log(res);
         }
