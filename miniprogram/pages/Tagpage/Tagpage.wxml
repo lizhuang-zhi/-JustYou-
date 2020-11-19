@@ -1,0 +1,27 @@
+<view class="TagBox">
+	<view class="Picture">
+		<view class="Picin">
+      <!-- 图片 -->
+			<image class="Picimg" src="https://s1.ax1x.com/2020/11/01/BdvJ4P.jpg"></image>
+      <!-- 标签 -->
+      <view class="Tagtxt">#什么时候放假#</view>
+      <!-- 参与 -->
+      <view class="Joinnum">23参与</view>
+      <!-- 立即参与 -->
+      <view class="NowJoin">立即参与</view>
+		</view>
+	</view>
+</view>
+
+<view class="taskBar">
+  <block wx:for="{{CateList}}" wx:key="index">
+    <Taskbar 
+      time="{{item.release_time}}"
+      looks="{{item.recruiting_number}}"
+      category="{{item.taskClassification.name}}"
+      title="{{item.task_title}}"
+      picture="{{item.taskFirstFigure}}">
+    </Taskbar> 
+  
+  </block>
+</view>

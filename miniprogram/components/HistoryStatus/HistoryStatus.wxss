@@ -1,0 +1,94 @@
+page {
+  background-color: white;
+}
+
+.list {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.list .listin {
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: left;
+  box-shadow: 2px 2px 2px rgba(87, 88, 89, 0.94);
+  position: relative;
+}
+
+/* 用户头像 */
+.list .listin .userimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* 用户头像图片 */
+.list .listin .userimg .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* 标签 */
+.list .listin .tag {
+  position: absolute;
+  left: 60px;
+  top: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 标签图片 */
+.list .listin .tagpic {
+  position: absolute;
+  right: 20px;
+  top: 2px;
+  display: flex;
+  justify-content: center;
+}
+/* 图片大小 */
+.list .listin .tagpic .tagimg{
+  width: 20px;
+  height: 20px;
+}
+
+.list .listin .tagpic .tagpictxt{
+  font-size:15px;
+  color: rgb(60, 60, 60);
+}
+/* 标签文字 */
+.list .listin .tag .tagtxt {
+  line-height: 20px;
+  font-size: 16px;
+  color: #464ac4;
+}
+
+/* 时间 */
+.list .listin .usertime {
+  position: absolute;
+  right: 12px;
+  bottom: 4px;
+}
+
+.list .listin .usertime .time {
+  line-height: 20px;
+  font-size: 15px;
+  color: rgb(162, 168, 168);
+  margin: 0 20rpx 20rpx 0;
+}
+
+/* 用户发表内容 */
+.list .listin .usertxt {
+  padding: 10px;
+  margin: 35px 0;
+  margin-top:25px;
+  box-sizing: border-box;
+  line-height: 22px;
+  font-size: 17px;
+  color: rgb(141, 136, 136);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

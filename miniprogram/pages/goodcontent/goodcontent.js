@@ -38,7 +38,7 @@ Page({
         })
         // 添加收藏
         wx.request({
-          url: addStarUrl,
+          url: '',
           data:{
             openid:that.data.openid,
             id:that.data.id
@@ -61,7 +61,7 @@ Page({
         })
         // 取消收藏
         wx.request({
-          url: delStarUrl,
+          url: '',
           data:{
             openid:that.data.openid,
             id:that.data.id
@@ -104,7 +104,7 @@ Page({
 
               var Mypromise = new Promise(function(resolve,reject){
                 wx.request({
-                  url: addCartsUrl,
+                  url: '',
                   data:{
                     id:that.data.id,
                     openid:that.data.openid
@@ -162,7 +162,7 @@ Page({
 
         // 请求收藏数据
         wx.request({
-          url: myStarUrl,
+          url: '',
           data:{
             openid:this.data.openid,
             id:this.data.id
@@ -212,7 +212,7 @@ Page({
       return new Promise((resolve,reject)=>{
         // 请求猜你喜欢商品集合
         wx.request({
-          url: myLikeUrl,
+          url: '',
           data:{
             smallsortId:this.data.smallsortId,
             id:this.data.id

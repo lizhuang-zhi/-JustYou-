@@ -5,13 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    animationStart: ''
   },
 
+  // 点击开启旅程
   ToStart(){
-    wx.navigateTo({
-      url: '/pages/index/index',
+    this.setData({
+      animationStart: 'animation-name: roll_img;'
     })
+
+    setTimeout(()=>{
+      wx.reLaunch({
+        url: '/pages/index/index',
+      })
+
+    },700)
+    
   },
 
   /**

@@ -26,7 +26,7 @@ Page({
     })
 
     wx.request({
-      url: GoodsBysmallSortsIdurl,
+      url: '',
       data:{
         id:index
       },
@@ -45,7 +45,7 @@ Page({
 
     setTimeout(()=>{
       wx.hideLoading({});
-    },1000)
+    },800)
 
   },
 

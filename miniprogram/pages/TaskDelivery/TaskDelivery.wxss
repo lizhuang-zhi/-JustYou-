@@ -1,0 +1,175 @@
+.user {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.user .user-list {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+/* 用户头像 */
+.user .user-list .user-img {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+}
+
+.user .user-list .user-img .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 用户姓名 */
+.user .user-list .user-name {
+  position: absolute;
+  left: 65px;
+  top: 5px;
+  font-size: 15px;
+}
+
+/* 用户发表时间 */
+.user .user-list .user-time {
+  position: absolute;
+  left: 65px;
+  bottom: 5px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* 用户标签 */
+.user .user-tip {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  display: flex;
+  justify-content: left;
+  color: #464ac4;
+}
+
+/* 描述 */
+.Describe {
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+/* 描述头部 */
+.infolist .infohead {
+  display: flex;
+  justify-content: left;
+}
+
+/* 描述头部图片 */
+.Describe .Deshead .Deshead-img,
+.infolist .infohead .infohead-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* 信息两个字 */
+.infolist .infohead .infohead-tip {
+  line-height: 40px;
+  font-size: 18px;
+}
+
+/* 描述内容 */
+.Describe .Deshead .Deshead-main {
+  line-height: 40px;
+  padding-left: 25px;
+  padding-right: 20px;
+  font-size: 16px;
+  color: #737375;
+  position: relative;
+}
+
+/* 描述内容后面的图片 */
+.Describe .Deshead .Deshead-main::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  bottom: 10px;
+  background: url('https://s1.ax1x.com/2020/10/26/BKfBdJ.png') no-repeat;
+  background-size: contain;
+}
+
+/* 信息内容 */
+.infolist .infobody {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  font-size: 16px;
+  color: #737375;
+}
+
+/*  弹性盒 */
+.infobody .time-list,
+.infobody .Picknum-list,
+.infobody .Weight-list,
+.infobody .Weather-list {
+  padding-left: 30px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 取件收件地 */
+.infobody .Pick-up-list,
+.infobody .Receiving-list {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+
+.infobody .Pick-up-list .info-Pick-up,
+.infobody .Receiving-list .info-Receiving {
+  text-align: center;
+  font-size: 15px;
+  background-color: rgb(209, 210, 211);
+  border-radius: 20px;
+}
+.infobody .Pick-up-list .info-Pick-up .Pick,
+.infobody .Receiving-list .info-Receiving .Rece{
+  width: 100%;
+  padding: 10rpx 35rpx;
+  box-sizing: border-box;
+}
+
+/* 时间 数量 地点 重量 天气 */
+.infobody .time-list .time-tip,
+.infobody .Pick-up-list .Pick-up-tip,
+.infobody .Receiving-list .Receiving-tip,
+.infobody .Picknum-list .Picknum-tip,
+.infobody .Weight-list .Weight-tip,
+.infobody .Weather-list .Weather-tip {
+  font-size: 18px;
+  color: #484849;
+}
+
+.infobody {
+  position: relative;
+}
+
+/* 信息后的图片 */
+.infobody .secondfloor::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  bottom: -6px;
+  background: url('https://s1.ax1x.com/2020/10/27/BKbleP.png') no-repeat;
+  background-size: contain;
+}

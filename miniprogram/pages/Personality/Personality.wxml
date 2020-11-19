@@ -1,0 +1,60 @@
+<!-- 性格分析图表 -->
+<view class="box">
+	<view class="tit">
+		每周情绪分析：
+	</view>
+
+	<ec-canvas id="mychart-dom-bar" 
+	canvas-id="mychart-bar" 
+	ec="{{ ec_ver }}"></ec-canvas>
+
+</view> 
+
+<view class="box_2">
+	<view class="tit">
+		性格分析：	
+	</view>
+
+	<ec-canvas id="mychart-dom-bar" 
+	canvas-id="mychart-bar" 
+	ec="{{ ec_flower }}"></ec-canvas>
+
+</view>
+
+<!-- 情绪调节语句 -->
+<view class="Box">
+	<!-- 头部 -->
+	<view class="Head">
+		<!-- 头部标题 -->
+		<view class="Headh1">性格管理家</view>
+		<view class="Headh2">你的性格属性</view>
+		<!-- 头部图片 -->
+		<view class="Headimg">
+			<image class="img" src="https://s1.ax1x.com/2020/10/24/BVq2nS.jpg" mode="aspectFit"></image>
+		</view>
+	</view>
+	<!-- 身体 -->
+	<view class="body">
+		<!-- 情绪解读 -->
+		<view class="Emotion">
+			<!-- 标题 -->
+			<view class="EmotionTitle">情绪解读</view>
+			<!-- 正文 -->
+			<view class="EmotionTxt">大到漫漫一生,小到一天的安排，你总是对此小心翼翼提心吊胆，似乎失去一丁点的掌控都足以让你窒息抓狂。你很容易受到外界的影响而产生较大的情绪波动，对负面信息比较在意，你经常反复思考和担忧。但也正是这思考，让你比常人更多一份创造力。</view>
+		</view>
+		<!-- 学业事业 -->
+		<view class="Academic ">
+			<!-- 标题 -->
+			<view class="AcademicTitle">学业事业</view>
+			<!-- 正文 -->
+			<view class="AcademicTxt">你在学业和事业方面一定是一个相当有创造力的人，你擅长从细节处不断进行深入地思考，从而能够触类旁通不断进行发散，在现有结论地基础上进行再创造。但是有时候不必在细节处过于纠结，而是学会放眼全局，说不定能收获更加开阔地视野。</view>
+		</view>
+		<!-- 健康身心 -->
+		<view class="Healthy ">
+			<!-- 标题 -->
+			<view class="HealthyTitle">健康身心</view>
+			<!-- 正文 -->
+			<view class="HealthyTxt">多喝热水</view>
+		</view>
+	</view>
+</view>

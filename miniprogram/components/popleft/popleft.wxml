@@ -1,13 +1,18 @@
 <view class="outbox">
 	<!-- 用户容器 -->
 	<view class="user-list">
-		<view class="user-img">
-			<image src="https://s1.ax1x.com/2020/10/07/0afByq.jpg"></image>
+		<navigator url="/pages/userSpace/userSpace">
+			<view class="user-img">
+				<image src="{{userImg}}"></image>
+			</view>
+		</navigator>
+			<view class="user-name">
+				<text>远道</text>
+			</view>
 		</view>
-		<view class="user-name">
-			<text>远道</text>
-		</view>
-	</view>
+
+	
+
 	<!-- 单元格列表 -->
 	<view class="list">
 		<!-- 编辑 -->
@@ -19,13 +24,13 @@
 
     <view class="Edit" bindtap="tapme">
 			<van-icon name="records" />
-			<text>编辑个人资料</text>
+			<text>更换背景风格</text>
 			<van-icon name="arrow" />
 		</view>
 
     <view class="Edit" bindtap="tapme">
 			<van-icon name="records" />
-			<text>编辑个人资料</text>
+			<text>未开发..</text>
 			<van-icon name="arrow" />
 		</view>
 	</view>

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/startway/startway",
     "pages/index/index",
     "pages/goodindexbar/goodindexbar",
     "pages/taskindexbar/taskindexbar",
-    "pages/startway/startway",
     "pages/missionhall/missionhall",
     "pages/search/search",
     "pages/user/user",
@@ -12,23 +12,31 @@
     "pages/userSpace/userSpace",
     "pages/test/test",
     "pages/myinfo/myinfo",
-    "pages/Expressnotes/Expressnotes",
     "pages/userAddress/userAddress",
     "pages/spaceDynamic/spaceDynamic",
     "pages/moreTask/moreTask",
     "pages/taskOne/taskOne",
     "pages/webSocket/webSocket",
     "pages/Albumwx/Albumwx",
-    "pages/userCharac/userCharac",
-    "pages/webSocketIndex/webSocketIndex",
     "pages/goodcategorys/goodcategorys",
     "pages/goodsmallcate/goodsmallcate",
     "pages/goodcarts/goodcarts",
     "pages/goodorder/goodorder",
-    "pages/goodsearch/goodsearch",
     "pages/goodcontent/goodcontent",
-    "pages/goodsettle/goodsettle"
-
+    "pages/goodsettle/goodsettle",
+    "pages/editDynamic/editDynamic",
+    "pages/TaskInit/TaskInit",
+    "pages/Officnoti/Officnoti",
+    "pages/massagelist/massagelist",
+    "pages/Messemcom/Messemcom",
+    "pages/succPage/succPage",
+    "pages/Tagpage/Tagpage",
+    "pages/TaskDelivery/TaskDelivery",
+    "pages/webTest_1/webTest_1",
+    "pages/webTest_2/webTest_2",
+    "pages/HistoryTask/HistoryTask",
+    "pages/Personality/Personality",
+    "pages/aboutus/aboutus"
 
 
   ],
@@ -39,7 +47,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "JustYou",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
 
 
@@ -54,7 +63,7 @@
         "selectedIconPath":"images/first1.png"
       },
       {
-        "pagePath": "pages/webSocketIndex/webSocketIndex",
+        "pagePath": "pages/massagelist/massagelist",
         "text": "消息",
         "iconPath":"images/dingding2.png",
         "selectedIconPath":"images/dingding1.png"
@@ -68,8 +77,8 @@
       {
         "pagePath": "pages/spaceDynamic/spaceDynamic",
         "text": "动态",
-        "iconPath":"images/dingding2.png",
-        "selectedIconPath":"images/dingding1.png"
+        "iconPath":"images/dynamic2.png",
+        "selectedIconPath":"images/dynamic1.png"
       },{
         "pagePath": "pages/user/user",
         "text": "我的",

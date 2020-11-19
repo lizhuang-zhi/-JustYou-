@@ -1,0 +1,3 @@
+<block wx:for="{{3}}" wx:key="index">
+  <Messagecoment/>
+</block>

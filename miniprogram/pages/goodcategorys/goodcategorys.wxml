@@ -18,7 +18,7 @@
     data-smallsortName="{{item.smallsortName}}"
     data-smallsortDescription="{{item.smallsortDescription}}">
 
-      <view class="inner">
+      <view class="inner" bindtap="ToSmallCate">
         <image src="https://img.alicdn.com/bao/uploaded/O1CN01h4yDIM22kPbs6jinM_!!0-item_pic.jpg_240x240.jpg"></image>
         <view class="innerbox">
           <view class="tit">{{item.smallsortName}}</view>

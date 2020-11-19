@@ -1,0 +1,6 @@
+<view class="list-list">
+	<view class="list-num">{{rankNum}}</view>
+	<view class="list-tip">#{{desc}}</view>
+	<view class="hot-num">{{tagCount}}</view>
+	<image class="hot-img" src="https://s1.ax1x.com/2020/10/27/BMSyYq.png"></image>
+</view>

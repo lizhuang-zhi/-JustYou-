@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Message":"/components/Message/Message"
+  }
+}

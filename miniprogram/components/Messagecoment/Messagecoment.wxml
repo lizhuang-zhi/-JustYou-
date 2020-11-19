@@ -1,0 +1,42 @@
+<view class="user">
+	<!-- 用户发表时间 -->
+	<view class="user-time">
+		<view class="time">10.27 1:12</view>
+	</view>
+	<!-- 用户列表 -->
+	<view class="user-list" bindtap="Tapother">
+		<!-- 用户头像 -->
+		<view class="user-img">
+			<image class="img" src="https://s1.ax1x.com/2020/10/24/BVq66f.jpg"></image>
+		</view>
+		<!-- 用户姓名 -->
+		<view class="user-name">
+			<view class="name">张嘉佳</view>
+		</view>
+		<!-- 提示消息 -->
+		<view class="user-mass">
+			<view class="mass">评论了你:</view>
+		</view>
+	</view>
+	<!-- 消息简略 -->
+	<view class="min" bindtap="Tapme">
+		<view class="mintxt">青山处处埋忠骨，何须马革裹尸还,露从今夜白，月是故乡明</view>
+		<view class="minlogo">
+			<!-- 点赞 -->
+			<view class="click">
+				<image class="clickimg" src="https://s1.ax1x.com/2020/10/31/BUD9bV.png"></image>
+				<view class="clicknum">100</view>
+			</view>
+			<!-- 评论 -->
+			<view class="mess">
+				<image class="messimg" src="https://s1.ax1x.com/2020/10/31/BUDSuq.png"></image>
+				<view class="messnum">1000</view>
+			</view>
+			<!-- 浏览 -->
+			<view class="glance">
+				<image class="glanceimg" src="https://s1.ax1x.com/2020/10/31/BUBL4g.png"></image>
+				<view class="glancenum">100</view>
+			</view>
+		</view>
+	</view>
+</view>

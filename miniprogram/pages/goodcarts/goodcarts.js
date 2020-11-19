@@ -38,7 +38,7 @@ Page({
       });
     }).then(res=>{
         wx.request({
-          url: allCartsUrl,
+          url: '',
           data:{
             openid:this.data.openid
           },
@@ -95,7 +95,7 @@ Page({
     .then(() => {
       // on confirm
       wx.request({
-        url: delGoodsUrl,
+        url: '',
         data:{
           id:back.currentTarget.dataset.id,
           openid:this.data.openid

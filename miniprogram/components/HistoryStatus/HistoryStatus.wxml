@@ -1,0 +1,25 @@
+<view class="list" bindtap="ClickMe">
+	<view class="listin">
+		<!-- 用户头像 -->
+		<view class="userimg">
+			<image class="img" src="{{userImg}}"></image>
+		</view>
+		<!-- 标签文字-->
+		<view class="tag">
+			<view class="tagtxt"># {{Tag}}</view>
+		</view>
+		<!-- 标签图片 -->
+		<view class="tagpic">
+			<image class="tagimg" src="https://s1.ax1x.com/2020/11/02/BruXee.png"></image>
+      <view class="tagpictxt">代取</view>
+		</view>
+		<!-- 时间 -->
+		<view class="usertime">
+			<view class="time">{{Time}}</view>
+		</view>
+		<!-- 发表内容 -->
+		<view class="usertxt">
+			<view class="txt">{{Content}}</view>
+		</view>
+	</view>
+</view>

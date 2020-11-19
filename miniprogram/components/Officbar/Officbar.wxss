@@ -1,0 +1,42 @@
+page{
+  background-color: white;
+}
+.mainp{
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.mainp .mainpin{
+  height: 140px;
+}
+/* 发表时间 */
+.mainp .mainp-time{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  text-align: center;
+  color: rgb(165, 164, 164);
+}
+/* 背景图片 */
+.mainp .mainpin image{
+  width: 100%;
+  height: 100%;
+  border-radius:15px;
+}
+/* 发表文字 */
+.mainp .mainptxt{
+  width: 100%;
+  height: 60px;
+  padding-left:20px;
+  box-sizing: border-box;
+}
+.mainp .mainptxt .title{
+  padding-top: 5px;
+  font-size:17px;
+}
+.mainp .mainptxt .content{
+  padding-top: 3px;
+  font-size: 14px;
+  color: rgb(157, 157, 157);
+}
+

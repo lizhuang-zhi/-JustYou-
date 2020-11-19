@@ -8,15 +8,12 @@
 				</view>
 				<!-- 用户id -->
 				<view class="user-id">
-					<text>K</text>
+					<text>{{userName}}</text>
 				</view>
-				<!-- 用户专业 -->
-				<view class="user-maj">
-					<text>信息工程</text>
-				</view>
+				
 				<!-- 发表时间 -->
 				<view class="user-time">
-					<text>1天前14：15</text>
+					<text>{{AttentionTime}}</text>
 				</view>
 			</view>
 		</view>

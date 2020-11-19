@@ -146,3 +146,9 @@ margin: 27rpx 0;}
 .other{padding: 25rpx 22rpx 0;}
 .other .otherBox{background-color: rgb(255,255,255);
 padding: 26rpx 32rpx;}
+
+
+
+/* 提交 */
+.btn{width: 100%;margin: 50rpx 0 30rpx;}
+.btn button{width: 90%;height: 100%;}

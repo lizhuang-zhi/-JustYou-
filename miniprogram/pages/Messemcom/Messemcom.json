@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Messagecoment":"/components/Messagecoment/Messagecoment"
+  }
+}

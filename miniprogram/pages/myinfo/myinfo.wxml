@@ -12,10 +12,15 @@
 		</view>
 
 		<view class='name'>
-			<text>姓名</text>
+			<text>昵称</text>
 			<input name="name" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的姓名'></input>
 		</view>
 
+		<view class='major'>
+			<text>学号</text>
+			<input name="major" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的学号'></input>
+		</view>
+		
 		<view class='major'>
 			<text>专业</text>
 			<input name="major" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的专业'></input>
@@ -30,18 +35,24 @@
 			</radio-group>
 		</view>
 
-		<view class='phone'>
-			<text>手机</text>
-			<input name="phone" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的手机号'></input>
+		
+		<view class='baseInfo'>
+			<text>联系信息</text>
 		</view>
 
-		<view class='baseInfo'>
-			<text>基本信息</text>
+		<view class='phone'>
+			<text>手机</text>
+			<input name="phone" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入您的手机号'></input>
 		</view>
 
 		<view class='info'>
-			<text>身份证号</text>
-			<input name="idNumber" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入证件号码'></input>
+			<text>地址</text>
+			<input name="idNumber" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入收货地址'></input>
+		</view>
+
+		<view class='info'>
+			<text>邮箱</text>
+			<input name="Number" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入您的邮箱'></input>
 		</view>
 	</view>
 

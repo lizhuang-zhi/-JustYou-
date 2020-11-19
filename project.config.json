@@ -65,13 +65,6 @@
           "scene": null
         },
         {
-          "id": -1,
-          "name": "开始页面",
-          "pathName": "pages/startway/startway",
-          "query": "",
-          "scene": null
-        },
-        {
           "id": 3,
           "name": "任务大厅",
           "pathName": "pages/missionhall/missionhall",
@@ -86,8 +79,7 @@
           "scene": null
         },
         {
-          "id": -1,
-          "name": "用户页面",
+          "name": "我的",
           "pathName": "pages/user/user",
           "query": "",
           "scene": null
@@ -103,13 +95,6 @@
           "id": 8,
           "name": "物品代取任务页面",
           "pathName": "pages/test/test",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": 9,
-          "name": "备注",
-          "pathName": "pages/Expressnotes/Expressnotes",
           "query": "",
           "scene": null
         },
@@ -149,7 +134,6 @@
           "scene": null
         },
         {
-          "id": -1,
           "name": "更多任务页面",
           "pathName": "pages/moreTask/moreTask",
           "query": "",
@@ -175,7 +159,7 @@
           "scene": null
         },
         {
-          "name": "用户性格扇形图",
+          "name": "历史任务数据表",
           "pathName": "pages/userCharac/userCharac",
           "query": "",
           "scene": null
@@ -183,12 +167,6 @@
         {
           "name": "动态",
           "pathName": "pages/spaceDynamic/spaceDynamic",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "进入聊天之前",
-          "pathName": "pages/webSocketIndex/webSocketIndex",
           "query": "",
           "scene": null
         },
@@ -213,6 +191,96 @@
         {
           "name": "商品搜索页面",
           "pathName": "pages/goodsearch/goodsearch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "编辑发布动态页面",
+          "pathName": "pages/editDynamic/editDynamic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "任务详情页面",
+          "pathName": "pages/TaskInit/TaskInit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "任务发布成功页面",
+          "pathName": "pages/succPage/succPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息",
+          "pathName": "pages/massagelist/massagelist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息通知具体页",
+          "pathName": "pages/Messemcom/Messemcom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "官方通知页面",
+          "pathName": "pages/Officnoti/Officnoti",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "快递任务页面",
+          "pathName": "pages/TaskDelivery/TaskDelivery",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "热榜跳转的标签页",
+          "pathName": "pages/Tagpage/Tagpage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试1",
+          "pathName": "pages/webTest_1/webTest_1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试2",
+          "pathName": "pages/webTest_2/webTest_2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "历史任务",
+          "pathName": "pages/HistoryTask/HistoryTask",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "性格数据页面",
+          "pathName": "pages/Personality/Personality",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品结算页面",
+          "pathName": "pages/goodsettle/goodsettle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品小分类页",
+          "pathName": "pages/goodsmallcate/goodsmallcate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         }

@@ -1,0 +1,42 @@
+<!-- 搜索框 -->
+<van-search value="{{ value }}" placeholder="搜索" shape="round" use-action-slot show-action />
+<!-- 顶部导航栏 -->
+<view class="topout">
+	<!-- 顶部导航栏 -->
+	<view class="topbar">
+		<!-- 点赞 -->
+		<view class="alike" bindtap="Clickme">
+			<image class="alikeimg" src="https://s1.ax1x.com/2020/10/31/BUf1mQ.png"></image>
+			<view class="aliketxt">点赞</view>
+		</view>
+		<!-- 关注 -->
+		<view class="interest" bindtap="Clickme">
+			<image class="interestimg" src="https://s1.ax1x.com/2020/10/31/BURa40.png"></image>
+			<view class="intertxt">关注</view>
+		</view>
+		<!-- 评论 -->
+		<view class="discuss" bindtap="Clickme">
+			<image class="discussimg" src="https://s1.ax1x.com/2020/10/31/BNzXqA.png"></image>
+			<view class="distxt">评论</view>
+		</view>
+		<!-- 官方通知 -->
+		<view class="goverinform" bindtap="ClickGo">
+			<image class="goverimg" src="https://s1.ax1x.com/2020/10/31/BUFXSx.png"></image>
+			<view class="govertxt">官方通知</view>
+		</view>
+	</view>
+</view>
+
+
+
+<view class="listMessage">
+	<!-- 消息列表 -->
+	<block wx:for="{{List}}" wx:key="index">
+		<Message name="{{item.name}}"
+		scentence="{{item.scentence}}"
+		time="{{item.time}}"
+		pic="{{item.pic}}"
+		openid="{{item.openid}}"/>
+	</block>
+</view>
+

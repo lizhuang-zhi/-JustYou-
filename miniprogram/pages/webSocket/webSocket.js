@@ -1,7 +1,7 @@
 // pages/webSocket/webSocket.js
 var tools = require('../../utils/public');
 const app = getApp();
-var websock = false;
+var wxWebsocket;
 Page({
 
   /**
@@ -11,7 +11,6 @@ Page({
     newsList:[],
     input:null,
     openid:null
-
 
   },
 
@@ -66,36 +65,34 @@ Page({
 
   
 
-
-  
-
-  
-  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     
     // this.test();
+    console.log(options.otherOpenid);
+    
     
 
     var that = this;
     var _this = this;
 
     var promise = new Promise(function(resolve,reject){
-      // 获取用户的openid
-      wx.cloud.callFunction({
-        name:'getUserOpenid',
-      })
-      .then(back=>{
-        // console.log(back.result.openid);
-        that.setData({
-          openid:back.result.openid
-        })
-        // Bestopenid = that.data.openid;
-        console.log('that.data中的openid：'+that.data.openid);
-        resolve('success');
-      })
+      // // 获取用户的openid
+      // wx.cloud.callFunction({
+      //   name:'getUserOpenid',
+      // })
+      // .then(back=>{
+      //   // console.log(back.result.openid);
+      //   that.setData({
+      //     openid:back.result.openid
+      //   })
+      //   // Bestopenid = that.data.openid;
+      //   console.log('that.data中的openid：'+that.data.openid);
+      //   resolve('success');
+      // })
+
     }).then(res=>{
       // wx.getStorage({
       //   key: 'OPENID',
@@ -110,34 +107,47 @@ Page({
       var _this = this;
       //建立连接
       // wss://mrkleo.top/justyou/websocket/1233/2345
-      wx.connectSocket({
+      wxWebsocket = wx.connectSocket({
         // url: "wss://mrkleo.top/justyou/websocket/"+_this.data.openid+"/"+"ohNiv4nVNsdHsSHQK6A1kFtWVjX8",
-        url: "wss://mrkleo.top/justyou/websocket/"+this.data.openid+"/"+options.id,
+        url: "wss://mrkleo.top/justyou/websocket/"+this.data.openid+"/"+options.otherOpenid,
         success:res=>{
           console.log(res);
         }
       })
       
       //连接成功
-      wx.onSocketOpen(function () {
-        console.log('连接成功');
+      // wx.onSocketOpen(function () {
+      //   console.log('连接成功');
 
         
-        // wx.closeSocket({
-        //   success:res=>{
-        //     console.log("我是在连接成功中调用的关闭");
+      //   // wx.closeSocket({
+      //   //   success:res=>{
+      //   //     console.log("我是在连接成功中调用的关闭");
             
-        //   }
-        // })
+      //   //   }
+      //   // })
         
-        
-        
+      // })
+
+      //接受消息
+      wxWebsocket.onMessage((e) =>{
+        console.log('连接成功')
+        _this.setData({
+          testWebsocket:JSON.parse(e.data).data
+        })
       })
 
+
+
       // 监听关闭事件
-      wx.onSocketClose(function(res){
-        console.log("断开连接");
+      // wx.onSocketClose(function(res){
+      //   console.log("断开连接");
         
+      // })
+
+      //监听 WebSocket 连接关闭事件
+      wxWebsocket.onClose((e) =>{
+
       })
 
     })
@@ -206,10 +216,20 @@ Page({
    */
   onUnload: function () {
     console.log('我退出页面了');
-    
-    
 
-
+    wxWebsocket.close({
+      code:1000,//一个数字值表示关闭连接的状态号，表示连接被关闭的原因。1000（表示正常关闭连接）
+      reason:"",//一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于 123 字节的 UTF-8 文本（不是字符）。
+      success:(e)=>{//接口调用成功的回调函数
+        console.log(e)
+      },
+      fail:(e)=>{//接口调用失败的回调函数
+        console.log(e)
+      },
+      complete:(e)=>{//接口调用结束的回调函数（调用成功、失败都会执行）
+        console.log(e)
+      }
+    })
     
   },
 

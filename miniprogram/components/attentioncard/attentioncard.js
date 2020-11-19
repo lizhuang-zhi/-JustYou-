@@ -7,7 +7,16 @@ Component({
 		attenimg:{
 			type:String,
 			value:""
-		}
+		},
+		userName:{
+			type:String,
+			value:""
+		},
+		AttentionTime:{
+			type:String,
+			value:""
+		},
+		
 	},
 
 	/**

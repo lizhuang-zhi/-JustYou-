@@ -1,7 +1,7 @@
 .van-ellipsis {
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis
+  text-overflow: ellipsis;
 }
 
 .van-multi-ellipsis--l2 {

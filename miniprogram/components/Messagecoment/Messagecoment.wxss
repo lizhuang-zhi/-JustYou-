@@ -1,0 +1,119 @@
+page {
+  background-color: #f4f4f4;
+}
+.user {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  background-color: white;
+  border-bottom:1px solid #e8e8e8;
+}
+/* 发表时间 */
+.user .user-time {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #9b9999;
+  text-align: center;
+}
+
+/* 用户列表 */
+.user .user-list {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* 用户头像 */
+.user .user-list .user-img {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+}
+
+.user .user-list .user-img .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 用户姓名 */
+.user .user-list .user-name {
+  position: absolute;
+  left: 65px;
+  top: 5px;
+  font-size: 15px;
+}
+
+/* 提示消息 */
+.user .user-mass {
+  position: absolute;
+  bottom: 0px;
+  left: 65px;
+  display: flex;
+  justify-content: left;
+  font-size: 14px;
+  color: #777777;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 消息简略 */
+.user .min {
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+  border-radius: 20px;
+}
+
+/* 消息简略文字 */
+.user .min .mintxt {
+  padding: 10px;
+  font-size: 15px;
+  color: #999595;
+  /* 超出显示... */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 底部logo */
+.user .min .minlogo {
+  padding: 0 5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+}
+
+/* 图片和数字 */
+.min .click,
+.min .mess,
+.min .glance {
+  padding-right:18px;
+  font-size: 14px;
+  display: flex;
+  justify-content: left;
+  color: #9e9e9e;
+}
+
+/* logo大小 */
+.min .minlogo .click .clickimg,
+.min .minlogo .mess .messimg,
+.min .minlogo .glance .glanceimg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 数量间距 */
+.min .minlogo .click .clicknum,
+.min .minlogo .mess .messnum,
+.min .minlogo .glance .glancenum {
+  padding-left: 2px;
+}

@@ -1,4 +1,25 @@
-<maincardmore userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" time="2020-10-1" txt="一路向前，莫问前程" userid="k" imagel="https://s1.ax1x.com/2020/10/01/0KfEwT.jpg" />
+<maincardmore 
+  userimg="{{dynamicDetail.user.userHeadPortrait}}" 
+  time="{{dynamicDetail.dynamicTime}}" 
+  txt="{{dynamicDetail.dynamicContent}}" 
+  userid="{{dynamicDetail.user.userName}}" 
+  imagel="{{dynamicDetail.photo[0].photoUrl}}"
+  lovenum="{{dynamicDetail.likeCount}}" 
+  looksNum="{{dynamicDetail.dynamicViews}}"
+  image="{{dynamicDetail.photo}}"
+  dynamicId="{{dynamicId}}"
+  judge="{{dynamicDetail.ifLike}}"
+  bind:UpdateComment="UpdateCom"
+/>
 
-<CommentCard txt="{{txt}}"/>
+
+
+<block wx:for="{{commList}}" wx:key="index">
+  <CommentCard 
+  txt="{{item.commContent}}" 
+  userImg="{{item.user.userHeadPortrait}}"
+  username="{{item.user.userName}}" 
+  realseTime="{{item.commTime}}"
+  Num="{{index+1}}" />
+</block>
 

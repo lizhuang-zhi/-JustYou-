@@ -1,5 +1,10 @@
 // components/maincardmore/maincardmore.js
 let content=''
+var api = require('../../utils/api')
+var comment = api.getcomment()
+var giveALike = api.getgiveALike();
+var CancelGiveLike = api.getCancelGiveLike()
+
 Component({
   /**
    * 组件的属性列表
@@ -25,6 +30,22 @@ Component({
       type:String,
       value:''
     },
+    lovenum:{
+      type:Number,
+      value:''
+    },
+    looksNum:{
+      type:Number,
+      value:''
+    },
+    image:{
+			type:[],
+			value:""
+    },
+    dynamicId: String,
+    // 判断是否点赞
+    judge: Boolean
+    
   },
 
   /**
@@ -37,8 +58,8 @@ Component({
     atten:"关注",
     at:true,
     light:true,
-    judge:true,
-    lovenum:100,
+    // 发布内容
+    ContentWords:''
   },
 
   /**
@@ -46,50 +67,120 @@ Component({
    */
   methods: {
   
-     // 输入框
-  inputFocus(e) {
-    console.log(e, '键盘弹起')
-    this.setData({
-      height: e.detail.height,
-      isInput: true
-    })
-  },
-  inputBlur(e) {
-    content=e.detail.value
-    console.log(content)
-    this.setData({
-      isInput: false
-    })
-  },
-  focusButn: function () {
-    this.setData({
-      focusInput: true,
-      isInput: true
-    })
-  },
-  // 发表评论
-  fabiao(){
-    if(content.length<4){
-      wx.showToast({
-        icon:"none",
-        title: '评论太短了'
+    // 输入框
+    inputFocus(e) {
+      console.log(e, '键盘弹起')
+      this.setData({
+        height: e.detail.height,
+        isInput: true
       })
-    return 
-    }
-  },
-    tapMe(){
-      if(this.data.judge == true){
+    },
+
+    // 输入框失去焦点
+    inputBlur(e) {
+      content=e.detail.value
+      console.log('发布的评论文字：'+content)
+      this.setData({
+        isInput: false,
+        ContentWords: content
+      })
+    },
+
+    // 点击 “评论” 弹出输入框
+    focusButn: function () {
+      this.setData({
+        focusInput: true,
+        isInput: true
+      })
+    },
+
+    // 发表评论
+    SendComment(e){
+      console.log(e);
+      
+      var that = this
+
+      var promise = new Promise(function(resolve,reject){
+        // 发表评论
+        wx.request({
+          url: comment,
+          data: {
+            dynamic_id: that.data.dynamicId,
+            open_id: 'vx002',
+            comm_father_id: 0,
+            content: that.data.ContentWords
+          },
+          success: res=>{
+            console.log(res.data.message);
+            resolve('success')
+          }
+        })
+
+
+      }).then(res=>{
+        // 置空输入框
+        that.setData({
+          ContentWords: ''
+        })
+
+      })
+
+      // 传递点击事件
+      this.triggerEvent("UpdateComment",{ "dynamic_id": that.data.dynamicId })
+
+    },
+
+    // 点赞
+    tapLike(){
+      if(this.data.judge == false){
+
+        // 点赞
+        wx.request({
+          url: giveALike,
+          data: {
+            dynamic_id: this.data.dynamicId,
+            openId: "vx001"
+          },
+          success: res=>{
+            console.log(res.data.message);
+            
+          },
+          fail: res=>{
+            console.log(res);
+            
+          }
+        })
+
         this.setData({
-          judge:false,
+          judge:true,
           lovenum:this.data.lovenum+1
         })
       }else{
+
+        // 取消点赞
+        wx.request({
+          url: CancelGiveLike,
+          data: {
+            dynamic_id: this.data.dynamicId,
+            openId: "vx001"
+          },
+          success: res=>{
+            console.log(res.data.message);
+
+          },
+          fail: res=>{
+            console.log(res);
+            
+          }
+        })
+
         this.setData({
-          judge:true,
+          judge:false,
           lovenum:this.data.lovenum-1
         })
       }
     },
+
     onClick(){
       if(this.data.at == true){
         this.setData({
@@ -103,7 +194,10 @@ Component({
         })
       }
     },
+
+    // 点击收藏
     Tapstart(){
+      
       if(this.data.light == true){
         this.setData({
           light:false,
@@ -114,5 +208,6 @@ Component({
         })
       }
     },
+
   }
 })

@@ -10,8 +10,18 @@ Page({
   data: {
     mainActiveIndex: 0,
     activeId: null,
-    items:[],
-    smallSortsList:[]
+    items:[
+      {id: 1, bigsortDescription: "科技数码分类", text: "数码"},
+      {id: 2, bigsortDescription: "各类书籍", text: "书籍"},
+      {id: 3, bigsortDescription: "各类潮鞋", text: "潮鞋"}
+    ],
+    smallSortsList:[
+      {id:1,smallsortName:'手机',smallsortDescription:'拥抱未来'},
+      {id:2,smallsortName:'电脑',smallsortDescription:'拥抱未来'},
+      {id:3,smallsortName:'照相机',smallsortDescription:'拥抱未来'},
+      {id:4,smallsortName:'风衣',smallsortDescription:'拥抱未来'}
+
+    ]
   },
 
   // 左侧导航点击事件 
@@ -30,7 +40,7 @@ Page({
   // 根据大分类id请求小分类集合
   getSmallSortsList(index){
     wx.request({
-      url: smallSortsurl,
+      url: '',
       data:{
         id:index
       },
@@ -42,6 +52,13 @@ Page({
         })
         
       }
+    })
+  },
+
+  // 去小分类页面
+  ToSmallCate(){
+    wx.navigateTo({
+      url: '/pages/goodsmallcate/goodsmallcate',
     })
   },
   
@@ -71,7 +88,7 @@ Page({
       title: '数据加载中',
     })
     wx.request({
-      url: bigSortsurl,
+      url: '',
       success:res=>{
         console.log(res.data);
        

@@ -40,7 +40,7 @@ Page({
       });
     }).then(res=>{
         wx.request({
-          url: allCartsUrl,
+          url: '',
           data:{
             openid:this.data.openid
           },

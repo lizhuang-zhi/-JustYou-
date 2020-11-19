@@ -2,21 +2,12 @@
 <van-sticky>
   <view class="headbar">
     <view class="pic" bindtap="showPopup">
-      <van-image round width="3.2rem" height="3.2rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+      <van-image round width="3.2rem" height="3.2rem" src="{{userImg}}" />
     </view>
-    <view class="words">晚上好，K</view>
+    <view class="words">{{JudgeTime}}好，{{userName}}</view>
   </view>
 </van-sticky>
 
-<!-- 搜索栏 -->
-<!-- <view class="search">
-  <van-search
-  value="{{ value }}"
-  shape="round"
-  background="#F6F6F6"
-  placeholder="请输入搜索关键词"
-  />
-</view> -->
 
 <!-- 左侧弹出层，点击头像 -->
 <view class="leftPanel">
@@ -26,7 +17,8 @@
     custom-style="width: 60%;height:100%"
     bind:close="onClose"
   >
-  <popleft></popleft>
+    <!-- 左侧弹出 -->
+    <popleft userImg="{{userImg}}"></popleft>
   </van-popup>
 
 </view>
@@ -61,7 +53,6 @@
         </swiper>
       </view>
     </view>
-
     
     <!-- 右侧栏 -->
     <view class="right">
@@ -76,20 +67,17 @@
           <!-- 第一个小方块 -->
           <view class="square">
             <view class="pic" bindtap="ToSearchPage">
-              <image src="/images/转发查阅.png"></image>
+              <image src="https://s1.ax1x.com/2020/11/09/B7z9W4.png"></image>
             </view>
           </view>
 
           <!-- 第二个小方块 -->
           <view class="square1">
             <view class="pic1" bindtap="GiveToast">
-              <image src="/images/地球.png"></image>
+              <image src="https://s1.ax1x.com/2020/11/09/B7zJTf.png"></image>
             </view>
           </view>
 
-          <!-- 自定义组件 -->
-          <!-- <Square/>
-          <Square/> -->
         </view>
 
         <view class="rightpar">
@@ -106,15 +94,12 @@
         </view>
       </view>
 
-      <!-- <view class="bottombar" bindtap="ShoppingContent">
-        <view class="words">项目商城</view>
-        <view class="go">>></view>
-      </view> -->
+
     </view>
 
-    
   </view>
 </view>
+
 
 <!-- 通知栏 -->
 <view class="notify">
@@ -136,18 +121,14 @@
             looks="{{item.recruiting_number}}"
             category="{{item.taskClassification.name}}"
             title="{{item.task_title}}"
-            picture="{{item.taskClassification.picture}}"></Taskbar>
+            picture="{{item.backpic}}"
+            task_id="{{item.id}}"
+            takObj="{{item}}"></Taskbar>
           </block>
 
         </van-tab>
 
-        <!-- <van-tab title="运动">内容 2</van-tab>
-        <van-tab title="ALL">内容 4</van-tab>
-        <van-tab title="招募">内容 3</van-tab>
-        <van-tab title="通知栏">内容 4</van-tab> -->
-
       </block>
-      
       
     </view>
     

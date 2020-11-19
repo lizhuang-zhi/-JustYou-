@@ -1,0 +1,68 @@
+<view class="box">
+	
+	<ec-canvas id="mychart-dom-bar" 
+	canvas-id="mychart-bar" 
+	ec="{{ ec }}"></ec-canvas>
+
+	<view class="desc">
+		近期任务发布倾向
+	</view>
+</view> 
+
+
+<!-- 下部分 -->
+<view class="bottom">
+
+	<block wx:if="{{JustIng}}">
+		<view class="top" 
+			wx:for="{{IngTask}}"
+			wx:key="index">
+				<HistoryStatus 
+				userImg="{{item.user.userHeadPortrait}}"
+				Tag="{{item.tags[0].tagName}}"
+				Content="{{item.task_description}}"
+				Time="{{item.release_time}}"/>
+				
+			</view>
+		
+	</block>
+
+	<block wx:else>
+		<van-tabs active="{{ active }}" bind:change="onChange">
+			<van-tab title="正在进行">
+
+				<view class="top" 
+				wx:for="{{IngTask}}"
+				wx:key="index">
+				<HistoryStatus 
+					userImg="{{item.user.userHeadPortrait}}"
+					Tag="{{item.tags[0].tagName}}"
+					Content="{{item.task_description}}"
+					Time="{{item.release_time}}"/>
+				
+				</view>
+
+			</van-tab>
+			
+			<van-tab title="已结束">
+				<view class="top" 
+				wx:for="{{PastTask}}"
+				wx:key="index">
+					<HistoryStatus 
+					userImg="{{item.user.userHeadPortrait}}"
+					Tag="{{item.tags[0].tagName}}"
+					Content="{{item.task_description}}"
+					Time="{{item.release_time}}"/>
+					
+				</view>
+
+			</van-tab>
+			
+		</van-tabs>
+	</block>
+	
+</view>
+
+
+
+

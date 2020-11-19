@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "HistoryStatus":"/components/HistoryStatus/HistoryStatus",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+
+  }
+}

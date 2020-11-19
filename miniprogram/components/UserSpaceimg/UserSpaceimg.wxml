@@ -1,0 +1,19 @@
+<view class="Album-list">
+	<!-- 图列 -->
+	<view class="list">
+		<image wx:for="{{PicList}}" wx:key="unique" 
+		src="{{item.photoUrl}}" data-index="{{index}}" 
+		bindtap="previewImage"></image>
+	</view>
+	
+	<!--图片描述-->
+	<!-- <view wx:if="{{item.pictures}}" class="list-dImg">
+		<image bindtap="imgYu" 
+		data-list="{{item.pictures}}" 
+		data-src="{{dImg}}" 
+		wx:for="{{item.pictures}}" 
+		wx:for-item="dImg" 
+		src="{{dImg}}"></image>
+	</view> -->
+
+</view>

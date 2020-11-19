@@ -2,6 +2,8 @@ var api = require('../../utils/api');
 // var manageSettleUrl = api.getmanageSettleUrl();
 var PayNum = 0;
 var PayPrice = 0;
+
+var app = getApp()
 Page({
 
   /**
@@ -13,7 +15,10 @@ Page({
     PayMentList:[],
     PayMentNum:0,
     PayMentTotalPrice:0,
-    FinallyList:[]
+    FinallyList:[],
+
+    // 用户openid
+    openid:''
     
   },
 
@@ -26,68 +31,69 @@ Page({
     var that = this;
 
     var promise = new Promise(function(resolve,reject){
-      // 获取用户的openid
-      wx.cloud.callFunction({
-        name:'getUserOpenid',
-      })
-      .then(back=>{
+      // 设置openid
+      app.getUserInfo().then(res=>{
         that.setData({
-          openid:back.result.openid
+          openid: app.globalData.openid
         })
-        console.log('that.data中的openid：'+that.data.openid);
-        resolve('success');
-        
-      });
+        resolve('success')
+      })
 
     }).then(res=>{
-      // 请求进行中的集合
-      wx.request({
-        url: manageSettleUrl,
-        data:{
-          openid:this.data.openid,
-          settleStatus:status_2
-        },
-        success:res=>{
-          console.log(res.data);
-          this.setData({
-            InProgressList:res.data
-          })
-          
-        }
-      })
+      // return new Promise(function(resolve,reject){
+        // 请求进行中的集合
+        wx.request({
+          url: '',
+          data:{
+            openid:this.data.openid,
+            settleStatus:status_2
+          },
+          success:res=>{
+            console.log(res.data);
+            this.setData({
+              InProgressList:res.data
+            })
+            
+          }
+        })
 
-      // 请求代付款的集合
-      wx.request({
-        url: manageSettleUrl,
-        data:{
-          openid:this.data.openid,
-          settleStatus:status_3
-        },
-        success:res=>{
-          console.log(res.data);
+        // 请求代付款的集合
+        wx.request({
+          url: '',
+          data:{
+            openid:this.data.openid,
+            settleStatus:status_3
+          },
+          success:res=>{
+            console.log(res.data);
 
-          this.setData({
-            PayMentList:res.data
-          })
-          
-        }
-      })
+            this.setData({
+              PayMentList:res.data
+            })
+            
+          }
+        })
 
-      // 请求已完成的集合
-      wx.request({
-        url: manageSettleUrl,
-        data:{
-          openid:this.data.openid,
-          settleStatus:status_1
-        },
-        success:res=>{
-          console.log(res.data);
-          this.setData({
-            FinallyList:res.data
-          })
-          
-        }
-      })
+        // 请求已完成的集合
+        wx.request({
+          url: '',
+          data:{
+            openid:this.data.openid,
+            settleStatus:status_1
+          },
+          success:res=>{
+            console.log(res.data);
+            this.setData({
+              FinallyList:res.data
+            })
+            
+          }
+        })
+
+        
+
+      // })
+      
 
     }).then(res=>{
       wx.hideLoading({ })

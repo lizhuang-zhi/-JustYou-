@@ -2,12 +2,19 @@
   <view class="section">
 
     <form bindsubmit="bindFormSubmit">
-      <textarea auto-height placeholder="请输入你的任务请求以及任务需求..." name="textarea"/>
+      <textarea auto-height 
+      placeholder="请输入你的任务请求以及任务需求..." 
+      name="textarea"
+      />
       <button form-type="submit"> 立即发布 </button>
     </form>
 
     <view class="upPic">
-      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+      <van-uploader file-list="{{ fileList }}" 
+      bind:after-read="afterRead" 
+      bind:delete="deletPic" 
+      deletable="{{ true }}"
+      multiple="{{ true }}"/>    
     </view>
 
   </view> 
@@ -16,3 +23,4 @@
 
 
 
+<!-- <image src="https://mrkleo.top/justyou/upload-image/1.jpg"></image> -->

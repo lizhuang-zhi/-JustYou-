@@ -4,6 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    userImg: String,
+    username: String,
+    realseTime: String,
+    Num: String,
+    txt: String
 
   },
 

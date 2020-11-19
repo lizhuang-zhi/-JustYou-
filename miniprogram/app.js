@@ -1,8 +1,15 @@
 //app.js
 
 App({
+
+  globalData: { 
+    openid: null,
+    token: '', 
+    userInfo: null
+  }, 
   
   onLaunch: function () {
+    // var that = this;
     
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -17,8 +24,81 @@ App({
       })
     }
 
-    this.globalData = {}
+    // 初始化用户openid
+    // this.getUserInfo()
 
   },
+
+  onShow (options) {
+    
+
+  },
+
+  onHide () {
+    
+  },
+
+  onUnhandledRejection(options){
+    console.log(options);
+    
+
+  },
+
+  // 获取用户信息 与 openid
+  getUserInfo: function(cb) {
+    var that = this
+    // 使用Promise完成同步！！
+    return new Promise(function(resolve,reject){
+
+      if (that.globalData.userInfo) {
+          typeof cb == "function" && cb(that.globalData.userInfo)
+      } else {
+          //调用登录接口
+          wx.login({
+              success: function (res) {
+                // console.log(res);
+                var code = res.code
+                
+                // 获取用户信息
+                wx.getUserInfo({
+                  success: function (res) {
+                    console.log(res.userInfo);
+                    
+                    that.globalData.userInfo = res.userInfo
+                    typeof cb == "function" && cb(that.globalData.userInfo)
+                    
+                    wx.request({
+                      //获取openid接口
+                      url: 'https://mrkleo.top/justyou/publish/getKey?js_code='+code,
+                      data: {},
+                      method: 'GET',
+                      success: function (res) {
+                        console.log('app.js中的返回的openid： '+res.data.openid)
+                        that.globalData.openid = res.data.openid
+                        resolve('success')
+
+                      },
+                      fail: res => {
+                        console.log(res);
+                        reject('error')
+                        
+                      }
+                        
+                    })  
+                  }
+
+              })
+
+                  
+            },
+          })
+      }
+
+
+    })
+    
+      
+  },
+
   
 })

@@ -1,0 +1,209 @@
+.user{
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.user .user-list{
+  width:100%;
+  height: 50px;
+  position: relative;
+}
+/* 用户头像 */
+.user .user-list .user-img{
+  width: 50px;
+  height: 100%;
+  position: absolute;
+}
+.user .user-list .user-img .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* 用户姓名 */
+.user .user-list .user-name{
+  position: absolute;
+  left:65px;
+  top: 5px;
+  font-size: 15px;
+}
+/* 用户发表时间 */
+.user .user-list .user-time{
+  position: absolute;
+  left: 65px;
+  bottom: 5px;
+  font-size: 13px;
+  color: #777;
+}
+/* 用户标签 */
+.user .user-tip{
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  display: flex;
+  justify-content: left;
+  color:#464ac4 ;
+}
+/* 描述 */
+.Describe{
+  min-height: 80px;
+  border-radius: 10px;
+}
+/* 描述头部 */
+.infolist .infohead{
+  display: flex;
+  justify-content: left;
+}
+/* 描述头部图片 */
+.Describe .Deshead .Deshead-img,.infolist .infohead .infohead-img{
+  width: 40px;
+  height: 40px;
+}
+/* 信息两个字 */
+.infolist .infohead .infohead-tip{
+  line-height: 40px;
+  font-size: 18px;
+}
+/* 描述内容 */
+.Describe .Deshead .Deshead-main{
+  line-height: 20px;
+  padding-left: 25px;
+  padding-right:20px;
+  font-size: 16px;
+  color:#737375;
+  position: relative;
+}
+/* 描述内容后面的图片 */
+.Describe .Deshead .Deshead-main::after{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  bottom:10px;
+  background:url('https://s1.ax1x.com/2020/10/26/BKfBdJ.png') no-repeat;
+  background-size:contain;
+}
+/* 信息内容 */
+.infolist .infobody{
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  font-size: 16px;
+  color:#737375;
+}
+/* 时间 性别 人数 弹性盒 */
+.infobody .time-list,.infobody .sex-list,.infobody .people-list,.infobody .QQ-list {
+  padding-left: 30px;
+  padding-right:25px;
+  box-sizing: border-box;
+  height:40px;
+  line-height: 40px;
+  font-size:16px;
+  display:flex;
+  justify-content:space-between;
+}
+/* 信息 性别 人数 QQ号 */
+.infobody .time-list .time-tip,
+.infobody .sex-list .sex-tip,.infobody .people-list .people-tip,.infobody .QQ-list .QQ-tip{
+  font-size:18px;
+  color: #484849;
+}
+.infobody{
+  position: relative;
+}
+/* 信息后的图片 */
+.infobody .secondfloor::after{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  bottom:-6px;
+  background:url('https://s1.ax1x.com/2020/10/27/BKbleP.png') no-repeat;
+  background-size:contain;
+}
+
+
+/* 评论 */
+.comm{padding-top: 50rpx;}
+
+/* 分界线 */
+.liner{width: 100%;}
+.liner .lin{
+  padding: 5rpx 30rpx 0;
+  margin: 30rpx 0 0;
+  width: 100%; height: 1rpx;
+  background: rgb(220,220,220);
+
+}
+
+.liner_bash{
+  padding: 5rpx 30rpx 0;
+  margin: 30rpx 0 0;
+  width: 100%; height: 1rpx;
+  background: rgb(220,220,220);
+
+}
+
+
+/* 任务申请 */
+.praisebar {
+  padding: 10rpx 20rpx 10rpx;
+}
+
+.praisebar .list {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* 申请图片 */
+.praisebar .list .join {
+  width: 35px;
+  padding: 10px;
+}
+
+.praisebar .list .join .jo {
+  width: 33px;
+  height: 33px;
+}
+
+.praisebar .list .join .jo .joinimg {
+  width: 100%;
+  height: 100%;
+}
+/* 申请加入 */
+.praisebar .list .join .jo .txt{
+  font-size: 12px;
+  text-align: center;
+}
+/* 用户头像 */
+.praisebar .list .user-image {
+  width: 100%;
+  display: flex;
+  justify-content:left;
+}
+
+.praisebar .list .user-image .img {
+  width: 25px;
+  height: 25px;
+  padding: 0 3px;
+}
+
+.praisebar .list .user-image .img .userimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* 用户名字 */
+.praisebar .list .user-image .username{
+  font-size:11px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

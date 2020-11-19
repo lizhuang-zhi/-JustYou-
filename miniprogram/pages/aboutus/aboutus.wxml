@@ -1,0 +1,31 @@
+<view class="about">
+  <view class="box">
+    <view class="up">
+      <image src="https://s1.ax1x.com/2020/11/06/BWOupF.png"></image>
+      <view class="txt">云 / 顶 / 犀 / 科 / 技 /</view>
+    </view>
+
+    <view class="line_1"></view>
+
+    <view class="mid">
+      <view class="txt">云顶犀科技致力于为大学生提供更加优质的服务平台，以创新创造的思想为核心理念，提供用户各类软件服务</view>
+      <view class="sentence">关注云顶犀科技,以拥抱幸福生活的名义！</view>
+    </view>
+
+    <view class="line_2"></view>
+
+    <view class="down">
+      <view class="tit">意见反馈、咨询、代理、投诉举报：</view>
+      <view class="second">
+        <view class="words">请联系微信：</view>
+        <view class="number">18200181462</view>
+      </view>
+      <view class="third">E-mail：2315831906@qq.com</view>
+      <view class="fourth">云顶犀官网：www.mrkleo.top</view>
+    </view>
+
+    <view class="line_3"></view>
+
+  </view>
+
+</view>

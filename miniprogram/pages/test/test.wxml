@@ -37,9 +37,9 @@
     <view class="mid">
       <view class="midbox">
         <!-- 到哪里取件 -->
-        <view class="whereAndaddress" bindtap='xuanZe'>
+        <view class="whereAndaddress" bindtap='xuanZe_Get'>
           <view class="where">到哪里取件</view>
-          <view class="address">点击填写取件地址</view>
+          <view class="address">{{GetAddress != null ? GetAddress : '点击填写收件地址'}}</view>
         </view>
 
         <view class="station">驿站</view>
@@ -52,9 +52,9 @@
     <view class="down">
       <view class="downbox">
         <!-- 要送到哪里 -->
-        <view class="whereAndaddress" bindtap='xuanZe'>
+        <view class="whereAndaddress" bindtap='xuanZe_Ship'>
           <view class="where">要送到哪里</view>
-          <view class="address">点击填写收件地址</view>
+          <view class="address">{{ShippingAddress != null ? ShippingAddress : '点击填写收件地址'}}</view>
         </view>
 
         <view class="station" bindtap="ToGetUsualAddress">常用</view>
@@ -92,8 +92,13 @@
       <view class="toast">请将快递收货短信截图上传至此。请放心下单，信息仅取件人员可见</view>
     </view>
 
+    <!-- 图片上传 -->
     <view class="uploadpic">
-      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+      <van-uploader file-list="{{ fileList }}" 
+      bind:after-read="afterRead" 
+      bind:delete="deletPic" 
+      deletable="{{ true }}"
+      multiple="{{ true }}"/>
     </view>
 
   </view>
@@ -105,16 +110,48 @@
 <view class="form">
   <view class="formBox">
 
-    <ExpressInfo titContent="物品重量" infoContent="请选择"
+    <ExpressInfo titContent="物品重量" infoContent="{{getWeight}}"
     bindtap="showPopup"/>
-    <view class="liner"></view>
-    <ExpressInfo titContent="取件数量" infoContent="请选择"
-    bindtap="showPopup"/>
-    <view class="liner"></view>
-    <ExpressInfo titContent="天气服务" infoContent="请选择"
-    bindtap="SelectTianQi"/>
+    <!-- 物品重量弹出层 -->
+    <van-popup show="{{ Popshow }}" 
+    bind:close="PoponClose"
+    position="bottom"
+    custom-style="height: 40%;">
+      <van-picker 
+      columns="{{ columns }}"
+      show-toolbar
+      default-index="{{ 2 }}"
+      title="物品重量"
+      bind:change="PickeronChange"
+      bind:cancel="cancelEvent" 
+      bind:confirm="confirmEvent"/>
+    </van-popup>
 
-    <!-- 上拉菜单部分 -->
+    <view class="liner"></view>
+
+    <ExpressInfo titContent="取件数量" infoContent="{{getNum}}"
+    bindtap="showPopupNum"/>
+    <!-- 取件数量弹出层 -->
+    <van-popup show="{{ PopshowNum }}" 
+    bind:close="PoponCloseNum"
+    position="bottom"
+    custom-style="height: 40%;">
+      <van-picker 
+      columns="{{ Numcolumns }}"
+      show-toolbar
+      default-index="{{ 2 }}"
+      title="取件数量"
+      bind:change="PickeronChangeNum"
+      bind:cancel="cancelEventNum" 
+      bind:confirm="confirmEventNum"/>
+    </van-popup>
+
+    
+    <view class="liner"></view>
+
+    <ExpressInfo titContent="天气服务" infoContent="{{getWeather}}"
+    bindtap="SelectTianQi"/>
+    <!-- 上拉菜单部分（天气服务）-->
     <van-action-sheet
       show="{{ show }}"
       actions="{{ actions }}"
@@ -122,18 +159,8 @@
       bind:select="onSelect"
     />
 
-    <!-- 弹出层 -->
-    <van-popup show="{{ Popshow }}" 
-    bind:close="PoponClose"
-    position="bottom"
-    custom-style="height: 40%;">
-      <Pickerup></Pickerup>
-      <van-picker columns="{{ columns }}" bind:change="PickeronChange" />
-    </van-popup>
-
     <!-- toast -->
     <van-toast id="van-toast" />
-
 
   </view>
 </view>
@@ -142,9 +169,32 @@
 
 <!-- 其他 -->
 <view class="other">
-  <view class="otherBox" bindtap="ToExpressNotes">
-    <ExpressInfo titContent="备注留言" infoContent="点击填写备注"/>
-  </view>
+  
+  <van-cell-group>
+    <van-field
+      value="{{ message }}"
+      label="留言"
+      type="textarea"
+      placeholder="请输入留言"
+      autosize
+      border="{{ false }}"
+      show-word-limit
+      maxlength="200"
+      size="large"
+      bind:blur="BlurWords"
+    />
+  </van-cell-group>
+  
+
+
+</view>
+
+
+
+
+<!-- 提交 -->
+<view class="btn">
+  <button plain bindtap="Release">提交</button>
 </view>
 
 

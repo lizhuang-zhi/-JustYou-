@@ -1,4 +1,8 @@
 // pages/search/search.js
+var api = require('../../utils/api');
+var recentSearch = api.getrecentSearch();
+var hotTag = api.gethotTag();
+var LinkTaskByTagId = api.getLinkTaskByTagId();
 Page({
 
   /**
@@ -12,14 +16,91 @@ Page({
       {jud:true,color:"yellowgreen",rank:"3",desc:"软件工程实践中心",numVal:"34444"},
       {jud:false,color:"gray",rank:"4",desc:"德玛西亚",numVal:"4356"},
       {jud:false,color:"gray",rank:"5",desc:"无极剑圣",numVal:"5000"},
-    ]
+    ],
+
+    // 用户id
+    open_id: "",
+    // 历史搜索集合
+    RescentSeaList: [],
+    // 热门搜索
+    hotTagList: []
   },
+
+  // 点击具体热门标签
+  GetTagId(back){
+    var tagId = back.currentTarget.dataset.tagid
+
+    wx.showToast({
+      title: '加载中',
+    }).then(res=>{
+      wx.navigateTo({
+        url: '/pages/Tagpage/Tagpage?id='+tagId,
+      })
+    }).then(res=>{
+      wx.hideLoading({ })
+    })
+    
+  },
+
+  // 初始化
+  Start(){
+    var that = this;
+    var promise = new Promise(function(resolve,reject){
+      // 获取用户的openid
+      wx.cloud.callFunction({
+        name:'getUserOpenid',
+      })
+      .then(back=>{
+        // console.log(back.result.openid);
+        that.setData({
+          openid:back.result.openid
+        })
+        // Bestopenid = that.data.openid;
+        console.log('that.data中的openid：'+that.data.openid);
+        resolve('success');
+      })
+
+    }).then(res=>{
+      wx.request({
+        url: recentSearch,
+        data: {
+          open_id: this.data.open_id
+        },
+        success: res=>{
+          console.log(res.data.data);
+          this.setData({
+            RescentSeaList: res.data.data
+          })
+          
+        }
+      })
+
+
+      wx.request({
+        url: hotTag,
+        success: res=>{
+          console.log(res.data.data);
+          this.setData({
+            hotTagList: res.data.data
+          })
+        }
+      })
+      
+    })
+
+
+    
+
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 初始化数据
+    this.Start();
   },
 
   /**

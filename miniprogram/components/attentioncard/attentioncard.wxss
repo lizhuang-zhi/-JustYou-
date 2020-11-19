@@ -33,22 +33,11 @@
 	left: 52px;
 	position: absolute;
 }
-/* 用户的专业 */
-.user-list .user-maj{
-	height: 20px;
-	position: relative;
-}
-/* 用户的专业样式 */
-.user-list .user-maj {
-	top: 22px;
-	left:60px;
-	position: absolute;
-	color: #353535;
-}
+
 /* 用户发表时间 */
 .user-list .user-time{
 	top: 22px;
-	left: 35%;
+	left:60px;
 	position: absolute;
 	color: #353535;
 }

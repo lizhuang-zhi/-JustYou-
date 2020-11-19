@@ -4,6 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    // 用户头像
+    userImg: {
+      type: String,
+      value: ''
+    }
 
   },
 

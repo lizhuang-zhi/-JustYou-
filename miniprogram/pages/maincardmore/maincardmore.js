@@ -1,19 +1,118 @@
+var api = require('../../utils/api');
+var tools = require('../../utils/public');
+var detailDynamic = api.getdetailDynamic();
+var comm = api.getcomm();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    txt:"当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常，不信人间有白头，月明高楼修独椅，忽到窗前疑是君当时只道是寻常",
+    // 动态详情对象
+    dynamicDetail: {},
+
+    // 评论集合
+    commList: [],
+
+    // 动态id
+    dynamicId: ''
+  },
+
+  // 初始化加载数据
+  Start(dynamic){
+    console.log(dynamic);
+    
+    var that = this;
+    
+    wx.showLoading({
+      title: '数据加载中',
+    })
+
+    var promise = new Promise(function(resolve,reject){
+      // 请求任务详情数据
+      wx.request({
+        url: detailDynamic,
+        data: {
+          dynamic_id: dynamic,
+          openId: "vx001"
+        },
+        success:res=>{
+          console.log(res.data.data);
+          // 更改日期格式
+          res.data.data.dynamicTime = tools.changeTimeFormat(res.data.data.dynamicTime);
+          that.setData({
+            dynamicDetail: res.data.data
+          })
+          resolve('success')
+        },
+        fail: res=>{
+          console.log('fail to load');
+          
+        }
+      })
+
+    }).then(res=>{
+      // 请求评论集合数据
+      wx.request({
+        url: comm,
+        data: {
+          dynamic_id: that.data.dynamicDetail.dynamicId
+        },
+        success: res=>{
+          console.log(res.data.data);
+          // 更改日期格式
+          res.data.data.forEach(item => {
+            item.commTime = tools.changeTimeFormat(item.commTime)
+          })
+          this.setData({
+            commList: res.data.data
+          })
+        }
+      })
+
+    }).then(res=>{
+      wx.hideLoading({ })
+    })
+    
+  },
+
+  // 实时更新评论数据
+  UpdateCom:function(e){
+    console.log('实时更新评论的id：'+e.detail.dynamic_id);
+    var dyId = e.detail.dynamic_id
+
+    // 请求评论集合数据
+    wx.request({
+      url: comm,
+      data: {
+        dynamic_id: dyId 
+      },
+      success: res=>{
+        console.log(res.data.data);
+        // 更改日期格式
+        res.data.data.forEach(item => {
+          item.commTime = tools.changeTimeFormat(item.commTime)
+        })
+        this.setData({
+          commList: res.data.data
+        })
+      }
+    })
+
+    // 刷新页面
+    this.onShow();
+
   },
  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    // 获取参数并初始化
+    this.Start(options.dynamicId)
+
     this.setData({
-      jude:options.value
+      dynamicId: options.dynamicId
     })
   },
 

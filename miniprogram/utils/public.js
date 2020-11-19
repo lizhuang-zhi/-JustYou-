@@ -9,7 +9,7 @@ var common = {
   },
 
  //  js时间戳转为时间
-  getMyData:function (timestamp, formats) {
+  getMyData:function (timestamp, formats ,judge=1) {
    // formats格式包括
    // 1. Y-m-d
    // 2. Y-m-d H:i:s
@@ -24,7 +24,10 @@ var common = {
        return value;
    };
 
-   var timestamp = timestamp*1000;
+   // 时间选择（vant）返回的时间戳不需要*1000
+   if(judge == 1){
+     var timestamp = timestamp*1000;
+   }
 
    var myDate = timestamp? new Date(timestamp): new Date();
 
@@ -50,7 +53,7 @@ var common = {
 
   // 更改日期格式
   changeTimeFormat(time){
-    return this.format(time,'yyyy-MM-dd');     
+    return this.format(time,'yyyy-MM-dd HH:mm');     
   },
 
   //封装时间格式
@@ -92,8 +95,31 @@ var common = {
          Object.getOwnPropertyDescriptor(obj, old_key));
       delete obj[old_key]; // 删除旧键
     }
+    
   },
+
+
+  // 更改图片为Base64并返回
+  PicListBackBase64(picArr){
+    var PicList = [];
+    picArr.forEach(item => {
+      // 遍历每一个图片存入PicList数组
+      wx.getFileSystemManager().readFile({
+        filePath: item.url,
+        encoding: 'base64',
+        success: res=>{
+          // 图片入栈
+          PicList.push(res.data)
   
+        }
+      })
+
+    })
+
+    return PicList
+    
+  },
+
 }
 
 module.exports = common

@@ -1,0 +1,13 @@
+<view class="mainp" bindtap="Tapme">
+	<!-- 发表时间 -->
+	<view class="mainp-time">20-10-31 15:00</view>
+	<!-- 背景图片 -->
+	<view class="mainpin">
+		<image src="https://s1.ax1x.com/2020/10/17/0qHgFf.jpg"></image>
+	</view>
+	<!-- 发表文字 -->
+	<view class="mainptxt">
+		<view class="title">日常生活中的鄙视链</view>
+		<view class="content">你经历过哪些无处不在的偏见？</view>
+	</view>
+</view>

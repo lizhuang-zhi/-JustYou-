@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "CommentCard":"/components/CommentCard/CommentCard",
+    "UserSpaceimg":"/components/UserSpaceimg/UserSpaceimg"
+  }
+}

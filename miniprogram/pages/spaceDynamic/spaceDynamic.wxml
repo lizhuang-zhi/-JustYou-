@@ -1,7 +1,25 @@
 <view class="outBox">
-  <block wx:for="{{5}}" wx:key="index">
-    <maincard image="https://s1.ax1x.com/2020/10/01/0KfnfJ.jpg"
-      txt="一路向前，莫问前程！"
-      time="2020-10-1" userimg="https://s1.ax1x.com/2020/10/07/0afByq.jpg" username="k" />
+  <block wx:for="{{DynamicList}}" wx:key="index">
+    <maincard 
+      image="{{item.photo}}"
+      txt="{{item.abstracts}}"
+      time="{{item.dynamicTime}}" 
+      userimg="{{item.user.userHeadPortrait}}" 
+      username="{{item.user.userName}}" 
+      looksNum="{{item.dynamicViews}}"
+      lovenum="{{item.likeCount}}"
+      dynamic="{{item.id}}"
+      dynamic_id="{{item.id}}"
+      judge="{{item.ifLike}}"
+      
+    />
   </block>
+</view>
+
+
+
+<!-- 添加的按钮 -->
+<view class="addBtn">
+		<van-icon name="add" size="60px" 
+    color="gray" bindtap="addDynamic"/>
 </view>

@@ -1,10 +1,15 @@
 var api = require('../../utils/api');
+var tools = require('../../utils/public');
 var indexCate = api.getindexCategory();
 var TaskListByCate = api.getTaskListByCate();
-var tools = require('../../utils/public');
+var AllTask = api.getAllTask()
 
 // 定义请求页面数
 var page_num = 1;
+
+// 定义分类id
+var class_id = 0;
+var app = getApp();
 Page({
   
   /**
@@ -25,9 +30,41 @@ Page({
     // 分类集合
     CateList:[],
     // 分类所对应的任务集合
-    TaskByCate:[]
+    TaskByCate:[],
+
+    // 判断时间
+    JudgeTime:'',
+
+    // 用户昵称
+    userName: '',
+
+    // 用户头像
+    userImg: '',
+
+    // 任务id
+    task_id:'',
+
+    // 首页背景图集合
+    backPicList:[
+      "https://s3.ax1x.com/2020/11/13/DSGPUO.jpg",
+      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3028148277,1614842737&fm=15&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3053072254,2488170492&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=720822740,2245648360&fm=15&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2113130528,967997212&fm=26&gp=0.jpg",
+      "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2306010771,3089368377&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1566826507,352179765&fm=26&gp=0.jpg",
+      "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2189967026,4181685455&fm=26&gp=0.jpg",
+      "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4249141887,1056952857&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2232845759,169295485&fm=26&gp=0.jpg",
+      "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=390954043,4280002272&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=108879143,4286503539&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=266641814,86922992&fm=26&gp=0.jpg",
+      "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3266479433,1999627905&fm=26&gp=0.jpg",
+    ]
 
   },
+
+  
 
   // 去搜索页面
   ToSearchPage(){
@@ -86,7 +123,6 @@ Page({
     
   },
 
-
   // tabbar点击事件
   onChange(event) {
     var that = this;
@@ -136,61 +172,128 @@ Page({
   // 改变tabs分类时触发
   ChangeTabs(res){
     console.log(res.detail.index);
+
     // 获取分类id
-    var class_id = res.detail.index + 1;
+    class_id = res.detail.index;
     // 置空原来存储的任务集合
     this.setData({
       TaskByCate: []
     })
     // 根据分类id获取对应集合
     this.UpdateTask(1,class_id);
+    console.log('class_id: '+class_id);
+    
     
   },
 
   // 初始化
   Start(){
-    wx.request({
-      url: indexCate,
-      method: 'GET',
-      success:back=>{
-        console.log(back.data.data);
-        this.setData({
-          CateList:back.data.data
+    var that = this;
+    wx.showLoading({
+      title: '数据加载中..',
+    }).then(res=>{
+      that.setData({
+        userName: app.globalData.userInfo.nickName,
+        userImg: app.globalData.userInfo.avatarUrl
+      })      
+  
+      var timeNow = new Date();
+      if(6 <= timeNow.getHours() && timeNow.getHours() < 12){
+        that.setData({
+          JudgeTime: '上午'
         })
-
-        // 初始化请求数据
-        this.UpdateTask();
+      }else if(12 <= timeNow.getHours() && timeNow.getHours() < 19 ){
+        that.setData({
+          JudgeTime: '下午'
+        })
+      }else{
+        that.setData({
+          JudgeTime: '晚上'
+        })
       }
-    })   
+      
+      wx.request({
+        url: indexCate,
+        method: 'GET',
+        success:back=>{
+          console.log(back.data.data);
+          that.setData({
+            CateList:back.data.data
+          })
+  
+          // 初始化请求数据
+          that.UpdateTask();
+        }
+      }) 
+    
+    }).then(res=>{
+      wx.hideLoading({ })
+    })
+    
   },
 
   // 触底更新数据
-  UpdateTask(pageN = 1,class_id = 1){
+  UpdateTask(pageN = 1,class_id = 0){
     wx.showLoading({
       title: '加载中..',
     }).then(res=>{
-      // 通过分类请求对应的集合
-      wx.request({
-        url: TaskListByCate,
-        method: 'GET',
-        data: {
-          pageNum: pageN,
-          class_id: class_id
-        },
-        success:res=>{
-          console.log(res.data.data.list);
-          var oldData = this.data.TaskByCate;
-          var newData = oldData.concat(res.data.data.list);
-          // 更改时间格式
-          res.data.data.list.forEach(element => {
-            element.release_time = tools.changeTimeFormat(element.release_time);
-          });  
-          this.setData({
-            TaskByCate: newData
-          })
-          
-        }
-      })
+
+      if(class_id == 0){
+        wx.request({
+          url: AllTask,
+          data: {
+            pageNum: pageN
+          },
+          success: res=>{
+            console.log(res.data.data.list);
+            var oldData = this.data.TaskByCate;
+            var newData = oldData.concat(res.data.data.list);
+            // 更改时间格式以及添加背景图
+            
+            res.data.data.list.forEach(element => {
+              var num = Math.floor(Math.random()*14);
+              console.log('我是随机数：'+num);
+              element.release_time = tools.format(element.release_time,"'yyyy-MM-dd");
+              element.backpic = this.data.backPicList[num];
+            }); 
+            this.setData({
+              TaskByCate: newData
+            })
+          }
+        })
+
+      }else{
+
+        // 通过分类请求对应的集合
+        wx.request({
+          url: TaskListByCate,
+          method: 'GET',
+          data: {
+            pageNum: pageN,
+            class_id: class_id
+          },
+          success:res=>{
+            console.log(res.data.data.list);
+            var oldData = this.data.TaskByCate;
+            var newData = oldData.concat(res.data.data.list);
+            // 更改时间格式
+            res.data.data.list.forEach(element => {
+              element.release_time = tools.changeTimeFormat(element.release_time);
+              var num = Math.floor(Math.random()*14);
+              console.log('我是随机数：'+num);
+              element.backpic = this.data.backPicList[num];
+            });  
+            this.setData({
+              TaskByCate: newData
+            })
+            
+          }
+        })
+
+
+      }
+
+      
 
     }).then(res=>{
       wx.hideLoading({})
@@ -199,33 +302,45 @@ Page({
 
   },
 
+  // 去到任务详情页
+  // ToTask: function(e){
+  //   wx.navigateTo({
+  //     url: '/pages/TaskInit/TaskInit',
+  //   })
+  // },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {  
-    // 初始化
-    this.Start();
+  onLoad: function (options) { 
+    app.getUserInfo().then(res=>{
+      // 初始化
+      this.Start();
+    })
+    
+    // 刷新完成后停止下拉刷新动效
+    wx.stopPullDownRefresh({})
     
   },
-
-
-
+  
+  
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
     
   },
-
+  
   // 箭头移动的动画
   moveJianTou(){
     var animation = wx.createAnimation({
       duration: 600,
       timingFunction: 'linear',
     })
-
+    
     this.animation = animation;
-
+    
     var next = true;
     setInterval(function(){
       if(next){
@@ -238,20 +353,26 @@ Page({
       this.setData({
         animationData:animation.export()
       })
-
+      
     }.bind(this),600)
-
+    
     // animation.scaleX(1).step();
-
+    
     // this.setData({
-    //   animationData:animation.export()
-    // })
-  },
-
+      //   animationData:animation.export()
+      // })
+    },
+    
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
+    // app.getUserInfo().then(res=>{
+    //   // 初始化
+    //   this.Start();
+    // })
+
     this.moveJianTou();
   },
 
@@ -273,7 +394,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    this.onLoad();
   },
 
   /**
@@ -281,7 +402,9 @@ Page({
    */
   onReachBottom: function () {
     page_num++;
-    this.UpdateTask(page_num,1);
+    console.log("class_id: "+class_id);
+    
+    this.UpdateTask(page_num,class_id);
   },
 
   /**

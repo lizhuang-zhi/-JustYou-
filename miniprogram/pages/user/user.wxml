@@ -3,53 +3,11 @@
 	<van-image fit="contain" round width="10rem" height="8rem" src="{{picUrl}}" />
 </view>
 
-<!-- 开始版本的点击栏 -->
-<!-- <view class="contentBor">
-
-  <van-cell value="详情" icon="star-o" is-link bindtap="myProServe">
-    <view slot="title">
-      <view class="van-cell-text">
-        我的收藏 <van-tag type="warning">查看</van-tag>		
-      </view>
-    </view>
-  </van-cell>
-
-  <van-cell value="详情" icon="comment-o" is-link>
-    <view slot="title">
-      <view class="van-cell-text">
-        联系客服 <van-tag type="danger">咨询</van-tag>
-      </view>
-    </view>
-  </van-cell>
-
-  <navigator url="" open-type="switchTab">
-    <van-cell value="详情" icon="setting-o" is-link>
-      <view slot="title">
-        <view class="van-cell-text">
-          授权设置 <van-tag type="primary">调整</van-tag>
-        </view>
-      </view>
-    </van-cell>
-  </navigator>
-
-  <navigator url="" open-type="switchTab">
-    <van-cell value="详情" icon="envelop-o" is-link>
-      <view slot="title">
-        <view class="van-cell-text">
-          意见反馈 <van-tag type="success">投诉</van-tag>
-        </view>
-      </view>
-    </van-cell>
-  </navigator>
-
-</view> -->
-
-
 
 <!-- 重置点击栏 -->
 <view class="uppart"></view>
 
-<!-- 博客文章布块 -->
+<!-- 关于我的布块 -->
 <view class="article">
 
   <view class="box">
@@ -58,9 +16,10 @@
 
     <view class="function" wx:for="{{aboutMeList}}" wx:key="index">
       <!-- 第一个功能 -->
-      <view class="collection" bindtap="myProServe">
+      <view class="collection" bindtap="myProServe"
+      data-url="{{item.url}}">
         <view class="leftPart">
-          <image src="https://s1.ax1x.com/2020/09/02/dz019f.png"></image>
+          <image src="{{item.pic}}"></image>
           <view class="tit">{{item.tit}}</view>
         </view>
         <view class="rightPart">查看 ></view>
@@ -84,9 +43,13 @@
     <view class="theme">周边服务</view>
 
     <van-grid column-num="3">
-      <van-grid-item icon="{{item.pic}}" text="{{item.text}}" 
-      wx:for="{{ aroundSaleList }}" wx:key="index" 
-      bindtap="ToAroundService" data-url="{{item.url}}"/>
+      <van-grid-item 
+      icon="{{item.pic}}" 
+      text="{{item.text}}" 
+      wx:for="{{ aroundSaleList }}" 
+      wx:key="index" 
+      bindtap="ToAroundService" 
+      data-url="{{item.url}}"/>
     </van-grid>
 
   </view>
@@ -109,6 +72,12 @@
           </view>
           <view class="right">></view>
         </view>
+        <!-- 微信开放能力 -->
+        <button 
+          wx:if="{{index != 3}}" 
+          class="power" 
+          open-type="{{item.power}}"
+        ></button>
 
         <view class="liner"></view>
       </view>
@@ -120,8 +89,8 @@
 
 <!-- 底部logo -->
 <view class="bottomlogo">
-  <image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/Blog/logo.png"></image>
-  <view class="txt">- Mr.KLeo提供技术支持 -</view>
+  <image src="https://s1.ax1x.com/2020/11/06/BWOupF.png"></image>
+  <view class="txt">- 云顶犀提供技术支持 -</view>
 </view>
 
 
@@ -129,14 +98,6 @@
 
 
 
-
-
-
 <view class="nickname"><text>Hi</text> , {{name}}</view>
-
-<!-- 按钮开放能力 -->
-<button class="kefu" open-type="contact"></button>
-<button class="setting" open-type="openSetting"></button>
-<button class="feedback" open-type="feedback"></button>
 
 

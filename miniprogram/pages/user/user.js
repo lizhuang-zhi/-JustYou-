@@ -1,4 +1,6 @@
 // pages/user/user.js
+var api = require('../../utils/api')
+var TaskOfMe = api.getTaskOfMe()
 Page({
 
   /**
@@ -11,32 +13,33 @@ Page({
     picUrl:'https://s1.ax1x.com/2020/08/02/aYQfFx.jpg',
     // 关于我的
     aboutMeList:[
-      {pic:"",tit:"我的发布",url:""},
-      {pic:"",tit:"我的动态",url:""},
-      {pic:"",tit:"我的性格",url:""}
+      {pic:"https://s1.ax1x.com/2020/11/09/BTvoSs.png",tit:"我的发布",url:"/pages/HistoryTask/HistoryTask?NotPast=1"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BTv4YQ.png",tit:"我的空间",url:"/pages/userSpace/userSpace"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BTv0Fe.png",tit:"我的性格",url:"/pages/Personality/Personality"}
     ],
     // 周边服务
     aroundSaleList:[
-      {pic:"orders-o",text:"订单管理",url:"/pages/goodorder/goodorder"},
-      {pic:"cart-o",text:"购物车",url:"/pages/goodcarts/goodcarts"},
-      {pic:"star-o",text:"我的收藏",url:""},
-      {pic:"location-o",text:"地址管理",url:""},
-      {pic:"friends-o",text:"我的相册",url:"/pages/Albumwx/Albumwx"},
-      {pic:"comment-o",text:"我的消息",url:""}
+      {pic:"https://s1.ax1x.com/2020/11/09/BHEXIs.png",text:"订单管理",url:"/pages/goodorder/goodorder"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHEzR0.png",text:"购物车",url:"/pages/goodcarts/goodcarts"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHEWad.png",text:"地址管理",url:""},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHVZJ1.png",text:"我的消息",url:"/pages/massagelist/massagelist"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHVFZ4.png",text:"我的相册",url:"/pages/Albumwx/Albumwx"},
     ],
     // 其他服务
     otherList:[
-      {pic:"https://s1.ax1x.com/2020/09/02/dz0Gjg.png",text:"在线客服"},
-      {pic:"https://s1.ax1x.com/2020/09/02/dz0YuQ.png",text:"授权管理"},
-      {pic:"https://s1.ax1x.com/2020/09/02/dz0aEn.png",text:"意见反馈"},
-      {pic:"https://s1.ax1x.com/2020/09/02/dz0dNq.png",text:"关于我们",url:"/pages/aboutus/aboutus"}
+      {pic:"https://s1.ax1x.com/2020/11/09/BHV7f1.png",text:"在线客服",power:"contact"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHV5TJ.png",text:"授权管理",power:"openSetting"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHVhmF.png",text:"意见反馈",power:"feedback"},
+      {pic:"https://s1.ax1x.com/2020/11/09/BHVRyT.png",text:"关于我们",url:"/pages/aboutus/aboutus"}
     ],
-
 
   },
 
-  // 我的收藏
-  myProServe(){
+  // 关于我的中具体跳转
+  myProServe(back){
+    console.log(back.currentTarget.dataset.url)
+    var myUrl = back.currentTarget.dataset.url
+    
     var that = this;
     
     wx.getSetting({
@@ -44,14 +47,13 @@ Page({
       success:function(res){
         console.log(res);
         
-
         //如果授权成功
         if(res.authSetting['scope.userInfo']==true){
           console.log(that.data.openid);
           
           wx.navigateTo({
             //跳转到收藏页面
-            url: '/pages/proserve/proserve?openid='+that.data.openid,   
+            url: myUrl+'?openid='+that.data.openid,   
             success:res=>{
               console.log('跳转到收藏页成功');
               

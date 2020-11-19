@@ -1,0 +1,87 @@
+/* 图表 */
+.box {
+	width:100%;
+	height:500rpx;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.box ec-canvas{height: 100%;}
+.box .tit{padding: 0 30rpx;font-weight: bold;}
+
+
+.box_2 {
+	width:100%;
+	height:700rpx;
+	position: absolute;
+	top: 600rpx;
+	bottom: 0;
+	left: 0;
+	right: 0;
+} 
+.box_2 ec-canvas{height: 100%;}
+.box_2 .tit{padding: 0 30rpx;font-weight: bold;}
+
+
+
+/* 建议文字 */
+.Box {
+  padding: 1400rpx 12px 0;
+}
+
+/* 头部 */
+.Head {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* 头部文字 */
+.Head .Headh1 {
+  height: 100%;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.Head .Headh2 {
+  height: 100%;
+  line-height: 45px;
+  font-size: 18px;
+}
+
+/* 头部图片 */
+.Head .Headimg {
+  width: 100%;
+  height: 200px;
+}
+
+.Head .Headimg .img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 情绪解读 学业事业 健康身心 */
+.Emotion,
+.Academic,
+.Healthy {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* 情绪解读标题 学业事业标题 健康身心标题*/
+.Emotion .EmotionTitle,
+.Academic .AcademicTitle,
+.Healthy .HealthyTitle {
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 情绪解读正文 学业事业正文 健康身心正文 */
+.Emotion .EmotionTxt,
+.Academic .AcademicTxt,
+.Healthy .HealthyTxt {
+  line-height: 30px;
+  font-size: 17px;
+}

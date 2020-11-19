@@ -1,4 +1,6 @@
 // pages/missionhall/missionhall.js
+var api = require('../../utils/api')
+var AllTaskClassifi = api.getAllTaskClassifi()
 Page({
 
   /**
@@ -7,16 +9,7 @@ Page({
   data: {
     animationMain:null,//正面
     animationBack:null,//背面
-    backgroundList:[
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BS0g1I.gif",backColor:'#FFDDAA',tit:"学习",description:"我们是的发放阿"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BSwvYd.gif",backColor:'#94CCB9',tit:"运动",description:"我们放阿"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BSDkGj.gif",backColor:'#FFECA7',tit:"物品代取",description:"我们是的发放阿"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BS0g1I.gif",backColor:'#D1DBBD',tit:"志愿者招募",description:"我们是画起来的发放阿"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BSDmLV.gif",backColor:'#D1DBBD',tit:"AA制拼餐",description:"我们是的发放阿"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BSDPIg.gif",backColor:'#FFDDAA',tit:"乐跑",description:"我们是的发放阿扯犊子"},
-      {picUrl:"https://s1.ax1x.com/2020/10/20/BSBOGd.gif",backColor:'#94CCB9',tit:"考研",description:"的发放阿有趣"},
-      {picUrl:"/images/more.png",backColor:'#FFECA7',tit:"更多",description:"更多任务请点击"}
-    ],
+    backgroundList:[],
 
     // 添加动画
     animationData: {},
@@ -24,48 +17,6 @@ Page({
     timer:null
 
   },
-
-  // 点击翻转
-  // rotateFn(e) {
-  // 	var id = e.currentTarget.dataset.id
-  // 	this.animation_main = wx.createAnimation({
-  //       duration:400,
-  //       timingFunction:'linear'
-  //     })
-  //     this.animation_back = wx.createAnimation({
-  //       duration:400,
-  //       timingFunction:'linear'
-  //     })
-  // 	// 点击正面
- 
-  // 	if (id==1) {
-  //     this.animation_main.rotateY(180).step()
-  //     this.animation_back.rotateY(0).step()
-  //     this.setData({
-  //     	animationMain: this.animation_main.export(),
-  //     	animationBack: this.animation_back.export(),
-  //     })
-  // 	}
-  // 	// 点击背面
-  // 	else{
-  //     this.animation_main.rotateY(0).step()
-  //     this.animation_back.rotateY(-180).step()
-  //     this.setData({
-  //     	animationMain: this.animation_main.export(),
-  //     	animationBack: this.animation_back.export(),
-  //     })
-  // 	}
-  // },
-
-
-  // 反面按钮点击
-  // btnClick(e){
-  //   console.log('反面点我:'+e.currentTarget.dataset.id);
-  //   // wx.navigateTo({
-  //   //   url: '/pages/index/index',
-  //   // })
-    
-  // },
 
   // 发布选择
   chooseMission(e){
@@ -78,12 +29,11 @@ Page({
     // 获取点击任务的标题
     var title = back.currentTarget.dataset.title;
     
-    
     var promise = new Promise(function(resolve,reject){
       
       var animation = wx.createAnimation({
         delay: 0,
-        timingFunction:'linear',
+        timingFunction:'ease',
         duration:1000
       })
     
@@ -101,17 +51,17 @@ Page({
       // 通过任务标题判断要进入的编辑任务页
       if(title == "更多"){
         wx.navigateTo({
-          url: '/pages/moreTask/moreTask',
+          url: '/pages/moreTask/moreTask?id='+back.currentTarget.dataset.id,
         })
         
       }else if(title == "物品代取"){
         wx.navigateTo({
           // 这里的test页面就是快递代取任务填写页面
-          url: '/pages/test/test',
+          url: '/pages/test/test?id='+back.currentTarget.dataset.id,
         })
       }else{
         wx.navigateTo({
-          url: '/pages/taskOne/taskOne',
+          url: '/pages/taskOne/taskOne?id='+back.currentTarget.dataset.id,
         })
       }
 
@@ -123,6 +73,43 @@ Page({
   },
 
 
+  // 初始化数据
+  Start(){
+    wx.request({
+      url: AllTaskClassifi,
+      data: {
+        pageNum: 1
+      },
+      success:res=>{
+        console.log(res.data.data.list);
+
+        // 随机添加颜色
+        res.data.data.list.forEach(item =>{
+          item.backColor = this.GetColor();
+        })
+
+        this.setData({
+          backgroundList: res.data.data.list
+        })
+        
+      }
+    })
+  },
+
+
+  // 获取随机颜色
+  GetColor(){
+    var arrColor = [
+    '#FFDDAA','#94CCB9','#FFECA7',
+    '#D1DBBD','#D1DBBD','#FFDDAA',
+    '#94CCB9']
+
+    var num = Math.floor(Math.random()*7)
+
+    return arrColor[num]
+  },
+
+
 
   
   
@@ -130,7 +117,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+   this.Start()
   },
 
 

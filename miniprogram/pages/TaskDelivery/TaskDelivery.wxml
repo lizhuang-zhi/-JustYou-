@@ -1,0 +1,90 @@
+<view class="user">
+	<!-- 用户列表 -->
+	<view class="user-list">
+		<!-- 用户头像 -->
+		<view class="user-img">
+			<image class="img" src="https://s1.ax1x.com/2020/10/24/BVq66f.jpg"></image>
+		</view>
+		
+		<!-- 用户姓名 -->
+		<view class="user-name">
+			<view class="name">张嘉佳</view>
+		</view>
+
+		<!-- 用户发表时间 -->
+		<view class="user-time">
+			<view class="time">10.27 1:12</view>
+		</view>
+
+		<!-- 用户标签 -->
+		<view class="user-tip">
+			<view class="tip-tip">#</view>
+			<view class="tip-con">一起约个饭?</view>
+		</view>
+	</view>
+</view>
+<!-- 描述 -->
+<view class="Describe">
+	<!-- 描述头部 -->
+	<view class="Deshead">
+		<!-- 头部图片 -->
+		<image class="Deshead-img" src="https://s1.ax1x.com/2020/10/26/BKRiQO.png"></image>
+		<view class="Deshead-main">“落魄山前来观礼，山主陈平安，开始问剑。</view>
+	</view>
+</view>
+<!-- 信息 -->
+<view class="infolist">
+	<!-- 信息头部-->
+	<view class="infohead">
+		<!-- 头部图片 -->
+		<image class="infohead-img" src="https://s1.ax1x.com/2020/10/26/BK5Bdg.png"></image>
+		<view class="infohead-tip">信息</view>
+	</view>
+	<!-- 信息内容 -->
+	<view class="infobody">
+	<!-- 到哪里取件 -->
+  <view class="Pick-up-list">
+			<view class="Pick-up-tip">取件地</view>
+			<view class="info-Pick-up">
+				<view class="Pick">四川省达到河系太阳系地球亚洲大陆中国</view>
+			</view>
+		</view>
+		<!-- 送到哪里 -->
+		<view class="Receiving-list">
+			<view class="Receiving-tip">收件地</view>
+			<view class="info-Receiving">
+				<view class="Rece">四川省成都市都江堰市江堰大道23号</view>
+			</view>
+		</view>
+		<!-- 时间 -->
+		<view class="time-list">
+			<view class="time-tip">时间</view>
+			<view class="info-time">星期六</view>
+		</view>
+		<!-- 取件数量 -->
+		<view class="Picknum-list">
+			<view class="Picknum-tip">取件数量</view>
+			<view class="info-Picknum">2件</view>
+		</view>
+		<!-- 物品重量 -->
+		<view class="Weight-list">
+			<view class="Weight-tip">物品重量</view>
+			<view class="info-Weight">20kg</view>
+		</view>
+		<!-- 天气 -->
+		<view class="Weather-list">
+			<view class="Weather-tip">天气</view>
+			<view class="info-Weather">晴</view>
+		</view>
+
+	</view>
+</view>
+
+
+
+<!-- 任务的评论集合 -->
+<block wx:for="{{commList}}" wx:key="index">
+  <CommentCard txt="{{item.commContent}}" userImg="{{}}"
+  username="{{}}" realseTime="{{item.commTime}}"
+  Num="{{index+1}}" />
+</block>

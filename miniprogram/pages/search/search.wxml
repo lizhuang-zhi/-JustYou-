@@ -22,9 +22,9 @@
         </view>
         
         <view class="content">
-          <block wx:for="{{7}}" wx:key="index">
+          <block wx:for="{{RescentSeaList}}" wx:key="index">
             <view class="searchwords">
-              <view class="words">考研</view>
+              <view class="words">{{item}}</view>
             </view>
           </block>
         </view>
@@ -41,7 +41,7 @@
         </view>
       </view>
 
-      <view class="contentOfhot">
+      <!-- <view class="contentOfhot">
         <block wx:for="{{RankList}}" wx:key="index">
           <hotcard color="{{item.color}}" 
           rankingnum="{{item.rank}}" 
@@ -49,7 +49,15 @@
           numberValue="{{item.numVal}}"
           judge="{{item.jud}}"/>
         </block>
+      </view> -->
+
+      <view class="hotlist">
+        <view wx:for="{{hotTagList}}" wx:key="index" 
+         data-tagid="{{item.tagId}}" bindtap="GetTagId">
+          <Hotlist rankNum="{{index+1}}" desc="{{item.tagName}}" tagCount="{{item.tagCount}}"></Hotlist>
+        </view>
       </view>
+      
     </view>
 
   </view>

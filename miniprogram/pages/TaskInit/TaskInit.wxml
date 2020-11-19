@@ -1,0 +1,125 @@
+<view class="user">
+	<!-- 用户列表 -->
+	<view class="user-list">
+		<!-- 用户头像 -->
+		<view class="user-img">
+			<image class="img" src="{{TskObj.user.userHeadPortrait}}"></image>
+		</view>
+		
+		<!-- 用户姓名 -->
+		<view class="user-name">
+			<view class="name">{{TskObj.user.userName}}</view>
+		</view>
+
+		<!-- 用户发表时间 -->
+		<view class="user-time">
+			<view class="time">{{TskObj.release_time}}</view>
+		</view>
+
+		<!-- 用户标签 -->
+		<view class="user-tip">
+			<view class="tip-tip">#</view>
+			<view class="tip-con">{{TskObj.tags[0].tagName}}</view>
+		</view>
+	</view>
+</view>
+<!-- 描述 -->
+<view class="Describe">
+	<!-- 描述头部 -->
+	<view class="Deshead">
+		<!-- 头部图片 -->
+		<image class="Deshead-img" src="https://s1.ax1x.com/2020/10/26/BKRiQO.png"></image>
+		<view class="Deshead-main">{{TskObj.task_description}}</view>
+	</view>
+</view>
+
+<UserSpaceimg PicList="{{PicList}}"/>
+
+<!-- 信息 -->
+<view class="infolist">
+	<!-- 信息头部-->
+	<view class="infohead">
+		<!-- 头部图片 -->
+		<image class="infohead-img" src="https://s1.ax1x.com/2020/10/26/BK5Bdg.png"></image>
+		<view class="infohead-tip">信息</view>
+	</view>
+	<!-- 信息内容 -->
+	<view class="infobody">
+		<!-- 第一层 -->
+		<view class="firstfloor">
+			<!-- 时间 -->
+			<view class="time-list">
+				<view class="time-tip">时间</view>
+				<view class="info-time">{{TskObj.release_time}}</view>
+			</view>
+			<!-- 性别 -->
+			<view class="sex-list">
+				<view class="sex-tip">性别</view>
+				<view class="info-sex">{{TskObj.user.gender == 1 ? '男' : '女'}}</view>
+			</view>
+		</view>
+		<!-- 第二层 -->
+		<view class="secondfloor">
+			<!-- 人数 -->
+			<view class="people-list">
+				<view class="people-tip">人数</view>
+				<view class="info-peoplenum">2人</view>
+			</view>
+			<!-- QQ号 -->
+			<view class="QQ-list">
+				<view class="QQ-tip">QQ号</view>
+				<view class="info-QQ">123456789</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 分界线 -->
+<view class="liner">
+	<view class="lin"></view>
+</view>
+
+
+<!-- 任务申请 -->
+<!-- 点赞栏 -->
+<view class="praisebar">
+	<!-- 栏 -->
+	<view class="list">
+		<!-- 申请图片 -->
+		<view class="join" bindtap="addOne">
+			<view class="jo">
+				<image class="joinimg" src="https://s3.ax1x.com/2020/11/15/DijhKs.png"></image>
+        <view class="txt">申请</view>
+			</view>
+		</view>
+		<!-- 用户头像 -->
+		<view class="user-image">
+			<block wx:for="{{numList}}" wx:key="index">
+				<view class="img">
+					<image class="userimg" src="{{item.url}}"></image>
+          <view class="username">{{item.name}}</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>
+
+
+<!-- 分界线 -->
+<view class="liner_bash">
+</view>
+
+
+
+<view class="comm">
+	<!-- 任务的评论集合 -->
+	<block wx:for="{{commList}}" wx:key="index">
+		<CommentCard txt="{{item.commContent}}" 
+		userImg="{{item.user.userHeadPortrait}}"
+		username="{{item.user.userName}}" 
+		realseTime="{{item.commTime}}"
+		Num="{{index+1}}" />
+	</block>
+
+
+</view>

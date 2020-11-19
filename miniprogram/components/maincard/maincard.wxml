@@ -6,7 +6,7 @@
 			<view class="user-img" bindtap="ToAboutUser">
 				<image src="{{userimg}}"></image>
 			</view>
-			<!-- 用户id -->
+			<!-- 用户昵称 -->
 			<view class="user-id">
 				<text>{{username}}</text>
 			</view>
@@ -15,9 +15,13 @@
 				<text>{{time}}</text>
 			</view>
 			<!-- 发表状态 -->
-			<van-action-sheet show="{{ show }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+			<van-action-sheet 
+			show="{{ show }}" 
+			actions="{{ actions }}" 
+			bind:close="onClose" 
+			bind:select="onSelect" />
 			<view class="state" bindtap="onClick">
-				<image src="cloud://leo-wxnmc.6c65-leo-wxnmc-1302702304/JustYou/goddes.png">
+				<image src="https://s1.ax1x.com/2020/11/09/BH7Ef1.png">
 				</image>
 			</view>
 		</view>
@@ -31,9 +35,7 @@
 			</text>
 		</view>
 		<view class="img-list">
-			<view>
-				<image src="{{image}}"></image>
-			</view>
+			<UserSpaceimg PicList="{{image}}"/>
 		</view>
 	</view>
 
@@ -42,11 +44,11 @@
 		<!-- 浏览 -->
 		<view class="eye">
 			<image src="https://s1.ax1x.com/2020/10/13/04lkfH.png"></image>
-			<text class="eye-num">100</text>
+			<text class="eye-num">{{looksNum}}</text>
 		</view>
 		<!-- 爱心 -->
-		<view class="click" bindtap="tapMe">
-			<image wx:if="{{judge}}" src="https://s1.ax1x.com/2020/10/07/0ah39J.png"></image>
+		<view class="click" bindtap="GiveLove">
+			<image wx:if="{{judge == false}}" src="https://s1.ax1x.com/2020/10/07/0ah39J.png"></image>
 			<image wx:else src="https://s1.ax1x.com/2020/10/07/0ahlh4.png"></image>
 			<text class="click-love">{{lovenum}}</text>
 		</view>

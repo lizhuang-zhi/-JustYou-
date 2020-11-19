@@ -1,0 +1,52 @@
+.user{
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.user .user-list{
+  width:100%;
+  height: 50px;
+  position: relative;
+}
+/* 用户头像 */
+.user .user-list .user-img{
+  width: 50px;
+  height: 100%;
+  position: absolute;
+}
+.user .user-list .user-img .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+/* 用户姓名 */
+.user .user-list .user-name{
+  position: absolute;
+  left:65px;
+  top: 5px;
+  font-size: 15px;
+}
+/* 用户发表时间 */
+.user .user-list .user-time{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+/* 用户标签 */
+.user .user-mass{
+  position: absolute;
+  bottom: 0px;
+  left: 65px;
+  display: flex;
+  justify-content: left;
+  font-size: 14px;
+  color: #777777;
+  max-width: 150px;
+  /* 超出显示... */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}

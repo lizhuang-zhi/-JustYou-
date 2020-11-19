@@ -1,0 +1,20 @@
+<view class="user" bindtap="Tapme">
+	<!-- 用户列表 -->
+	<view class="user-list">
+		<!-- 用户头像 -->
+		<view class="user-img">
+			<image class="img" src="{{pic}}"></image>
+		</view>
+		<!-- 用户姓名 -->
+		<view class="user-name">
+			<view class="name">{{name}}</view>
+		</view>
+		<!-- 用户发表时间 -->
+		<view class="user-time">
+			<view class="time">{{time}}</view>
+		</view>
+    <view class="user-mass">
+      <view class="mass">{{scentence}}</view>
+    </view>
+	</view>
+</view>

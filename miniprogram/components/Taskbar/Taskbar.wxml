@@ -1,8 +1,9 @@
-<navigator open-type="navigateTo" url="/pages/maincardmore/maincardmore">
+<!-- <navigator open-type="navigateTo" url="/pages/TaskInit/TaskInit?task_id={{task_id}}&taskObj={{takObj}}"> -->
+<!-- <block bind:tap="ToDetailTask"> -->
 
-	<view class="mainp">
+	<view class="mainp" bind:tap="ToDetailTask">
 		<image src="{{picture}}"></image>
-
+		
 		<view class="part-list">
 			<view class="time-list">
 				<image src="https://s1.ax1x.com/2020/10/17/0LlTkd.png"></image>
@@ -17,7 +18,7 @@
 				<view class="tag">{{category}}</view>
 			</view>
 		</view>
-
+		
 		<view class="content-list">
 			<view class="content-title">
 				<view class="content">{{title}}</view>
@@ -25,5 +26,6 @@
 		</view>
 		
 	</view>
-
-</navigator>
+	
+<!-- </block> -->
+<!-- </navigator> -->

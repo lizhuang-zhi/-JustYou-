@@ -1,1 +1,6 @@
-/* pages/spaceDynamic/spaceDynamic.wxss */
+/* 添加的按钮 */
+.addBtn van-icon {
+  position: fixed;
+  bottom: 70rpx;
+  left: 75%;
+}

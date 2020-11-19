@@ -1,5 +1,6 @@
 {
   "component": true,
   "usingComponents": {
+    "UserSpaceimg":"/components/UserSpaceimg/UserSpaceimg"
   }
 }

@@ -16,35 +16,29 @@
 
     <block wx:for="{{backgroundList}}" wx:key="index">
 
-      <!-- <LongMis backColr="{{item.backColor}}" description="我们是作事法师"></LongMis> -->
-      <!-- <LongMis backColr="#FFECA7" description="我们是的发放阿"></LongMis>
-      <LongMis backColr="#FFECA7" description="我们是的发放阿"></LongMis>
-      <LongMis backColr="#91AA9D" description="我们是作事法师"></LongMis>
-      <LongMis backColr="#D1DBBD" description="我们是作事法师"></LongMis>
-      <LongMis backColr="#FFECA7" description="我们是的发放阿"></LongMis>
-      <LongMis backColr="#FFECA7" description="我们是的发放阿"></LongMis>
-      <LongMis backColr="#91AA9D" description="我们是作事法师"></LongMis> -->
-
       <!-- 任务大厅发布 -->
-      <view class="long" style="background: {{item.backColor}};"
-      bindtap="ToGetAPage" animation="{{animationData}}" data-Title="{{item.tit}}" >
+      <view class="long" 
+      style="background: {{item.backColor}};"
+      bindtap="ToGetAPage" 
+      animation="{{animationData}}" 
+      data-title="{{item.name}}" 
+      data-id="{{item.id}}">
         <view class="longbox">
 
           <view class="up">
             <view class="pic">
-              <!-- <image src="https://s1.ax1x.com/2020/09/26/0PltmT.png"></image> -->
-              <image src="{{item.picUrl}}"></image>
+              <image src="{{item.picture}}"></image>
             </view>
 
-            <view class="tit">{{item.tit}}</view>
+            <view class="tit">{{item.name}}</view>
           </view>
 
           <view class="mid">
-            <view class="word">{{item.description}}</view>
+            <view class="word">{{item.describe}}</view>
           </view>
 
           <view class="bottom">
-            <view class="join">4 参与</view>
+            <view class="join">{{item.classCount}} 参与</view>
             <view class="img">
               <image src="/images/箭头.png"></image>
             </view>

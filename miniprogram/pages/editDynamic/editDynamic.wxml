@@ -1,0 +1,18 @@
+<view class="outbox">
+  <view class="section">
+
+    <form bindsubmit="bindFormSubmit">
+      <textarea auto-height placeholder="请输入你的任务请求以及任务需求..." name="textarea"/>
+      <button form-type="submit"> 立即发布 </button>
+    </form>
+
+    <view class="upPic">
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+    </view>
+
+  </view> 
+</view> 
+
+
+
+

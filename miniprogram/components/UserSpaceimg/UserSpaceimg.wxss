@@ -1,0 +1,21 @@
+/* 相册列表 */
+.Album-list{
+  top: 0;
+  padding:0 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+/* 排列*/
+.Album-list .list{
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/* 图片大小 */
+.Album-list .list image{
+  width: 47.9%;
+  max-width: 360rpx;
+  height:330rpx;
+  margin-bottom:16rpx;
+}

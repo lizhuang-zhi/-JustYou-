@@ -1,0 +1,27 @@
+<view class="outbox">
+	<!-- 回到首页 -->
+	<view class="back" bindtap="BackToIndex">
+		<van-icon name="arrow-left" />
+		<view>回到首页</view>
+	</view>
+	<!-- 发布成功logo -->
+	<view class="box">
+		<view class="suc">
+			<icon type="success" size="100"/>
+			<view>发布成功</view>
+		</view>
+	</view>
+	<!-- 底部 -->
+	<view class="last">
+		<!-- 查看任务 -->
+		<view class="look">
+			<image class="lookimg" src="https://s1.ax1x.com/2020/10/31/BaVzSs.png"></image>
+			<view class="looktxt">查看任务</view>
+		</view>
+		<!-- 再写一篇 -->
+		<view class="again">
+			<image class="againimg" src="https://s1.ax1x.com/2020/10/31/BaVfFe.png"></image>
+			<view class="againtxt">再次发布</view>
+		</view>
+	</view>
+</view>

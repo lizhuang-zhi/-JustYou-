@@ -1,0 +1,26 @@
+.outbox {
+  padding: 52rpx 0 0;
+  margin: 0 auto;
+}
+
+.outbox .section button {
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  width: 80%;
+  background: #585859;
+  color: #FFFFFF;
+  
+}
+
+.outbox .section .upPic {
+  position: absolute;
+  top: 35%;
+}
+.outbox .section .upPic .van-uploader{
+  box-shadow: 0 0 10px rgb(143, 142, 142);
+}
+
+.outbox .section .upPic .van-uploader__upload{
+  margin: 0 -8px -8px 0;
+}

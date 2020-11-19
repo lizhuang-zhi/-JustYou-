@@ -1,0 +1,24 @@
+.about .box{padding: 170rpx 30rpx 40rpx;}
+.about .box .up{display: flex;
+justify-content: center;align-items: center;
+padding-bottom: 65rpx;}
+.about .box .up image{width: 110rpx;height: 110rpx;}
+.about .box .up .txt{font-size: 25rpx;
+  color: rgb(144,144,144);padding-left: 20rpx;}
+.about .box .line_1{width: 100%;
+  border: 1rpx dashed rgb(227,227,227);}
+.about .box .mid .txt{padding: 30rpx 0 40rpx;
+letter-spacing: 4rpx;line-height: 1.8;}
+.about .box .mid .sentence{padding-bottom: 60rpx;
+letter-spacing: 4rpx;font-size: 30rpx;}
+.about .box .line_2{width: 100%;
+border: 1rpx dashed rgb(227,227,227);}
+.about .box .down .tit{padding: 50rpx 0;
+font-weight: bold;letter-spacing: 2rpx;}
+.about .box .down .second{display: flex;
+padding-bottom: 50rpx;}
+.about .box .down .second .number{color: rgb(255,3,23);}
+.about .box .down .third{padding-bottom: 50rpx;}
+.about .box .down .fourth{padding-bottom: 60rpx;}
+.about .box .line_3{width: 100%;
+  border: 1rpx dashed rgb(227,227,227);}
