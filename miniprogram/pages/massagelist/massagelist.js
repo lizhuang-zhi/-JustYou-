@@ -117,7 +117,7 @@ Page({
           that.setData({
               List: [{
                 pic:"https://s1.ax1x.com/2020/10/24/BVq66f.jpg",
-                name:'老骚',
+                name:'求道玉M.P',
                 time:'10-27 12:00',
                 scentence:"你在干嘛？",
                 openid: 'ohNiv4nVNsdHsSHQK6A1kFtWVjX8'
@@ -129,7 +129,7 @@ Page({
         that.setData({
             List: [{
               pic:"https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1473836766,4030812874&fm=26&gp=0.jpg",
-              name:'小骚',
+              name:'K',
               time:'10-27 12:00',
               scentence:"你在干嘛？",
               openid: 'ohNiv4sDFfJFos4AGEQdZisBetp0'
